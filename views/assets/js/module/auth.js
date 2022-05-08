@@ -2,7 +2,7 @@ class Auth {
   constructor() {}
 
   async signUp(dataObj) {
-    let response = await fetch("https://api.miningfy.net/auth/signUp", {
+    let response = await fetch("http://api.miningfy.net/auth/signUp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dataObj),
@@ -11,7 +11,7 @@ class Auth {
     return data;
   }
   async signIn(dataObj) {
-    let response = await fetch("https://api.miningfy.net/auth/signIn", {
+    let response = await fetch("http://api.miningfy.net/auth/signIn", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dataObj),

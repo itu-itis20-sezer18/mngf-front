@@ -622,7 +622,7 @@
          <script type="module" src="./assets/js/user/user.js"></script>
 
          <script>
-            fetch(`https://api.miningfy.net/coin/getPrice`)
+            fetch(`http://api.miningfy.net/coin/getPrice`)
                           .then(datatwo => {
                              return datatwo.json();
                           })
@@ -647,7 +647,7 @@
     window.location.href = "";
   }
             function preInvRequest(){
-               fetch(`https://api.miningfy.net/coin/getPrice`)
+               fetch(`http://api.miningfy.net/coin/getPrice`)
                      .then(datatwo => {
                         return datatwo.json();
                      })
@@ -692,7 +692,7 @@
                   return;
                }
                if (selectedGlobalCoin != "USDT") {
-                  fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${selectedGlobalCoin}USDT`)
+                  fetch(`http://api.binance.com/api/v3/ticker/price?symbol=${selectedGlobalCoin}USDT`)
                      .then(data => {
                         return data.json();
                      })
@@ -746,13 +746,13 @@
                            amountInMngf: document.getElementById("mngf-coin-corresponding").value.split(" ")[0],
                            amountWillBeRecieved: document.getElementById("mngf-coin-corresponding").value.split(" ")[0] * (1+multiplier)
                         }
-                        fetch("https://api.miningfy.net/deposit/create", {
+                        fetch("http://api.miningfy.net/deposit/create", {
                            method: "POST",
                            headers: { 'Content-Type': 'application/json' },
                            body: JSON.stringify(dataaa)
                         }).then(response => response.json()).then(dataa => {
 
-                           fetch("https://api.miningfy.net/auth/signInWithId", {
+                           fetch("http://api.miningfy.net/auth/signInWithId", {
                               method: "POST",   
                               headers: { 'Content-Type': 'application/json' },
                               body: JSON.stringify({ userId: myUser._id })
@@ -793,12 +793,12 @@
                         amountInMngf: document.getElementById("mngf-coin-corresponding").value.split(" ")[0],
                         amountWillBeRecieved: document.getElementById("mngf-coin-corresponding").value.split(" ")[0] * (1+multiplier)
                      }
-                     fetch("https://api.miningfy.net/deposit/create", {
+                     fetch("http://api.miningfy.net/deposit/create", {
                         method: "POST",
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(dataaa)
                      }).then(response => response.json()).then(dataa => {
-                        fetch("https://api.miningfy.net/auth/signInWithId", {
+                        fetch("http://api.miningfy.net/auth/signInWithId", {
                            method: "POST",
                            headers: { 'Content-Type': 'application/json' },
                            body: JSON.stringify({ userId: myUser._id })
@@ -849,7 +849,7 @@
             }
             function coinAmountChange() {
                if (selectedGlobalCoin != "USDT") {
-                  fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${selectedGlobalCoin}USDT`)
+                  fetch(`http://api.binance.com/api/v3/ticker/price?symbol=${selectedGlobalCoin}USDT`)
                      .then(data => {
                         return data.json();
                      })
@@ -859,7 +859,7 @@
                         document.getElementById("usd-corresponding").value = dollarPrice + " $"
                         console.log(dollarPrice)
                         finalAmount = (dollarPrice * multiplier).toFixed(2)
-                        fetch(`https://api.miningfy.net/coin/getPrice`)
+                        fetch(`http://api.miningfy.net/coin/getPrice`)
                      .then(datatwo => {
                         return datatwo.json();
                      })
@@ -877,7 +877,7 @@
                else {
                   document.getElementById("usd-corresponding").value = document.getElementById("coin-amount").value + " $"
                   var dollarPrice = document.getElementById("coin-amount").value
-                  fetch(`https://api.miningfy.net/coin/getPrice`)
+                  fetch(`http://api.miningfy.net/coin/getPrice`)
                      .then(datatwo => {
                         return datatwo.json();
                      })
@@ -898,7 +898,7 @@
             }
             var selectedGlobalCoin;
             if (myUser) {
-               fetch("https://api.miningfy.net/auth/signInWithId", {
+               fetch("http://api.miningfy.net/auth/signInWithId", {
                   method: "POST",
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ userId: myUser._id })

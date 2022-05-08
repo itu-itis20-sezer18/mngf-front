@@ -810,7 +810,7 @@
       }
 
       function generateQRforRef() {
-         fetch("https://api.miningfy.net/ref/getRefs", {
+         fetch("http://api.miningfy.net/ref/getRefs", {
                   method: "POST",
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ userId: userData._id })
@@ -838,7 +838,7 @@
    </script>
    <!-- Get coin price -->
    <script>
-       fetch(`https://api.miningfy.net/coin/getPrice`)
+       fetch(`http://api.miningfy.net/coin/getPrice`)
                      .then(datatwo => {
                         return datatwo.json();
                      })
@@ -854,7 +854,7 @@
       let userData = JSON.parse(localStorage.getItem("myUser"));
 
       if (userData) {
-               fetch("https://api.miningfy.net/auth/signInWithId", {
+               fetch("http://api.miningfy.net/auth/signInWithId", {
                   method: "POST",
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ userId: userData._id })
@@ -867,7 +867,7 @@
                         //   window.location.href="investment-plan"
                         return;
                      }
-                     fetch("https://api.miningfy.net/deposit/calculateEarnings", {
+                     fetch("http://api.miningfy.net/deposit/calculateEarnings", {
                   method: "POST",
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ userId: userData._id })
@@ -948,7 +948,7 @@
       source.addEventListener("input", coinAmountChange);
 
       function formWithdrawalHistoryTable() {
-         fetch("https://api.miningfy.net/withdrawal/getAll", {
+         fetch("http://api.miningfy.net/withdrawal/getAll", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ userId: userData._id }),
@@ -1067,7 +1067,7 @@
                wallet: document.getElementById("receive-wallet").value,
             };
 
-            fetch("https://api.miningfy.net/withdrawal/create", {
+            fetch("http://api.miningfy.net/withdrawal/create", {
                method: "POST",
                headers: { "Content-Type": "application/json" },
                body: JSON.stringify(data),
