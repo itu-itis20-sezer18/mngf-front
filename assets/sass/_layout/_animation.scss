@@ -1,0 +1,104 @@
+/*All Animations Starts Here*/
+@keyframes  coin {
+    0% {
+        @include transform(translate(190px, -90px)rotate(2000deg));
+        opacity: .4;
+    }
+    33% {
+        @include transform(translate(90px, -90px)rotate(1500deg));
+        opacity: .8;
+    }
+    66% {
+        @include transform(translate(10px, -50px)rotate(1000deg));
+        opacity: 1;
+    }
+    100% {
+        @include transform(translate(0, 0)rotate(500deg));
+        opacity: .1;
+    }
+}
+@-webkit-keyframes  coin {
+    0% {
+        @include transform(translate(190px, -90px)rotate(2000deg));
+        opacity: .4;
+    }
+    33% {
+        @include transform(translate(90px, -90px)rotate(1500deg));
+        opacity: .8;
+    }
+    66% {
+        @include transform(translate(10px, -50px)rotate(1000deg));
+        opacity: 1;
+    }
+    100% {
+        @include transform(translate(0, 0)rotate(500deg));
+        opacity: .1;
+    }
+}
+@-o-keyframes  coin {
+    0% {
+        @include transform(translate(190px, -90px)rotate(2000deg));
+        opacity: .4;
+    }
+    33% {
+        @include transform(translate(90px, -90px)rotate(1500deg));
+        opacity: .8;
+    }
+    66% {
+        @include transform(translate(10px, -50px)rotate(1000deg));
+        opacity: 1;
+    }
+    100% {
+        @include transform(translate(0, 0)rotate(500deg));
+        opacity: .1;
+    }
+}
+@keyframes rotate2 {
+    0% {
+        @include transform(rotate(360deg));
+    }
+    100% {
+        @include transform(rotate(3600deg));
+    }
+}
+@-webkit-keyframes rotate2 {
+    0% {
+        @include transform(rotate(360deg));
+    }
+    100% {
+        @include transform(rotate(3600deg));
+    }
+}
+@-o-keyframes rotate2 {
+    0% {
+        @include transform(rotate(360deg));
+    }
+    100% {
+        @include transform(rotate(3600deg));
+    }
+}
+@keyframes jump {
+    0%, 100% {
+        @include transform(translateY(-10px));
+    }
+    50% {
+        @include transform(translateY(10px));
+    }
+}
+@-webkit-keyframes jump {
+    0%, 100% {
+        @include transform(translateY(-10px));
+    }
+    50% {
+        @include transform(translateY(10px));
+    }
+}
+@-moz-keyframes jump {
+    0%, 100% {
+        @include transform(translateY(-10px));
+    }
+    50% {
+        @include transform(translateY(10px));
+    }
+}
+/*All Animation Ends Here*/

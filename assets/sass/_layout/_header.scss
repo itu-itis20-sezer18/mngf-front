@@ -1,0 +1,347 @@
+/*Header Section Starts Here*/
+.header-top {
+    padding: 11px 0;
+    border-bottom: 1px solid #f2f2f2;
+    z-index: 99;
+    position: relative;
+    ul {
+        @extend %flex;
+        li {
+            .nice-select {
+                background-color: transparent;
+            }
+            @extend %flex;
+            align-items: center;
+            font-size: 14px;
+            color: $body-color;
+            padding: 0;
+            i {
+                margin-right: 7px;
+            }
+            a {
+                color: $body-color;
+            }
+            .select-bar {
+                padding: 0;
+                padding-right: 15px;
+                border: none;
+                height: 28px;
+                .current {
+                    line-height: 28px;
+                    display: block;
+                }
+                &::after {
+                    right: 0;
+                }
+                .list {
+                    right: 0;
+                    left: auto;
+                    .option {
+                        line-height: 30px;
+                        min-height: 30px;
+                    }
+                }
+            }
+        }
+        &.support-area {
+            li {
+                margin-right: 10px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        &.cart-area {
+            justify-content: flex-end;
+            li {
+                margin-left: 15px;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+            .list {
+                .option {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.header-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    .logo-2 {
+        display: none;
+    }
+    &.plan-header {
+        .header-top {
+            border-color: #5169e8;
+        }
+        .header-top ul li .select-bar::after {
+            border-color: $white-color;
+        }
+        .header-top ul li i,
+        .header-top ul li .select-bar .current,
+        .header-top ul li a {
+            color: $white-color
+        }
+        @include breakpoint(lg) {
+            .header-bottom .header-area .menu li >a {
+                color: $white-color;
+            }
+        }
+        .logo {
+            display: none;
+        }
+        .logo-2 {
+            display: block;
+        }
+        .header-bar {
+            span {
+                background: $white-color;
+            }
+        }
+    }
+}
+
+
+
+.header-bottom {
+    z-index: 99;
+    width: 100%;
+    .header-area {
+        @extend %flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 5px 0;
+        @include breakpoint(max-lg) {
+            padding: 15px 0;
+        }
+        .logo {
+            width: 160px;
+            a {
+                display: block;
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        .menu {
+            @extend %flex;
+            align-items: center;
+            @include breakpoint(lg) {
+                li {
+                    padding: 10px;
+                    a {
+                        padding: 10px;
+                        font-size: 14px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        color: $title-color;
+                        &.custom-button {
+                            padding: 0 35px;
+                            color: $white-color;
+                        }
+                    }
+                    .submenu {
+                        position: absolute;
+                        background: $white-color;
+                        top: 100%;
+                        left: 0;
+                        z-index: 99;
+                        width: 200px;
+                        @include transform(translateY(10px));
+                        @include transition($transition);
+                        visibility: hidden;
+                        opacity: 0;
+                        li {
+                            padding: 0;
+                            a {
+                                padding: 5px 10px;
+                                display: flex;
+                                align-items: center;
+                                border-top: 1px solid rgba($color: $title-color, $alpha: .4);
+                                font-weight: 500;
+                                text-transform: capitalize;
+                                justify-content: space-between;
+                                &:hover {
+                                    background: $theme-color;
+                                    color: $white-color;
+                                    border-color: $theme-color;
+                                }
+                            }
+                            &:last-child {
+                                a {
+                                    border-bottom: 1px solid rgba($color: $title-color, $alpha: .4);
+                                }
+                            }
+                            .submenu {
+                                top: 0;
+                                left: 100%;
+                            }
+                        }
+                    }
+                    &:hover {
+                        >.submenu {
+                            @include transform(translateY(0));
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+                @include breakpoint(max-xl) {
+                    li {
+                        padding: 10px 5px;
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                @include breakpoint(max-lg) {
+                    li {
+                        width: 100%;
+                        a {
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+            @include breakpoint(max-lg) {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                max-height: calc(100vh - 130px);
+                z-index: 9;
+                background-color: $white-color;
+                overflow-y: auto;
+                box-shadow: 0 0 20px rgba(0, 0, 0, .08);
+                padding: 30px 0;
+                @include transition($transition);
+                @include transform(scaleY(0));
+                transform-origin: top;
+                li {
+                    width: 100%;
+                    padding: 0;
+                    a {
+                        padding: 5px 10px;
+                        display: flex;
+                        align-items: center;
+                        border-top: 1px solid rgba($color: $title-color, $alpha: .4);
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        justify-content: space-between;
+                        color: $title-color;
+                        &:hover {
+                            background: $theme-color;
+                            color: $white-color;
+                            border-color: $theme-color;
+                        }
+                        &.custom-button {
+                            display: inline-flex;
+                            padding: 0 50px;
+                            color: $white-color;
+                            border-top: none;
+                        }
+                    }
+                    .submenu {
+                        display: none;
+                        padding-left: 20px;
+                        li {
+                            a {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    @include transform(scaleY(1));
+                }
+            }
+        }
+    }
+    &.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        animation: fadeInDown;
+        -webkit-animation: fadeInDown;
+        -moz-animation: fadeInDown;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        background: $white-color;
+        border-bottom: 1px solid rgba($color: $title-color, $alpha: .4);
+    }
+}
+
+
+
+.menu-item-has-children {
+    position: relative;
+    >a {
+        @extend %flex;
+        align-items: center;
+        &::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            content: "\f107";
+            margin-left: 5px;
+        }
+    }
+}
+
+
+
+/*Header Bar Starts*/
+.header-bar {
+    position: relative;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    margin-left: auto;
+    span {
+        position: absolute;
+        display: inline-block;
+        height: 3px;
+        width: 100%;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+        background-color: $title-color;
+        left: 0;
+        &:first-child {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 52%;
+            transform: translateY(-65%);
+        }
+        &:last-child {
+            bottom: 0;
+        }
+    }
+    &.active span {
+        &:first-child {
+            -webkit-transform: rotate(45deg) translate(3px, 9px);
+            -ms-transform: rotate(45deg) translate(3px, 9px);
+            transform: rotate(45deg) translate(3px, 9px);
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:last-child {
+            -webkit-transform: rotate(-45deg) translate(3px, -9px);
+            -ms-transform: rotate(-45deg) translate(3px, -9px);
+            transform: rotate(-45deg) translate(3px, -9px);
+        }
+    }
+}

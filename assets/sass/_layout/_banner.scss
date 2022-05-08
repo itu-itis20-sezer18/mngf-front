@@ -1,0 +1,226 @@
+/*Banner Section Starts Here*/
+.banner-section {
+    padding: 310px 0 364px;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint(max-lg) {
+        padding: 250px 0 180px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 312px 0 180px;
+    }
+}
+.banner-content {
+    .title {
+        font-size: 70px;
+        line-height: 80px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: -5px;
+        margin-bottom: 10px;
+        span {
+            font-weight: 700;
+        }
+        @include breakpoint(max-lg) {
+            letter-spacing: 0;
+            margin-bottom: 20px;
+        }
+        @include breakpoint(max-md) {
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+    p {
+        margin: 0;
+        font-size: 26px;
+        line-height: 36px;
+        margin-bottom: 32px;
+    }
+    .button-group {
+        @extend %flex;
+        align-items: center;
+        .custom-button {
+            margin-right: 50px;
+            @include breakpoint(sm) {
+                margin-right: 65px;
+            }
+        }
+    }
+    @include breakpoint(max-sm) {
+        .title {
+            font-size: 38px;
+            line-height: 48px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .button-group {
+            margin: -10px;
+            a {
+                margin: 10px !important;
+                &.custom-button {
+                    font-size: 14px;
+                }
+                &::after, &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.banner-bg { 
+    @extend %center; 
+    width: 100%;
+    height: 100%;
+    div[class*="chart"] {
+        position: absolute;
+    }
+    .chart-1 {
+        top: 350px;
+        right: calc(50% - 50px);
+        @include breakpoint(max-xl) {
+            display: none;
+        }
+    }
+    .chart-2 {    
+        top: 300px;
+        right: calc(50% + 206px);
+    
+    }
+    .chart-3 {
+        top: 290px;
+        right: calc(50% + 688px);    
+    }
+    .chart-4 {
+        top: 250px;
+        right: calc(50% + 150px);
+    }
+}
+
+.animation-area {
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    bottom: 0;
+    left: 0;
+    .plot {
+        position: absolute;
+        bottom: -21px;
+        right: 193px;
+    }
+    .element-1 {
+        bottom: 111px;
+        right: 145px;
+        img {
+            animation: light 6s linear infinite;
+            -webkit-animation: light 6s linear infinite;
+            -moz-animation: light 6s linear infinite;
+        }
+    }
+    .element-2 {
+        bottom: 235px;
+        right: 323px;
+        img {
+            animation: jump 6s alternate infinite;
+            -webkit-animation: jump 6s alternate infinite;
+            -moz-animation: jump 6s alternate infinite;
+            animation-delay: 4s;
+            -webkit-animation-delay: 4s;
+            -moz-animation-delay: 4s;
+        }
+    }
+    .element-3 {
+        bottom: 188px;
+        right: 323px;
+        img {
+            animation: jump 6s alternate infinite;
+            -webkit-animation: jump 6s alternate infinite;
+            -moz-animation: jump 6s alternate infinite;
+            animation-delay: 3.5s;
+            -webkit-animation-delay: 3.5s;
+            -moz-animation-delay: 3.5s;
+        }
+    }
+    .element-4 {
+        bottom: 255px;
+        right: 260px;
+        img {
+            animation: jump 6s alternate infinite;
+            -webkit-animation: jump 6s alternate infinite;
+            -moz-animation: jump 6s alternate infinite;
+            animation-delay: 3s;
+            -webkit-animation-delay: 3s;
+            -moz-animation-delay: 3s;
+        }
+    }
+    .element-5 {
+        bottom: 82px;
+        right: 235px;
+        img {
+            animation: jump 6s alternate infinite;
+            -webkit-animation: jump 6s alternate infinite;
+            -moz-animation: jump 6s alternate infinite;
+            animation-delay: 2.5s;
+            -webkit-animation-delay: 2.5s;
+            -moz-animation-delay: 2.5s;
+        }
+    }
+    .element-6 {
+        bottom: 69px;
+        right: 458px;
+        img {
+            animation: jump 6s alternate infinite;
+            -webkit-animation: jump 6s alternate infinite;
+            -moz-animation: jump 6s alternate infinite;
+            animation-delay: 2s;
+            -webkit-animation-delay: 2s;
+            -moz-animation-delay: 2s;
+        }
+    }
+    .element-7 {
+        bottom: 150px;
+        right: 230px;
+        img {
+            animation: jump 6s alternate infinite;
+            -webkit-animation: jump 6s alternate infinite;
+            -moz-animation: jump 6s alternate infinite;
+            animation-delay: .5s;
+            -webkit-animation-delay: .5s;
+            -moz-animation-delay: .5s;
+        }
+    }
+    .element-8 {
+        bottom: 64px;
+        right: 357px;
+        img {
+            animation: jump 6s alternate infinite;
+            -webkit-animation: jump 6s alternate infinite;
+            -moz-animation: jump 6s alternate infinite;
+            animation-delay: 1s;
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+        }
+    }
+    .element-9 {
+        bottom: 210px;
+        right: 455px;
+        img {
+            animation: jump 6s alternate infinite;
+            -webkit-animation: jump 6s alternate infinite;
+            -moz-animation: jump 6s alternate infinite;
+            animation-delay: 1.5s;
+            -webkit-animation-delay: 1.5s;
+            -moz-animation-delay: 1.5s;
+        }
+    }
+    div[class*="element"] {
+        position: absolute;
+        @include transition(all ease .7s);
+        &.animated {
+            bottom: 0;
+            @include transform(translateY(100%));
+        }
+    }
+}

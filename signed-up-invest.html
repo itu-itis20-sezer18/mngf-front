@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Hyipland - HYIP Investment HTML Template</title>
+   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./assets/css/all.min.css">
+   <link rel="stylesheet" href="./assets/css/animate.css">
+   <link rel="stylesheet" href="./assets/css/odometer.css">
+   <link rel="stylesheet" href="./assets/css/nice-select.css">
+   <link rel="stylesheet" href="./assets/css/owl.min.css">
+   <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+   <link rel="stylesheet" href="./assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="./assets/css/flaticon.css">
+   <link rel="stylesheet" href="./assets/css/main.css">
+   
+   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+   <div class="main--body">
+      <!--========== Preloader ==========-->
+      <div class="loader">
+         <div class="loader-inner">
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+         </div>
+      </div>
+      <a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+      <div class="overlay"></div>
+      <header class="header-section ">
+         <!-- <div class="header-top no-user">
+             <div class="container">
+                 <div class="row align-items-center">
+                     <div class="col-6">
+
+                     </div>
+                     <div class="col-6">
+                         <ul class="cart-area ">
+
+                             <li>
+                                 <a href="sign-in.html">Sign In</a>
+                             </li>
+                             <li>
+                                 <a href="sign-up.html">Sign Up</a>
+                             </li>
+                         </ul>
+
+                     </div>
+                 </div>
+             </div>
+         </div> -->
+         <div class="header-top user" style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+            <div class="container d-flex coin-price-div" style="margin-left: 1%">
+               <div class="d-flex">
+                  <div class="coin-label">MNGF COIN</div>
+                  <div class="coin-label-two">MNGF</div>
+                  <div class="coin-price-label" id="coin-price-lb">0.5 $</div>
+               </div>
+            </div>
+             <div class="container mobile-side" >
+                 <div class="mobile-header d-flex justify-content-end d-lg-none align-items-center">
+                     <div class="author">
+                         <i class="fa fa-user" style="color: white;" aria-hidden="true"></i>
+                     </div>
+                 </div>
+                 <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-end align-items-center">
+
+                     <div
+                         class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
+                         <ul class="menu" style="margin-right: 20px;">
+                             <li class="menu-item-outer">
+                                 <a href="dashboard.html" class="menu-item"
+                                     style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Yatırımlarım</a>
+                             </li>
+                         </ul>
+                         <ul class="dashboard-right-menus">
+                             <li>
+                                 <a href="#0" class="author">
+                                     <div class="thumb">
+                                         <i class="fa fa-user" style="color: white;" aria-hidden="true"></i>
+                                         <span class="checked">
+                                             <i class="flaticon-checked" style="color: white;"></i>
+                                         </span>
+                                     </div>
+                                     <div class="content">
+                                         <h6 id="main-user-name-m" class="title">John Doe</h6>
+                                         <!-- <span class="country">Indonesia</span> -->
+                                     </div>
+                                 </a>
+                                 <div class="notification-area">
+                                     <div class="author-header">
+                                         <div class="thumb">
+                                             <i class="fa fa-user" aria-hidden="true" style="color: #e73351;font-size: 60px;"></i>
+                                         </div>
+                                         <h6 id="nav-user-name-m" class="title">John Doe</h6>
+                                         <a id="nav-email-m" href="#mailto:johndoe@gmail.com">Johndoe@gmail.com</a>
+                                     </div>
+                                     <div class="author-body">
+                                         <ul>
+                                             <li>
+                                                 <a href="/profile.html"><i class="far fa-user"></i>Profile</a>
+                                             </li>
+                                             <li>
+                                                 <a onclick="Logout()"><i class="flaticon-right-arrow"></i>Logout</a>
+
+                                             </li>
+                                         </ul>
+                                     </div>
+                                 </div>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <div class="container desktop-side" >
+                 <div class="mobile-header d-flex justify-content-center d-lg-none align-items-center">
+                     <div class="author">
+                         <i class="fa fa-user" style="color: white;" aria-hidden="true"></i>
+                     </div>
+                 </div>
+                 <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-end align-items-center">
+
+                     <div
+                         class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
+                         <ul class="menu" style="margin-right: 20px;">
+                             <li>
+                                 <a href="dashboard.html"
+                                     style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Yatırımlarım</a>
+                             </li>
+                         </ul>
+                         <ul class="dashboard-right-menus">
+                             <li>
+                                 <a href="#0" class="author">
+                                     <div class="thumb">
+                                         <i class="fa fa-user" style="color: white;" aria-hidden="true"></i>
+                                         <span class="checked">
+                                             <i class="flaticon-checked" style="color: white;"></i>
+                                         </span>
+                                     </div>
+                                     <div class="content">
+                                         <h6 id="main-user-name" class="title">John Doe</h6>
+                                         <!-- <span class="country">Indonesia</span> -->
+                                     </div>
+                                 </a>
+                                 <div class="notification-area">
+                                     <div class="author-header">
+                                         <div class="thumb">
+                                             <i class="fa fa-user" aria-hidden="true" style="color: #e73351;font-size: 60px;"></i>
+                                         </div>
+                                         <h6 id="nav-user-name" class="title">John Doe</h6>
+                                         <a id="nav-email" href="#mailto:johndoe@gmail.com">Johndoe@gmail.com</a>
+                                     </div>
+                                     <div class="author-body">
+                                         <ul>
+                                             <li>
+                                                 <a href="/profile.html"><i class="far fa-user"></i>Profile</a>
+                                             </li>
+                                             <li>
+                                                 <a onclick="Logout()"><i class="flaticon-right-arrow"></i>Logout</a>
+
+                                             </li>
+                                         </ul>
+                                     </div>
+                                 </div>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!-- <div class="header-bottom">
+             <div class="container">
+                 <div class="header-area">
+                     <div class="logo">
+                         <a href="index.html">
+                             <img src="./assets/images/logo/logo.png" alt="logo">
+                         </a>
+                     </div>
+                     <ul class="menu">
+                         <li>
+                             <a href="index.html">Home</a>
+                         </li>
+                         <li>
+                             <a href="dashboard.html">Dashboard</a>
+                         </li>
+                         <li>
+                             <a href="about.html">About</a>
+                         </li>
+                         <li>
+                             <a href="affiliate.html">Affiliate</a>
+                         </li>
+                         <li>
+                             <a href="investment-plan.html">Plan</a>
+                         </li>
+                         <li>
+                             <a href="faq.html">Faqs</a>
+                         </li>
+                         <li>
+                             <a href="contact.html">Contact</a>
+                         </li>
+                         <li class="pr-0">
+                             <a href="contact.html" class="custom-button btn-join-us">Join Us</a>
+                         </li>
+                     </ul>
+                     <div class="header-bar d-lg-none">
+                         <span></span>
+                         <span></span>
+                         <span></span>
+                     </div>
+                 </div>
+             </div>
+         </div> -->
+     </header>
+      <!--========== Preloader ==========-->
+      <div class="dasboard-body">
+         <div class="dashboard-hero">
+            <!-- <header class="header-section "> -->
+               <!-- <div class="header-top no-user">
+                   <div class="container">
+                       <div class="row align-items-center">
+                           <div class="col-6">
+   
+                           </div>
+                           <div class="col-6">
+                               <ul class="cart-area ">
+   
+                                   <li>
+                                       <a href="sign-in.html">Sign In</a>
+                                   </li>
+                                   <li>
+                                       <a href="sign-up.html">Sign Up</a>
+                                   </li>
+                               </ul>
+   
+                           </div>
+                       </div>
+                   </div>
+               </div> -->
+               <!-- <div class="header-bottom">
+                   <div class="container">
+                       <div class="header-area">
+                           <div class="logo">
+                               <a href="index.html">
+                                   <img src="./assets/images/logo/logo.png" alt="logo">
+                               </a>
+                           </div>
+                           <ul class="menu">
+                               <li>
+                                   <a href="index.html">Home</a>
+                               </li>
+                               <li>
+                                   <a href="dashboard.html">Dashboard</a>
+                               </li>
+                               <li>
+                                   <a href="about.html">About</a>
+                               </li>
+                               <li>
+                                   <a href="affiliate.html">Affiliate</a>
+                               </li>
+                               <li>
+                                   <a href="investment-plan.html">Plan</a>
+                               </li>
+                               <li>
+                                   <a href="faq.html">Faqs</a>
+                               </li>
+                               <li>
+                                   <a href="contact.html">Contact</a>
+                               </li>
+                               <li class="pr-0">
+                                   <a href="contact.html" class="custom-button btn-join-us">Join Us</a>
+                               </li>
+                           </ul>
+                           <div class="header-bar d-lg-none">
+                               <span></span>
+                               <span></span>
+                               <span></span>
+                           </div>
+                       </div>
+                   </div>
+               </div> -->
+           <!-- </header> -->
+            <!--=======Header-Section Ends Here=======-->
+            <!--=======Banner-Section Starts Here=======-->
+            <!--=======Banner-Section Ends Here=======-->
+            <!--=======Proit-Section Starts Here=======-->
+            <section class="profit-section invest padding-top padding-bottom">
+               <!-- <div class="container-fluid p-0">
+               <div class="profit-bg bg_img" data-background="./assets/images/profit/profit-bg.png">
+                   <div class="animation-group">
+                       <div class="platform">
+                           <img src="./assets/images/profit/platform.png" alt="profit">
+                       </div>
+                       <div class="light">
+                           <img src="./assets/images/profit/light.png" alt="profit">
+                       </div>
+                       <div class="coin-1 wow fadeOutDown" data-wow-delay="1s">
+                           <img src="./assets/images/profit/coin6.png" alt="profit">
+                       </div>
+                       <div class="coin-2 wow fadeOutDown" data-wow-delay="1s">
+                           <img src="./assets/images/profit/coin2.png" alt="profit">
+                       </div>
+                       <div class="coin-3 wow fadeOutDown" data-wow-delay="1s">
+                           <img src="./assets/images/profit/coin3.png" alt="profit">
+                       </div>
+                       <div class="coin-4 wow fadeOutDown" data-wow-delay="1s">
+                           <img src="./assets/images/profit/coin4.png" alt="profit">
+                       </div>
+                       <div class="coin-5 wow fadeOutDown" data-wow-delay="1s">
+                           <img src="./assets/images/profit/coin5.png" alt="profit">
+                       </div>
+                       <div class="coin-6 wow fadeOutDown" data-wow-delay="1s">
+                           <img src="./assets/images/profit/coin1.png" alt="profit">
+                       </div>
+                   </div>
+               </div>
+               </div> -->
+               <div class="container">
+                  <div class="calculate-wrapper tab">
+                     <div class="calculate--area">
+                        <div class="calculate-area">
+                           <div class="calculate-item">
+                              <h5 class="title" style="margin-bottom: 20px;text-transform: none;" data-serial="01">
+                                 Seçili Plan</h5>
+                              <select style="text-align: center;" id="select-plan">
+                                 <option value="30-days" style="text-align: left;">%5 Vade - 30 Gün</option>
+                                 <option value="60-days" style="text-align: left;">%10 Vade - 60 Gün</option>
+                                 <option value="90-days" style="text-align: left;">%20 Vade - 90 Gün</option>
+                              </select>
+                           </div>
+                           <div class="calculate-item" style="width: fit-content;">
+                              <h5 class="title" data-serial="02" style="margin-bottom: 20px;text-transform: none;">Coin
+                                 Seçiniz</h5>
+                              <ul class="tab-menu">
+                                 <li onclick="selectedCoin('BTC')" class="active">btc</li>
+                                 <li onclick="selectedCoin('USDT')"
+                                    style="min-width: 60px;width: fit-content;padding-left: 5px;padding-right: 5px;">
+                                    Tether(USDT)</li>
+                                 <li onclick="selectedCoin('ETH')">eth</li>
+                                 <li onclick="selectedCoin('LTC')">ltc</li>
+                              </ul>
+                           </div>
+                           <div class="calculate-item" style="width: fit-content">
+                              <h5 class="title" style="margin-bottom: 20px;text-transform: none;">Toplam Bakiyeniz</h5>
+                              <input type="text" class="form-control fw-bold amount text-warning" name="amount"
+                                 value="0" id="coin-balance" readonly>
+                           </div>
+                        </div>
+                        <div class="calculate-area" style="display: flex;flex-direction: row;">
+                           <div class="calculate-item">
+                              <h5 class="title" data-serial="03" style="margin-bottom: 20px;text-transform: none;">
+                                 Yatıracağınız miktar</h5>
+                              <div style="display: flex;width: 70%;">
+                                 <input type="text" class="form-control fw-bold amount text-warning"
+                                    style="border-top-right-radius: 0;border-bottom-right-radius: 0;width: 200px;"
+                                    name="amount" id="coin-amount"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                 <span class="input-group-text"
+                                    style="border-top-left-radius: 0;border-bottom-left-radius: 0;">
+                                    <a onclick="maxCoinValue()" class="text-dark fw-bold maximumCoin"
+                                       style="cursor: pointer;">MAX</a>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="calculate-item" style="width: fit-content;">
+                              <h5 class="title" style="margin-bottom: 20px;">MNGF Coin Karşılığı</h5>
+                              <input type="text" class="form-control fw-bold amount text-warning" name="amount"
+                                 value="0" id="mngf-coin-corresponding" readonly>
+                           </div>
+                           <div class="calculate-item" style="width: fit-content">
+                              <h5 class="title" style="margin-bottom: 20px;text-transform: none;">Dolar Karşılığı</h5>
+                              <input type="text" class="form-control fw-bold amount text-warning" name="amount"
+                                 value="0" id="usd-corresponding" readonly>
+                           </div>
+                          
+                        </div>
+                        <div>
+                           <div class="tab-item active">
+                              <div class="profit-calc">
+                                 <div class="item">
+                                    <span class="cate">Günlük Kazanç</span>
+                                    <h2 class="title cl-theme-1" id="daily-profit"></h2>
+                                 </div>
+                                 <div class="item">
+                                    <span class="cate">Toplam Kazanç</span>
+                                    <h2 class="title cl-theme" id="total-profit"></h2>
+                                 </div>
+                              </div>
+                              <div style="margin-top: 10px;display: flex;justify-content: center;">
+                                 <button type="button" class="btn btn-primary btn-sm fw-bold btn-block" style="border-radius: 0.25em;background: -webkit-linear-gradient(-103deg, #ef774c 0%, #ed684f 35%, #e84351 76%, #e73351 100%);width: 60%;
+                                 border-color: #f55c25;" onclick="preInvRequest()">Yatırıma Başlayın</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!--=======Offer-Section Ends Here=======-->
+            <!--=======Proit-Section Ends Here=======-->
+            <!--=======Feature-Section Starts Here=======-->
+            <section class="faq-section padding-top padding-bottom bg_img"
+               data-background="./assets/images/feature/feature-bg.png">
+               <div class="ball-group-1" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
+                  data-paroller-type="foreground" data-paroller-direction="horizontal">
+                  <img src="./assets/images/balls/ball-group5.png" alt="balls">
+               </div>
+               <div class="ball-group-2 rtl" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
+                  data-paroller-type="foreground" data-paroller-direction="horizontal">
+                  <img src="./assets/images/balls/ball-group6.png" alt="balls">
+               </div>
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-8 col-md-10">
+                        <div class="section-header">
+                           <span class="cate">You have questions</span>
+                           <h2 class="title">
+                              we have answers
+                           </h2>
+                           <p class="mw-100">
+                              Do not hesitate to send us an email if you can't find what you're looking for.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="faq-wrapper">
+                     <div class="faq-item">
+                        <div class="faq-title">
+                           <h5 class="title">What is the minimum percentage that an investor can earn on Hyipland?</h5>
+                           <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                           <p>
+                              Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus, dicta
+                              optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione, molestiae magnam.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="faq-item active open">
+                        <div class="faq-title">
+                           <h5 class="title">Can i invest using cryptocurrency?</h5>
+                           <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                           <p>
+                              Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus, dicta
+                              optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione, molestiae magnam.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="faq-item">
+                        <div class="faq-title">
+                           <h5 class="title">What are the minimum and maximum deposit amounts?</h5>
+                           <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                           <p>
+                              Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus, dicta
+                              optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione, molestiae magnam.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="faq-item">
+                        <div class="faq-title">
+                           <h5 class="title">How long will the money arrive in my account after the withdrawal process?
+                           </h5>
+                           <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                           <p>
+                              Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus, dicta
+                              optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione, molestiae magnam.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="faq-item">
+                        <div class="faq-title">
+                           <h5 class="title">What payment system can i use to withdraw?</h5>
+                           <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                           <p>
+                              Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus, dicta
+                              optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione, molestiae magnam.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!--=======Feature-Section Ends Here=======-->
+            <!-- ==========Footer-Section Starts Here========== -->
+            <footer class="footer-section">
+               <div class="newslater-section padding-bottom">
+                  <div class="container">
+                     <div class="newslater-area">
+                        <div class="newslater-content padding-bottom padding-top">
+                           <span class="cate">SUBSCRIBE TO hyipland</span>
+                           <h3 class="title">To Get Exclusive Benefits</h3>
+                           <form class="newslater-form">
+                              <input type="text" placeholder="Enter Your Email Here" required>
+                              <button type="submit">subscribe</button>
+                           </form>
+                        </div>
+                        <div class="newslater-thumb">
+                           <img src="./assets/images/footer/footer.png" alt="footer">
+                           <div class="coin-1">
+                              <img src="./assets/images/footer/Coin_01.png" alt="footer">
+                           </div>
+                           <div class="coin-2">
+                              <img src="./assets/images/footer/Coin_02.png" alt="footer">
+                           </div>
+                           <div class="coin-3">
+                              <img src="./assets/images/footer/Coin_03.png" alt="footer">
+                           </div>
+                           <div class="coin-4">
+                              <img src="./assets/images/footer/Coin_04.png" alt="footer">
+                           </div>
+                           <div class="coin-5">
+                              <img src="./assets/images/footer/Coin_05.png" alt="footer">
+                           </div>
+                           <div class="coin-6">
+                              <img src="./assets/images/footer/Coin_06.png" alt="footer">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="container">
+                  <div class="footer-top">
+                     <div class="logo">
+                        <a href="index.html">
+                           <img src="./assets/images/logo/footer-logo.png" alt="logo">
+                        </a>
+                     </div>
+                     <ul class="links">
+                        <li>
+                           <a href="#0">About</a>
+                        </li>
+                        <li>
+                           <a href="#0">Affiliates</a>
+                        </li>
+                        <li>
+                           <a href="#0">Plans</a>
+                        </li>
+                        <li>
+                           <a href="#0">FAQ</a>
+                        </li>
+                        <li>
+                           <a href="#0">Privacy Policy</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="footer-bottom">
+                     <div class="footer-bottom-area">
+                        <div class="left">
+                           <p>&copy; 2020 <a href="#0">Hyipland</a> | All right reserved</p>
+                        </div>
+                        <ul class="social-icons">
+                           <li>
+                              <a href="#0">
+                                 <i class="fab fa-facebook-f"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#0" class="active">
+                                 <i class="fab fa-twitter"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#0">
+                                 <i class="fab fa-pinterest-p"></i>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#0">
+                                 <i class="fab fa-instagram"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </footer>
+            <!-- ==========Footer-Section Ends Here========== -->
+         </div>
+         <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+         <script src="./assets/js/lib/modernizr-3.6.0.min.js"></script>
+         <script src="./assets/js/lib/plugins.js"></script>
+         <script src="./assets/js/lib/bootstrap.min.js"></script>
+         <script src="./assets/js/lib/magnific-popup.min.js"></script>
+         <script src="./assets/js/lib/jquery-ui.min.js"></script>
+         <script src="./assets/js/lib/wow.min.js"></script>
+         <script src="./assets/js/lib/odometer.min.js"></script>
+         <script src="./assets/js/lib/viewport.jquery.js"></script>
+         <script src="./assets/js/lib/nice-select.js"></script>
+         <script src="./assets/js/lib/owl.min.js"></script>
+         <script src="./assets/js/lib/paroller.js"></script>
+         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+         <script src="./assets/js/lib/lib_main.js"></script>
+         <script type="module" src="./assets/js/main.js"></script>
+         <script type="module" src="./assets/js/auth/sign.js"></script>
+         <script type="module" src="./assets/js/user/user.js"></script>
+
+
+         <script>
+            fetch(`http://localhost:4000/coin/getPrice`)
+                          .then(datatwo => {
+                             return datatwo.json();
+                          })
+                          .then(data => {
+                             console.log("data three: ",data)
+                             document.getElementById("coin-price-lb").innerHTML = (data[0].coinPrice) + " $"
+                          })
+        </script>
+
+         <script>
+            var myUser = JSON.parse(localStorage.getItem("myUser"));
+            var multiplier;
+            var days;
+            var finalAmount;
+            var source = document.getElementById("coin-amount");
+            var selectOption = document.getElementById("select-plan");
+            source.addEventListener('input', coinAmountChange);
+            document.querySelector('#select-plan').addEventListener('change', planChange);
+
+            function Logout() {
+    window.localStorage.removeItem("myUser");
+    window.location.href = "sign-in.html";
+  }
+            function preInvRequest(){
+               fetch(`http://localhost:4000/coin/getPrice`)
+                     .then(datatwo => {
+                        return datatwo.json();
+                     })
+                     .then(datathree => {
+                        console.log("data three: ",datathree)
+                        sendInvestmentRequest(datathree[0].coinPrice)
+                     })
+            }
+            function sendInvestmentRequest(mngfPrice) {
+               var investment = document.getElementById("coin-amount").value
+               var coinBalance;
+               switch (selectedGlobalCoin) {
+                  case 'BTC':
+                     coinBalance = myUser.balances.BTC
+                     break
+                  case 'USDT':
+                     coinBalance = myUser.balances.USDT
+                     break
+                  case 'ETH':
+                     coinBalance = myUser.balances.ETH
+                     break
+                  case 'LTC':
+                     coinBalance = myUser.balances.LTC
+                     break
+               }
+               if (document.getElementById("coin-amount").value == "") {
+                  Swal.fire({
+                     icon: "error",
+                     title: "Hata",
+                     text: "Lütfen yatırmak istediğiniz miktarı giriniz!",
+                  })
+                  return;
+               }
+
+
+               if (coinBalance < investment) {
+                  Swal.fire({
+                     icon: "error",
+                     title: "Hata",
+                     text: "Yatırmak istediğiniz miktar mevcut bakiyenizden büyük olamaz!",
+                  })
+                  return;
+               }
+               if (selectedGlobalCoin != "USDT") {
+                  fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${selectedGlobalCoin}USDT`)
+                     .then(data => {
+                        return data.json();
+                     })
+                     .then(data => {
+
+                        var dollarPrice = (document.getElementById("coin-amount").value * data.price)
+                        finalAmount = (dollarPrice * multiplier)
+                        finalAmount = (dollarPrice + finalAmount).toFixed(2)
+                        console.log("NOT USDT", finalAmount)
+                        switch (selectedGlobalCoin) {
+                           case 'BTC':
+                              if (dollarPrice < 100) {
+                                 Swal.fire({
+                                    icon: "error",
+                                    title: "Hata",
+                                    text: "Bitcoin ile minimum 100$ yatırım yapabilirsiniz.",
+                                 })
+                                 return
+                              }
+                              break;
+
+                           case 'ETH':
+                              if (dollarPrice < 50) {
+                                 Swal.fire({
+                                    icon: "error",
+                                    title: "Hata",
+                                    text: "Ethereum ile minimum 50$ yatırım yapabilirsiniz",
+                                 })
+                                 return
+                              }
+                              break;
+                           case 'LTC':
+                              if (dollarPrice < 10) {
+                                 Swal.fire({
+                                    icon: "error",
+                                    title: "Hata",
+                                    text: "Litecoin ile minimum 10$ yatırım yapabilirsiniz.",
+                                 })
+                                 return
+                              }
+                              break;
+                        }
+
+                        finalAmount = finalAmount/mngfPrice
+                        let dataaa = {
+                           userId: myUser._id,
+                           selectedCoin: selectedGlobalCoin,
+                           amount: investment,
+                           methodCurrency: "USD",
+                           plan: document.getElementById("select-plan").value,
+                           amountInMngf: document.getElementById("mngf-coin-corresponding").value.split(" ")[0],
+                           amountWillBeRecieved: document.getElementById("mngf-coin-corresponding").value.split(" ")[0] * (1+multiplier)
+                        }
+                        fetch("http://localhost:4000/deposit/create", {
+                           method: "POST",
+                           headers: { 'Content-Type': 'application/json' },
+                           body: JSON.stringify(dataaa)
+                        }).then(response => response.json()).then(dataa => {
+
+                           fetch("http://localhost:4000/auth/signInWithId", {
+                              method: "POST",   
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify({ userId: myUser._id })
+                           }).then(response => response.json())
+                              .then(data => {
+                                 localStorage.setItem("myUser", JSON.stringify(data));
+                              });
+
+                           Swal.fire({
+                              icon: "success",
+                              title: "Yatırımınız oluşturulmuştur..",
+                              text: "Yatırımlarım bölümünden kontrol edebilirsiniz.",
+                           }).then(function() {
+                              window.location.href = "dashboard.html";
+});;
+                        });
+
+                     });
+               }
+               else {
+                  finalAmount = document.getElementById("mngf-coin-corresponding").value;
+                  if (finalAmount < 10) {
+                     Swal.fire({
+                        icon: "error",
+                        title: "Yatırımınız oluşturulmuştur..",
+                        text: "Tether(USDT) ile minimum 10$ yatırım yapabilirsiniz.",
+                     })
+                     return;
+                  }
+                  else {
+                     finalAmount = finalAmount * (1 + multiplier)
+                     let dataaa = {
+                        userId: myUser._id,
+                        selectedCoin: selectedGlobalCoin,
+                        amount: investment,
+                        methodCurrency: "USD",
+                        plan: document.getElementById("select-plan").value,
+                        amountInMngf: document.getElementById("mngf-coin-corresponding").value.split(" ")[0],
+                        amountWillBeRecieved: document.getElementById("mngf-coin-corresponding").value.split(" ")[0] * (1+multiplier)
+                     }
+                     fetch("http://localhost:4000/deposit/create", {
+                        method: "POST",
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(dataaa)
+                     }).then(response => response.json()).then(dataa => {
+                        fetch("http://localhost:4000/auth/signInWithId", {
+                           method: "POST",
+                           headers: { 'Content-Type': 'application/json' },
+                           body: JSON.stringify({ userId: myUser._id })
+                        }).then(response => response.json())
+                           .then(data => {
+                              localStorage.setItem("myUser", JSON.stringify(data));
+                           });
+                        Swal.fire({
+                           icon: "success",
+                           title: "Yatırımınız oluşturulmuştur..",
+                           text: "Yatırımlarım bölümünden kontrol edebilirsiniz.",
+                        }).then(function() {
+                               window.location.href = "dashboard.html";
+});;
+                     });
+
+
+
+                  }
+               }
+            }
+
+
+            function planChange() {
+               document.getElementById("coin-amount").value = ""
+               document.getElementById("mngf-coin-corresponding").value = ""
+               document.getElementById("usd-corresponding").value = ""
+               var plan = document.getElementById("select-plan").value
+               console.log("Plan: " + plan)
+               switch (plan) {
+                  case '30-days':
+                     document.getElementById('select-plan').value = "30-days"
+                     multiplier = 0.05;
+                     days = 30
+                     break
+                  case '60-days':
+                     document.getElementById('select-plan').value = "60-days"
+                     multiplier = 0.10;
+                     days = 60
+
+                     break
+                  case '90-days':
+                     document.getElementById('select-plan').value = "90-days"
+                     multiplier = 0.20;
+                     days = 90
+                     break
+               }
+            }
+            function coinAmountChange() {
+               if (selectedGlobalCoin != "USDT") {
+                  fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${selectedGlobalCoin}USDT`)
+                     .then(data => {
+                        return data.json();
+                     })
+                     .then(data => {
+
+                        var dollarPrice = (document.getElementById("coin-amount").value * data.price).toFixed(2)
+                        document.getElementById("usd-corresponding").value = dollarPrice + " $"
+                        console.log(dollarPrice)
+                        finalAmount = (dollarPrice * multiplier).toFixed(2)
+                        fetch(`http://localhost:4000/coin/getPrice`)
+                     .then(datatwo => {
+                        return datatwo.json();
+                     })
+                     .then(datathree => {
+                        console.log("MNGF: ", datathree)
+                        mngfAmount = dollarPrice/(datathree[0].coinPrice)
+                        document.getElementById("mngf-coin-corresponding").value = mngfAmount.toFixed(2) + " MNGF"
+                        document.getElementById("daily-profit").innerHTML = ((mngfAmount*multiplier) / days).toFixed(2) + " MNGF"
+                        document.getElementById("total-profit").innerHTML = ((mngfAmount*multiplier)).toFixed(2) + " MNGF"
+
+                     });
+
+                     });
+               }
+               else {
+                  document.getElementById("usd-corresponding").value = document.getElementById("coin-amount").value + " $"
+                  var dollarPrice = document.getElementById("coin-amount").value
+                  fetch(`http://localhost:4000/coin/getPrice`)
+                     .then(datatwo => {
+                        return datatwo.json();
+                     })
+                     .then(datathree => {
+                        console.log("MNGF: ", datathree)
+                        mngfAmount = dollarPrice/(datathree[0].coinPrice)
+                        document.getElementById("mngf-coin-corresponding").value = mngfAmount.toFixed(2) + " MNGF"
+                        document.getElementById("daily-profit").innerHTML = ((mngfAmount*multiplier) / days).toFixed(2) + " MNGF"
+                        document.getElementById("total-profit").innerHTML = ((mngfAmount*multiplier)).toFixed(2) + " MNGF"
+
+                     });
+                  finalAmount = dollarPrice
+                 
+
+               }
+               //Set Balances
+
+            }
+            var selectedGlobalCoin;
+            if (myUser) {
+               fetch("http://localhost:4000/auth/signInWithId", {
+                  method: "POST",
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ userId: myUser._id })
+               }).then(response => response.json())
+                  .then(data => {
+                     console.log(data);
+                     myUser = data;
+                     selectedCoin('BTC');
+                     localStorage.setItem("myUser", JSON.stringify(data));
+                     //Set Balances
+                     if (data.length == 0) {
+                        //   window.location.href="investment-plan.html"   
+                        return;
+                     }
+                     document.getElementById("main-user-name").innerHTML = myUser.firstName;
+            document.getElementById("nav-user-name").innerHTML = myUser.firstName;
+            document.getElementById("nav-email").innerHTML = myUser.email;
+            document.getElementById("main-user-name-m").innerHTML = myUser.firstName;
+                  });
+            }
+            else {
+               window.location.href = "sign-in.html"
+            }
+
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const plan = urlParams.get('plan')
+            console.log(plan);
+            switch (plan) {
+               case '30days':
+                  document.getElementById('select-plan').value = "30-days"
+                  var multiplier = 0.05;
+                  days = 30
+                  break
+               case '60days':
+                  document.getElementById('select-plan').value = "60-days"
+                  var multiplier = 0.10;
+                  days = 60
+
+                  break
+               case '90days':
+                  document.getElementById('select-plan').value = "90-days"
+                  var multiplier = 0.20;
+                  days = 90
+                  break
+            }
+            function selectedCoin(coin) {
+               selectedGlobalCoin = coin
+               document.getElementById("coin-amount").value = ""
+               document.getElementById("usd-corresponding").value = ""
+               switch (coin) {
+                  case 'BTC':
+                     document.getElementById("coin-balance").value = myUser.balances.BTC.toFixed(2) + " BTC"
+                     break;
+                  case 'USDT':
+                     document.getElementById("coin-balance").value = myUser.balances.USDT.toFixed(2) + " USDT"
+
+                     break;
+                  case 'ETH':
+                     document.getElementById("coin-balance").value = myUser.balances.ETH.toFixed(2) + " ETH"
+
+
+                     break;
+                  case 'LTC':
+                     document.getElementById("coin-balance").value = myUser.balances.LTC.toFixed(2) + " LTC"
+
+                     break;
+                  default:
+                  // code block
+               }
+            }
+
+            function maxCoinValue() {
+               switch (selectedGlobalCoin) {
+                  case 'BTC':
+                     document.getElementById("coin-amount").value = myUser.balances.BTC.toFixed(2)
+                     break
+                  case 'USDT':
+                     document.getElementById("coin-amount").value = myUser.balances.USDT.toFixed(2)
+                     break
+                  case 'ETH':
+                     document.getElementById("coin-amount").value = myUser.balances.ETH.toFixed(2)
+                     break
+                  case 'LTC':
+                     document.getElementById("coin-amount").value = myUser.balances.LTC.toFixed(2)
+                     break
+               }
+               coinAmountChange();
+            }
+
+         </script>
+</body>
+
+</html>

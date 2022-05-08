@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Hyipland - HYIP Investment HTML Template</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/odometer.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="./assets/css/owl.min.css">
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="./assets/css/flaticon.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main--body">
+        <!--========== Preloader ==========-->
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+        <div class="overlay"></div>
+        <!--========== Preloader ==========-->
+
+
+        <!--=======Header-Section Starts Here=======-->
+
+        <header class="header-section ">
+            <!-- <div class="header-top no-user">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+
+                        </div>
+                        <div class="col-6">
+                            <ul class="cart-area ">
+
+                                <li>
+                                    <a href="sign-in.html">Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="sign-up.html">Sign Up</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="header-top user" style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                <div class="container d-flex coin-price-div" style="margin-left: 1%">
+                    <div class="d-flex">
+                       <div class="coin-label">MNGF COIN</div>
+                       <div class="coin-label-two">MNGF</div>
+                       <div class="coin-price-label" id="coin-price-lb">0.6$</div>
+                    </div>
+                 </div>
+                <div class="container mobile-side" >
+                    <div class="mobile-header d-flex justify-content-end d-lg-none align-items-center">
+                        <div class="author">
+                            <i class="fa fa-user" style="color: white;" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-end align-items-center">
+
+                        <div
+                            class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
+                            <ul class="menu" style="margin-right: 20px;">
+                                <li class="menu-item-outer">
+                                    <a href="dashboard.html" class="menu-item"
+                                        style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Yatırımlarım</a>
+                                </li>
+                            </ul>
+                            <ul class="dashboard-right-menus">
+                                <li>
+                                    <a href="#0" class="author">
+                                        <div class="thumb">
+                                            <i class="fa fa-user" style="color: white;" aria-hidden="true"></i>
+                                            <span class="checked">
+                                                <i class="flaticon-checked" style="color: white;"></i>
+                                            </span>
+                                        </div>
+                                        <div class="content">
+                                            <h6 id="main-user-name-m" class="title">John Doe</h6>
+                                            <!-- <span class="country">Indonesia</span> -->
+                                        </div>
+                                    </a>
+                                    <div class="notification-area">
+                                        <div class="author-header">
+                                            <div class="thumb">
+                                                <i class="fa fa-user" aria-hidden="true" style="color: #e73351;font-size: 60px;"></i>
+                                            </div>
+                                            <h6 id="nav-user-name-m" class="title">John Doe</h6>
+                                            <a id="nav-email-m">Johndoe@gmail.com</a>
+                                        </div>
+                                        <div class="author-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="/profile.html"><i class="far fa-user"></i>Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a onclick="Logout()"><i class="flaticon-right-arrow"></i>Logout</a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container desktop-side" >
+                    <div class="mobile-header d-flex justify-content-center d-lg-none align-items-center">
+                        <div class="author">
+                            <i class="fa fa-user" style="color: white;" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-end align-items-center">
+
+                        <div
+                            class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
+                            <ul class="menu" style="margin-right: 20px;">
+                                <li>
+                                    <a href="dashboard.html"
+                                        style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Yatırımlarım</a>
+                                </li>
+                            </ul>
+                            <ul class="dashboard-right-menus">
+                                <li>
+                                    <a href="#0" class="author">
+                                        <div class="thumb">
+                                            <i class="fa fa-user" style="color: white;" aria-hidden="true"></i>
+                                            <span class="checked">
+                                                <i class="flaticon-checked" style="color: white;"></i>
+                                            </span>
+                                        </div>
+                                        <div class="content">
+                                            <h6 id="main-user-name" class="title">John Doe</h6>
+                                            <!-- <span class="country">Indonesia</span> -->
+                                        </div>
+                                    </a>
+                                    <div class="notification-area">
+                                        <div class="author-header">
+                                            <div class="thumb">
+                                                <i class="fa fa-user" aria-hidden="true" style="color: #e73351;font-size: 60px;"></i>
+                                            </div>
+                                            <h6 id="nav-user-name" class="title">John Doe</h6>
+                                            <a id="nav-email" href="#mailto:johndoe@gmail.com">Johndoe@gmail.com</a>
+                                        </div>
+                                        <div class="author-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="/profile.html"><i class="far fa-user"></i>Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a onclick="Logout()"><i class="flaticon-right-arrow"></i>Logout</a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="header-bottom">
+                <div class="container">
+                    <div class="header-area">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="./assets/images/logo/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <ul class="menu">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="dashboard.html">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="affiliate.html">Affiliate</a>
+                            </li>
+                            <li>
+                                <a href="investment-plan.html">Plan</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">Faqs</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                            <li class="pr-0">
+                                <a href="contact.html" class="custom-button btn-join-us">Join Us</a>
+                            </li>
+                        </ul>
+                        <div class="header-bar d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </header>
+        <!--=======Header-Section Ends Here=======-->
+
+
+        <!--=======Banner-Section Starts Here=======-->
+        <section class="hero" style="margin-top: 0px;">
+            <div class="hero__img">
+                <img src="./assets/images/about/hero-bg2.jpg" alt="">
+            </div>
+            <div class="hero__text">
+                <h1 class="title" style="color: white;">Bir Plan Seçiniz</h1>
+            </div>
+            <div class="hero__shape">
+                <img class="wow slideInUp" src="./assets/images/about/hero-shape1.png" alt="about"
+                    data-wow-duration="1s">
+            </div>
+        </section>
+
+        <!--=======Banner-Section Ends Here=======-->
+
+
+        <!--=======Offer-Section Stars Here=======-->
+        <section class="offer-section padding-top padding-bottom">
+            <div class="ball-group-1" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
+                data-paroller-type="foreground" data-paroller-direction="horizontal">
+                <img src="./assets/images/balls/ball-group1.png" alt="balls">
+            </div>
+            <div class="ball-group-2" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
+                data-paroller-type="foreground" data-paroller-direction="horizontal">
+                <img src="./assets/images/balls/ball-group2.png" alt="balls">
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <div class="section-header">
+                            <span class="cate">INVESTMENT OFFER</span>
+                            <h2 class="title">OUR INVESTMENT PLANS</h2>
+                            <p>
+                                Hyipland provides a straightforward and transparent mechanism to attract investments and
+                                make more profits.
+                            </p>
+                        </div>
+                    </div>
+                </div><br>
+                <section class="plan-choose">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="plan-choose__item">
+                                    <div class="plan-choose__shape">
+                                        <img src="./assets/images/grain.svg" alt="">
+                                        <div class="plan-choose__img">
+                                            <img src="./assets/images/normal.png" alt="">
+                                        </div>
+                                    </div>
+                                    <span class="plan-choose__corner-title">Standart Paket</span>
+
+                                    <div class="plan-choose__percentage">
+                                        <h2 class="clr-00c3ff">%5</h2> <br>
+                                        <p>Vade Sonu Kazanç</p>
+
+                                    </div>
+                                    <div class="plan-choose__hr"></div>
+
+                                    <div class="plan-choose__text">
+                                        <p> Vade Süresi: 30 Gün</p>
+                                        <p> Minimum Yatırım: 200$-500$</p>
+                                    </div>
+                                    <a class="btn-fast-start" href="signed-up-invest.html?plan=30days" style="">Hemen
+                                        Başlayın <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="plan-choose__item">
+                                    <div class="plan-choose__shape">
+                                        <img src="./assets/images/grain.svg" alt="">
+
+                                        <div class="plan-choose__img">
+                                            <img src="./assets/images/rare.png" alt="">
+                                        </div>
+                                    </div>
+                                    <span class="plan-choose__corner-title bg-5432f6">Avantajlı Paket</span>
+
+                                    <div class="plan-choose__percentage">
+                                        <h2 class="clr-5432f6">%15</h2><br>
+                                        <p>Vade Sonu Kazanç</p>
+                                    </div>
+                                    <div class="plan-choose__hr"></div>
+
+                                    <div class="plan-choose__text">
+                                        <p> Vade Süresi: 60 Gün</p>
+                                        <p> Minimum Yatırım: 500$-2000$</p>
+                                    </div>
+                                    <a class="btn-fast-start bg-5432f6" href="signed-up-invest.html?plan=60days">Hemen
+                                        Başlayın <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="plan-choose__item">
+                                    <div class="plan-choose__shape">
+                                        <img src="./assets/images/grain.svg" alt="">
+                                        <div class="plan-choose__img">
+                                            <img src="./assets/images/legendary.png" alt="">
+                                        </div>
+                                    </div>
+                                    <span class="plan-choose__corner-title bg-fe4c1c">Altın Paket</span>
+
+                                    <div class="plan-choose__percentage">
+                                        <h2 class="clr-00c3ff" style="color: #fe4c1c!important">%30</h2><br>
+                                        <p>Vade Sonu Kazanç</p>
+                                    </div>
+                                    <div class="plan-choose__hr"></div>
+                                    <div class="plan-choose__text">
+                                        <p>Vade Süresi: 90 Gün</p>
+                                        <p>Minimum Yatırım: +2000$</p>
+                                    </div>
+                                    <a class="btn-fast-start bg-fe4c1c" href="signed-up-invest.html?plan=60days"
+                                        >Hemen
+                                        Başlayın <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </section>
+
+                <!--=======Offer-Section Ends Here=======-->
+
+
+
+
+                <!--=======Proit-Section Ends Here=======-->
+
+
+                <!--=======Feature-Section Starts Here=======-->
+                <section class="faq-section padding-top padding-bottom bg_img"
+                    data-background="./assets/images/feature/feature-bg.png">
+                    <div class="ball-group-1" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
+                        data-paroller-type="foreground" data-paroller-direction="horizontal">
+                        <img src="./assets/images/balls/ball-group5.png" alt="balls">
+                    </div>
+                    <div class="ball-group-2 rtl" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
+                        data-paroller-type="foreground" data-paroller-direction="horizontal">
+                        <img src="./assets/images/balls/ball-group6.png" alt="balls">
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-md-10">
+                                <div class="section-header">
+                                    <span class="cate">You have questions</span>
+                                    <h2 class="title">
+                                        we have answers
+                                    </h2>
+                                    <p class="mw-100">
+                                        Do not hesitate to send us an email if you can't find what you're looking for.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-wrapper">
+                            <div class="faq-item">
+                                <div class="faq-title">
+                                    <h5 class="title">What is the minimum percentage that an investor can earn on
+                                        Hyipland?</h5>
+                                    <span class="right-icon"></span>
+                                </div>
+                                <div class="faq-content">
+                                    <p>
+                                        Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus,
+                                        dicta optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione,
+                                        molestiae magnam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-item active open">
+                                <div class="faq-title">
+                                    <h5 class="title">Can i invest using cryptocurrency?</h5>
+                                    <span class="right-icon"></span>
+                                </div>
+                                <div class="faq-content">
+                                    <p>
+                                        Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus,
+                                        dicta optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione,
+                                        molestiae magnam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-title">
+                                    <h5 class="title">What are the minimum and maximum deposit amounts?</h5>
+                                    <span class="right-icon"></span>
+                                </div>
+                                <div class="faq-content">
+                                    <p>
+                                        Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus,
+                                        dicta optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione,
+                                        molestiae magnam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-title">
+                                    <h5 class="title">How long will the money arrive in my account after the withdrawal
+                                        process?</h5>
+                                    <span class="right-icon"></span>
+                                </div>
+                                <div class="faq-content">
+                                    <p>
+                                        Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus,
+                                        dicta optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione,
+                                        molestiae magnam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-title">
+                                    <h5 class="title">What payment system can i use to withdraw?</h5>
+                                    <span class="right-icon"></span>
+                                </div>
+                                <div class="faq-content">
+                                    <p>
+                                        Ea commodi eius nisi fugiat eligendi neque repellendus vero, aliquam temporibus,
+                                        dicta optio eveniet saepe. Beatae hic fugiat qui possimus doloribus? Ratione,
+                                        molestiae magnam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--=======Feature-Section Ends Here=======-->
+
+                <!-- ==========Footer-Section Starts Here========== -->
+                <footer class="footer-section">
+                    <div class="newslater-section padding-bottom">
+                        <div class="container">
+                            <div class="newslater-area">
+                                <div class="newslater-content padding-bottom padding-top">
+                                    <span class="cate">SUBSCRIBE TO hyipland</span>
+                                    <h3 class="title">To Get Exclusive Benefits</h3>
+                                    <form class="newslater-form">
+                                        <input type="text" placeholder="Enter Your Email Here" required>
+                                        <button type="submit">subscribe</button>
+                                    </form>
+                                </div>
+                                <div class="newslater-thumb">
+                                    <img src="./assets/images/footer/footer.png" alt="footer">
+                                    <div class="coin-1">
+                                        <img src="./assets/images/footer/Coin_01.png" alt="footer">
+                                    </div>
+                                    <div class="coin-2">
+                                        <img src="./assets/images/footer/Coin_02.png" alt="footer">
+                                    </div>
+                                    <div class="coin-3">
+                                        <img src="./assets/images/footer/Coin_03.png" alt="footer">
+                                    </div>
+                                    <div class="coin-4">
+                                        <img src="./assets/images/footer/Coin_04.png" alt="footer">
+                                    </div>
+                                    <div class="coin-5">
+                                        <img src="./assets/images/footer/Coin_05.png" alt="footer">
+                                    </div>
+                                    <div class="coin-6">
+                                        <img src="./assets/images/footer/Coin_06.png" alt="footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="footer-top">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="./assets/images/logo/footer-logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#0">About</a>
+                                </li>
+                                <li>
+                                    <a href="#0">Affiliates</a>
+                                </li>
+                                <li>
+                                    <a href="#0">Plans</a>
+                                </li>
+                                <li>
+                                    <a href="#0">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#0">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-bottom">
+                            <div class="footer-bottom-area">
+                                <div class="left">
+                                    <p>&copy; 2020 <a href="#0">Hyipland</a> | All right reserved</p>
+                                </div>
+                                <ul class="social-icons">
+                                    <li>
+                                        <a href="#0">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0" class="active">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0">
+                                            <i class="fab fa-pinterest-p"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- ==========Footer-Section Ends Here========== -->
+
+
+            </div>
+
+            <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+            <script src="./assets/js/lib/modernizr-3.6.0.min.js"></script>
+            <script src="./assets/js/lib/plugins.js"></script>
+            <script src="./assets/js/lib/bootstrap.min.js"></script>
+            <script src="./assets/js/lib/magnific-popup.min.js"></script>
+            <script src="./assets/js/lib/jquery-ui.min.js"></script>
+            <script src="./assets/js/lib/wow.min.js"></script>
+            <script src="./assets/js/lib/odometer.min.js"></script>
+            <script src="./assets/js/lib/viewport.jquery.js"></script>
+            <script src="./assets/js/lib/nice-select.js"></script>
+            <script src="./assets/js/lib/owl.min.js"></script>
+            <script src="./assets/js/lib/paroller.js"></script>
+            <script src="./assets/js/lib/lib_main.js"></script>
+            <script type="module" src="./assets/js/main.js"></script>
+            <script type="module" src="./assets/js/auth/sign.js"></script>
+
+            <script>
+                fetch(`http://localhost:4000/coin/getPrice`)
+                              .then(datatwo => {
+                                 return datatwo.json();
+                              })
+                              .then(data => {
+                                 console.log("data three: ",data)
+                                 document.getElementById("coin-price-lb").innerHTML = (data[0].coinPrice) + " $"
+                              })
+            </script>
+
+
+            <script>
+                 let userData = JSON.parse(localStorage.getItem("myUser"));
+
+if (!userData) {
+    window.location.href = "sign-in.html";
+
+}
+else{
+    document.getElementById("main-user-name").innerHTML = userData.firstName;
+    document.getElementById("nav-user-name").innerHTML = userData.firstName;
+    document.getElementById("nav-email").innerHTML = userData.email;
+    document.getElementById("main-user-name-m").innerHTML = userData.firstName;
+
+}
+                 function Logout() {
+    window.localStorage.removeItem("myUser");
+    window.location.href = "sign-in.html";
+  }
+            </script>
+</body>
+
+</html>

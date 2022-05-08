@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Hyipland - HYIP Investment HTML Template</title>
+
+   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./assets/css/all.min.css">
+   <link rel="stylesheet" href="./assets/css/animate.css">
+   <link rel="stylesheet" href="./assets/css/odometer.css">
+   <link rel="stylesheet" href="./assets/css/nice-select.css">
+   <link rel="stylesheet" href="./assets/css/owl.min.css">
+   <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+   <link rel="stylesheet" href="./assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="./assets/css/flaticon.css">
+   <link rel="stylesheet" href="./assets/css/main.css">
+   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+   <!-- referance -->
+   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="referenceModal" aria-hidden="true" 
+   id="refModal">
+      <div class="modal-dialog modal-xl">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Referanslar</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: min-content;">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="container d-flex" style="flex-wrap:wrap">
+                  <div class="col-xl-6">
+                     <div class="earn-item mb-30">
+                        <div class="earn-thumb">
+                           <img src="./assets/images/dashboard/earn/02.png" alt="dashboard-earn">
+                        </div>
+                        <div class="earn-content">
+                           <h6 class="title">Kazanılan Komisyon</h6>
+                           <ul class="mb--5">
+                              <li>
+                                 <div class="icon">
+                                    <img src="./assets/images/dashboard/earn/usd.png" alt="dashboard-earn">
+                                 </div>
+                                 <div class="cont">
+                                    <span class="cl-1" id="ref-commision">0.00 MNGF</span>
+                                 </div>
+                              </li>
+                           
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="earn-item mb-30">
+                         <div class="earn-thumb">
+                             <img src="./assets/images/dashboard/earn/03.png" alt="dashboard-earn">
+                         </div>
+                         <div class="earn-content partner-content d-flex flex-wrap align-items-start justify-content-between">
+                             <h6 class="title w-100">Referanslarınız</h6>
+                             <ul class="mb--5">
+                                 <li>
+                                     <div class="icon">
+                                         <img src="./assets/images/dashboard/earn/active.png" alt="dashboard-earn">
+                                     </div>
+                                     <div class="cont">
+                                         <span class="cl-4">Yatırımcılar :</span>
+                                         <span class="cl-1" id="invested-label">40</span>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="icon">
+                                         <img src="./assets/images/dashboard/earn/inactive.png" alt="dashboard-earn">
+                                     </div>
+                                     <div class="cont">
+                                         <span class="cl-4">Diğer :</span>
+                                         <span class="cl-1" id="not-invested-label">05</span>
+                                     </div>
+                                 </li>
+                             </ul>
+                             <div class="total-partner">
+                                 <span class="total-title" id="total-ref-count">45</span>
+                                 <span>Total</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="calculate-item" style="width: fit-content;margin-top: 10px;">
+                  <div class=" wallet-adress">
+                     <div id="qrcode-ref"></div>
+                     <div style="display: flex;flex-direction: column">
+                        <div style="display: flex; margin-left: 15px;">
+                           <label class="title" style="margin-bottom: 0px;text-transform: none;font-weight: bold;text-align: initial;font-size: 20px;" id="ref-label">Referans Linkiniz</label>
+                        </div>
+                        <div class="input-group input-group-flat" style="display: flex;height: fit-content;margin-left: 10px;width: fit-content;margin-top: 15px;">
+                           <div type="text" class="fs-4 bg-white" readonly="" style="margin: 0 auto;
+                                 height: 50px;
+                                 background-color: transparent;
+                                 border-radius: 0;
+                                 border: 1px solid #cdd9f6;display: flex;flex-direction: column;justify-content: center;">
+                              <label id="ref-link" style="margin: 10px"></label>
+                           </div>
+                           <span class="copy-btn input-group-text border-start-0 bg-white">
+                              <i class="fa fa-clone fs-4"></i>
+                           </span>
+                        </div>
+                        <div style="display: flex;justify-content: left;margin-left: 15px;margin-top: 10px;">
+                           <label for="" style="font-size: 13px;margin-bottom: 0px;line-height: 20px;text-align: initial;font-weight: bold;margin-top: 10px;" id="ref-info">Alt tarafta bulunan referans linki üzerinden pasif gelir elde edebilirsiniz.</label>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Large modal -->
+   <!-- withdraw history -->
+   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" 
+      id="withdraw-history-modal">
+      <div class="modal-dialog modal-xl">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Para Çekme Talepleriniz</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: min-content;">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="container" id="withdraw-history-table" style="overflow-x: scroll;">
+
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- withdraw money -->
+   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="withdrawMoney" id="withdrawModal"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Para Çek</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: min-content;">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="container">
+                  <div class="calculate-wrapper tab">
+                     <div class="calculate--area">
+                        <div class="calculate-area" style="flex-direction: column;">
+                           <div class="calculate-item" style="width: fit-content;">
+                              <h5 class="title" style="text-transform: none;margin-bottom: 20px;text-align: initial;">
+                                 Kripto Parayı Seçiniz</h5>
+                              <ul class="tab-menu">
+                                 <li class="active" onclick="withdrawSelectedCoin('BTC')" style="min-width: 60px;">btc
+                                 </li>
+                                 <li onclick="withdrawSelectedCoin('MNGF')" style="min-width: 60px;">mngf
+                                 </li>
+                                 <li onclick="withdrawSelectedCoin('USDT')"
+                                    style="min-width: 60px;width: fit-content;padding-left: 5px;padding-right: 5px;">
+                                    Tether(USDT)</li>
+                                 <li onclick="withdrawSelectedCoin('ETH')" style="min-width: 60px;">eth</li>
+                                 <li onclick="withdrawSelectedCoin('LTC')" style="min-width: 60px;">LTC</li>
+                              </ul>
+                           </div>
+                           <div class="container" style="flex-direction: column;">
+                              <div>
+                                 <div class="d-block d-md-flex" style="justify-content: space-between;">
+                                    <div class="d-flex" style="flex-direction: column;">
+                                       <div style="display: flex;justify-content:flex-start">
+                                          <label for=""
+                                             style="margin-bottom: -2px;font-weight: bold;font-size: 16px; ">Miktar
+                                             Giriniz</label>
+                                       </div>
+                                       <div class="d-flex">
+                                          <input type="text" class="form-control fw-bold amount text-warning"
+                                             style="border-top-right-radius: 0;border-bottom-right-radius: 0;"
+                                             name="amount" value="0" id="coin-amount"
+                                             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                          <span class="input-group-text"
+                                             style="border-top-left-radius: 0;border-bottom-left-radius: 0;">
+                                             <a onclick="maxCoinValue()" class="text-dark fw-bold maximumCoin"
+                                                style="cursor: pointer;">MAX</a>
+                                          </span>
+                                       </div>
+                                    </div><br>
+                                    <div class="d-flex d-md-block " style="flex-direction: column;">
+                                       <div>
+                                          <label for=""
+                                             style="margin-bottom: -2px;font-weight: bold;font-size: 16px;width: 100%;text-align: left;">Mevcut Coin
+                                             Miktarı</label>
+                                       </div>
+                                       <div class="currentBTC d-block d-md-flex " style="max-width: 150px;">
+                                          <input type="text" class="form-control fw-bold amount text-warning"
+                                             name="amount" value="0" id="coin-balance" readonly>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="d-flex" style="flex-direction: column;margin-top: 10px;">
+                                    <div style="display:flex;justify-content: flex-start">
+                                       <label for=""
+                                          style="margin-bottom: -2px;font-weight: bold;font-size: 16px;">Ödeme İşlem
+                                          Ücreti</label>
+                                    </div>
+                                    <div class="d-flex" style="max-width: 150px;">
+                                       <input type="text" class="form-control fw-bold amount text-warning"
+                                          name="amount" value="0" id="coin-fee" readonly>
+                                    </div>
+                                 </div>
+
+                                 <div class="d-flex" style="flex-direction: column;margin-top: 10px;">
+                                    <div style="display:flex;justify-content: flex-start">
+                                       <label for=""
+                                          style="margin-bottom: -2px;font-weight: bold;font-size: 16px;">Cüzdanınıza
+                                          Geçecek Tutar</label>
+                                    </div>
+                                    <div class="d-flex" style="max-width: 150px;">
+                                       <input type="text" class="form-control fw-bold amount text-warning"
+                                         name="amount" value="0" id="coin-receive"
+                                          readonly>
+                                    </div>
+                                 </div>
+
+                                 <div class="d-flex" style="flex-direction: column;margin-top: 10px;">
+                                    <div style="display:flex;justify-content: flex-start">
+                                       <label for=""
+                                          style="margin-bottom: -2px;font-weight: bold;font-size: 16px;">Ödemenin
+                                          Yapılacağı Cüzdan Adresi</label>
+                                    </div>
+                                    <div class="d-flex" style="min-width: 200px;">
+                                       <input type="text" class="form-control fw-bold amount text-warning" name="amount"
+                                          id="receive-wallet">
+                                    </div>
+                                 </div>
+                                 <div>
+                                    <p class="fw-bold text-purple mt-2 text-center mb-0 walletAddressBTC"
+                                       style="font-size:13px" id="wtlabel1"> <i class="fa fa-exclamation-triangle"></i>
+                                       Bitcoin cüzdan adresi BTC ağından olmadılır.BTC ağından değilse ödeme yapılmaz.
+                                    </p>
+                                 </div>
+                              </div>
+                              <div>
+                                 <p class="fw-bold text-danger mt-0 text-center mb-2" style="font-size:13px"
+                                    id="wtlabel2"> <i class="fa fa-exclamation-triangle"></i> Cüzdan adresini lütfen
+                                    kontrol edin.Burada yapılan hata kullanıcı sorumluluğundadır.</p>
+                              </div>
+                           </div>
+                           <div style="margin-top: 10px;">
+                              <button type="button" class="btn btn-primary btn-sm fw-bold btn-block" style="border-radius: 0.25em;background: -webkit-linear-gradient(-103deg, #ef774c 0%, #ed684f 35%, #e84351 76%, #e73351 100%);
+                                border-color: #f55c25;" onclick="sendWithdrawalRequest()">Çekme İsteği Gönder</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- deposit money -->
+   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Para Yatır</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: min-content;">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="container">
+                  <div class="calculate-wrapper tab">
+                     <div class="calculate--area">
+                        <div class="calculate-area" style="flex-direction: column;">
+                           <div class="calculate-item" style="width: fit-content;">
+                              <h5 class="title" style="text-transform: none;margin-bottom: 20px;text-align: initial;">
+                                 Kripto Parayı Seçiniz</h5>
+                              <ul class="tab-menu">
+                                 <li class="active" onclick="selectedCoin('BTC')" style="min-width: 60px;">btc</li>
+                                 <li onclick="selectedCoin('USDT')"
+                                    style="min-width: 60px;width: fit-content;padding-left: 5px;padding-right: 5px;">
+                                    Tether(USDT)</li>
+                                 <li onclick="selectedCoin('ETH')" style="min-width: 60px;">eth</li>
+                                 <li onclick="selectedCoin('LTC')" style="min-width: 60px;">LTC</li>
+                              </ul>
+                           </div>
+                           <div class="calculate-item" style="width: fit-content;margin-top: 10px;">
+                              <div class=" wallet-adress">
+                                 <div id="qrcode-2"></div>
+                                 <div style="display: flex;flex-direction: column">
+                                    <div style="display: flex; margin-left: 15px;">
+                                       <label class="title"
+                                          style="margin-bottom: 0px;text-transform: none;font-weight: bold;text-align: initial;font-size: 20px;"
+                                          id="adr-label">Yatıracağınız adres</label>
+                                    </div>
+                                    <div class="input-group input-group-flat"
+                                       style="display: flex;height: fit-content;margin-left: 10px;width: fit-content;margin-top: 15px;">
+                                       <div type="text" class="fs-4 bg-white" readonly
+                                          style="margin: 0 auto;
+                                             height: 50px;
+                                             background-color: transparent;
+                                             border-radius: 0;
+                                             border: 1px solid #cdd9f6;display: flex;flex-direction: column;justify-content: center;">
+                                          <label id="wallet-adr" style="margin: 10px"></label>
+                                       </div>
+                                       <span class="copy-btn input-group-text border-start-0 bg-white">
+                                          <i class="fa fa-clone fs-4"></i>
+                                       </span>
+                                    </div>
+                                    <div
+                                       style="display: flex;justify-content: left;margin-left: 15px;margin-top: 10px;">
+                                       <label for=""
+                                          style="font-size: 13px;margin-bottom: 0px;line-height: 20px;text-align: initial;font-weight: bold;margin-top: 10px;"
+                                          id="inv-info"></label>
+                                    </div>
+                                    <div
+                                       style="display: flex;justify-content: left;margin-left: 15px;margin-top: 10px;">
+                                       <label for="" id="min-label"
+                                          style="font-size: 13px;color: rgb(5, 5, 7);margin-bottom: 0px;line-height: 20px;font-weight: bold;text-align: left;">test</label>
+                                    </div>
+                                    <div
+                                       style="display: flex;justify-content: left;margin-left: 15px;margin-top: 10px;">
+                                       <label for="" id="network-label"
+                                          style="font-size: 13px; color: red;text-align: initial;margin-bottom: 0px;line-height: 20px;font-weight: bold">test</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="main--body dashboard-bg">
+      <!--========== Preloader ==========-->
+      <div class="loader">
+         <div class="loader-inner">
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+               <div class="loader-line"></div>
+            </div>
+         </div>
+      </div>
+      <div class="overlay"></div>
+      <!--========== Preloader ==========-->
+      <!--=======SideHeader-Section Starts Here=======-->
+      <div class="notify-overlay"></div>
+      <section class="dashboard-section">
+         <div class="side-header oh">
+            <div class="cross-header-bar d-xl-none">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <div class="site-header-container">
+               <div class="side-logo">
+                  <a href="dashboard.html">
+                     <img src="./assets/images/logo/logo.png" alt="logo">
+                  </a>
+               </div>
+               <ul class="dashboard-menu">
+                  <li>
+                     <a href="dashboard.html" class="active"><i class="flaticon-man"></i>Dashboard</a>
+                  </li>
+                  <li>
+                     <a href="operations.html"><i class="flaticon-coin"></i>Operations</a>
+                  </li>
+                  <li>
+                     <a href="deposit.html"><i class="flaticon-interest"></i>Deposits</a>
+                  </li>
+                  <li>
+                     <a href="withdraw.html"><i class="flaticon-atm"></i>Withdraw</a>
+                  </li>
+                  <li>
+                     <a href="fund-transfer.html"><i class="flaticon-exchange"></i>Fund Transfer </a>
+                  </li>
+                  <li>
+                     <a href="partners.html"><i class="flaticon-deal"></i>Partners</a>
+                  </li>
+                  <li>
+                     <a href="setting.html"><i class="flaticon-gears"></i>Settings</a>
+                  </li>
+                  <li>
+                     <a href="notification.html"><i class="flaticon-bell"></i>Notifications</a>
+                  </li>
+                  <li>
+                     <a href="ticket.html"><i class="flaticon-sms"></i>Tickets</a>
+                  </li>
+                  <li>
+                     <a href="promotional-metarials.html"><i class="flaticon-deal"></i>Promotional</a>
+                  </li>
+                  <li>
+                     <a onclick="Logout()"><i class="flaticon-right-arrow"></i>Logout</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="dasboard-body">
+            <div class="dashboard-hero">
+               <div class="header-top">
+                  <div class="container d-flex coin-price-div">
+                     <div class="d-flex">
+                        <div class="coin-label">MNGF COIN</div>
+                        <div class="coin-label-two">MNGF</div>
+                        <div class="coin-price-label" id="coin-price-lb">$1</div>
+                     </div>
+                  </div>
+                  <div class="container d-flex flex-direction-column justify-content-end">
+                     <div class="mobile-header d-flex justify-content-end d-lg-none align-items-center">
+                        <div class="author">
+                           <!-- <img src="./assets/images/dashboard/author.png" alt="dashboard"> -->
+                           <i class="fa fa-bars" style="color: #ffffff;font-size: 25px;margin-top: 5px;" aria-hidden="true" alt="dashboard"></i>
+
+                        </div>
+
+                     </div>
+                     <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-end align-items-center">
+
+                        <div
+                           class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
+                           <ul class="menu" style="margin-right: 20px;">
+                              <li class="menu-item-outer">
+                                 <a href="index.html" class="menu-item"
+                                    style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;"
+                                    data-toggle="modal" data-target="#refModal"
+                                    onclick="generateQRforRef()">Referanslar</a>
+                              </li>
+                              <li class="menu-item-outer">
+                                 <a href="index.html" class="menu-item"
+                                    style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;"
+                                    data-toggle="modal" data-target=".bd-example-modal-lg"
+                                    onclick="selectedCoin('BTC')">Para Yatır</a>
+                              </li>
+                              <li class="menu-item-outer">
+                                 <a href="index.html" class="menu-item"
+                                    style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;"
+                                    data-toggle="modal" data-target="#withdrawModal"
+                                    onclick="withdrawSelectedCoin('BTC')">Para Çek</a>
+                              </li>
+                              <li class="menu-item-outer">
+                                 <a href="index.html" class="menu-item"
+                                    style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;"
+                                    data-toggle="modal" data-target="#withdraw-history-modal"
+                                    onclick="formWithdrawalHistoryTable()">Talep Geçmişi</a>
+                              </li>
+                              <li class="menu-item-outer">
+                                 <a href="signed-up-plan.html" class="menu-item"
+                                    style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Yatırıma
+                                    Başlayın</a>
+                              </li>
+                           </ul>
+                           <ul class="dashboard-right-menus">
+
+                              <li>
+                                 <a href="#0" class="author">
+                                    <div class="thumb">
+                                       <!-- <img src="./assets/images/dashboard/author.png" alt="dashboard"> -->
+                                       <i class="fa fa-user" aria-hidden="true" ></i>
+
+                                       <span class="checked">
+                                          <i class="flaticon-checked"></i>
+                                       </span>
+                                    </div>
+                                    <div class="content">
+                                       <h6 id="main-user-name" class="title">John Doe</h6>
+                                       <!-- <span class="country">Indonesia</span> -->
+                                    </div>
+                                 </a>
+                                 <div class="notification-area">
+                                    <div class="author-header">
+                                       <div class="thumb">
+                                          <i class="fa fa-user" aria-hidden="true" style="color: #e73351;font-size: 60px;"></i>
+                                          <!-- <img src="./assets/images/dashboard/author.png" alt="dashboard"> -->
+                                       </div>
+                                       <h6 id="nav-user-name" class="title">John Doe</h6>
+                                       <a id="nav-email" href="#mailto:johndoe@gmail.com">Johndoe@gmail.com</a>
+                                    </div>
+                                    <div class="author-body">
+                                       <ul>
+                                          <li>
+                                             <a href="/profile.html"><i class="far fa-user"></i>Profile</a>
+                                          </li>
+                                          <li>
+                                             <a href="" id="btn-logout" ><i class="fas fa-sign-out-alt"></i>Log
+                                                Out</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="dashboard-hero-content text-white">
+                  <h3 class="title">Dashboard</h3>
+                  <ul class="breadcrumb">
+                     <li>
+                        <a href="index.html">Home</a>
+                     </li>
+                     <li>
+                        Dashboard
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="container-fluid">
+               <div class="row justify-content-center mt--85">
+                  <div class="col-sm-6 col-lg-2">
+                     <div class="dashboard-item">
+                        <div class="dashboard-inner">
+                           <div class="cont">
+                              <span class="title">Balance</span>
+                              <h5 class="amount" id="mngfb">0 MNGF</h5>
+                           </div>
+                           <div class="thumb">
+                              <!-- <img src="./assets/images/dashboard/dashboard4.png" alt="dasboard"> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-2">
+                     <div class="dashboard-item">
+                        <div class="dashboard-inner">
+                           <div class="cont">
+                              <span class="title">Balance</span>
+                              <h5 class="amount" id="btcb">0 BTC</h5>
+                           </div>
+                           <div class="thumb">
+                              <!-- <img src="./assets/images/dashboard/dashboard2.png" alt="dasboard"> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-2">
+                     <div class="dashboard-item">
+                        <div class="dashboard-inner">
+                           <div class="cont">
+                              <span class="title">Balance</span>
+                              <h5 class="amount" id="usdtb">0 USDT</h5>
+                           </div>
+                           <div class="thumb">
+                              <!-- <img src="./assets/images/dashboard/dashboard1.png" alt="dasboard"> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-2">
+                     <div class="dashboard-item">
+                        <div class="dashboard-inner">
+                           <div class="cont">
+                              <span class="title">Balance</span>
+                              <h5 class="amount" id="ethb">0 ETH</h5>
+                           </div>
+                           <div class="thumb">
+                              <!-- <img src="./assets/images/dashboard/dashboard3.png" alt="dasboard"> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-2">
+                     <div class="dashboard-item">
+                        <div class="dashboard-inner">
+                           <div class="cont">
+                              <span class="title">Balance</span>
+                              <h5 class="amount" id="ltcb">0 LTC</h5>
+                           </div>
+                           <div class="thumb">
+                              <!-- <img src="./assets/images/dashboard/dashboard4.png" alt="dasboard"> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               
+               </div>
+               <div class="row pb-30">
+                  <div class="col-lg-6">
+                     <div class="total-earning-item">
+                        <div class="total-earning-heading" style="justify-content: flex-start;">
+                           <h5 class="title">Mevcut Kazanç</h5>
+                           <h4 class="amount cl-1" id="current-profit" style="margin-left: 5%;font-size: 32px;"></h4>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-between">
+                           <div class="item">
+                              <div class="cont" style="display: flex;flex-direction: column;">
+                                 <span class="month" style="white-space: nowrap;">Mevcut Kazanç Yüzdesi</span>
+                                 <h4 class="cl-theme mt-1" id="current-profit-percent" >+.3%</h4>
+                              </div>
+                              <div class="thumb">
+                                 <img src="./assets/images/dashboard/graph1.png"  alt="dashboard">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="progress-wrapper mb-30">
+                        <div style="display: flex;justify-content: space-between;">
+                           <label style="margin-top: 2%;visibility: hidden;">Tümünü
+                              gör(5)</label>
+                           <h5 class="title cl-white">Aktif Yatırımlarınız</h5>
+                           <label id="loadmore-active-investment"
+                              style="margin-top: 1%;color: white;text-decoration: underline;">Tümünü
+                              gör (<span>0</span>)</label>
+                        </div>
+                        <div class="d-flex flex-wrap" style="margin-top: 4%;">
+                           <div id="first-invest" class="container">
+                              <div style="width: 100%;display: flex;justify-content: space-between;">
+                                 <div>
+                                    <label for="" style="color: white;font-size: 22px;" id="amount-deposit">Vade tutarı <br>
+                                       <b style="color: #55ffdd;">100$</b></label>
+                                 </div>
+                                 <div style="visibility: hidden;">
+                                    <label class="invest-sum" for="" style="color: white;">Vade tutarı
+                                       <b style="color: #55ffdd">100$</b></label>
+                                 </div>
+                                 <div>
+                                    <label class="invest-earn" for="" style="color: white;font-size: 22px;"
+                                       id="amount-will-receive">Vade
+                                       sonu kazanç <br> <b style="color: #55ffdd">10$</b></label>
+                                 </div>
+                              </div>
+                              <div class="meter ">
+                                 <span></span>
+                              </div>
+                              <div>
+                                 <label class="day-left" for="" style="color: white;">20 gün kaldı</label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="progress-loadmore">
+                           <!-- dashboard.js deposit-->
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-6">
+                     <div class="earn-item mb-30">
+                        <div class="earn-thumb">
+                           <img src="./assets/images/dashboard/earn/01.png" alt="dashboard-earn">
+                        </div>
+                        <div class="earn-content">
+                           <h6 class="title">Aktif yatırım miktarınız</h6>
+                           <ul class="mb--5">
+                              <li>
+                                 <div class="icon">
+                                    <img src="./assets/images/dashboard/earn/usd.png" alt="dashboard-earn">
+                                 </div>
+                                 <div class="cont">
+                                    <span class="cl-1" id="active-deposit-amount">0.00</span>
+                                 </div>
+                              </li>
+                           
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="earn-item mb-30">
+                        <div class="earn-thumb">
+                           <img src="./assets/images/dashboard/earn/01.png" alt="dashboard-earn">
+                        </div>
+                        <div class="earn-content">
+                           <h6 class="title">Yatırım sonu toplam kazanç</h6>
+                           <ul class="mb--5">
+                              <li>
+                                 <div class="icon">
+                                    <img src="./assets/images/dashboard/earn/usd.png" alt="dashboard-earn">
+                                 </div>
+                                 <div class="cont">
+                                    <span class="cl-1" id="total-receive">0.00</span>
+                                 </div>
+                              </li>
+                           
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container-fluid sticky-bottom">
+               <div class="dashboard-footer">
+                  <div class="d-flex flex-wrap justify-content-between m-0-15-none">
+                     <div class="left">
+                        &copy; 2020 <a href="#0">Hyipland</a> | All right reserved.
+                     </div>
+                     <div class="right">
+                        <ul>
+                           <li>
+                              <a href="#0">Terms of use</a>
+                           </li>
+                           <li>
+                              <a href="#0">Privacy policy</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--=======SideHeader-Section Ends Here=======-->
+   </div>
+   <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+   <script src="./assets/js/lib/modernizr-3.6.0.min.js"></script>
+   <script src="./assets/js/lib/plugins.js"></script>
+   <script src="./assets/js/lib/bootstrap.min.js"></script>
+   <script src="./assets/js/lib/magnific-popup.min.js"></script>
+   <script src="./assets/js/lib/jquery-ui.min.js"></script>
+   <script src="./assets/js/lib/wow.min.js"></script>
+   <script src="./assets/js/lib/odometer.min.js"></script>
+   <script src="./assets/js/lib/viewport.jquery.js"></script>
+   <script src="./assets/js/lib/nice-select.js"></script>
+   <script src="./assets/js/lib/owl.min.js"></script>
+   <script src="./assets/js/lib/paroller.js"></script>
+   <script src="./assets/js/lib/chart.js"></script>
+   <script src="./assets/js/lib/circle-progress.js"></script>
+   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="./assets/js/lib/lib_main.js"></script>
+   <script type="module" src="./assets/js/main.js"></script>
+   <script type="module" src="./assets/js/dashboard/dashboard.js"></script>
+   
+   
+
+
+   <script>
+      $(".meter > span").each(function () {
+         $(this)
+            .data("origWidth", $(this).width())
+            .width(0)
+            .animate(
+               {
+                  width: $(this).data("origWidth")
+               },
+               1200
+            );
+      });
+
+      $('.progress1.circle').circleProgress({
+         value: .75,
+         fill: {
+            gradient: ['#00cca2', '#00cca2']
+         },
+      }).on('circle-animation-progress', function (event, progress) {
+         $(this).find('strong').html(Math.round(75 * progress) + '<i>%</i>');
+      });
+      $('.progress2.circle').circleProgress({
+         value: .90,
+         fill: {
+            gradient: ['#8d16e8', '#8d16e8']
+         },
+      }).on('circle-animation-progress', function (event, progress) {
+         $(this).find('strong').html(Math.round(90 * progress) + '<i>%</i>');
+      });
+      $('.progress3.circle').circleProgress({
+         value: .85,
+         fill: {
+            gradient: ['#ef764c', '#ef764c']
+         },
+      }).on('circle-animation-progress', function (event, progress) {
+         $(this).find('strong').html(Math.round(85 * progress) + '<i>%</i>');
+      });
+   </script>
+
+   <script type="text/javascript">
+      function generateQR(address) {
+         document.getElementById("qrcode-2").innerHTML = ""
+         var qrcode = new QRCode(document.getElementById("qrcode-2"), {
+            text: address,
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+         });
+      }
+
+      function generateQRforRef() {
+         fetch("http://localhost:4000/ref/getRefs", {
+                  method: "POST",
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ userId: userData._id })
+               }).then(response => response.json())
+                  .then(data => {
+                     document.getElementById("invested-label").innerHTML = data.activeRefs
+                     document.getElementById("not-invested-label").innerHTML = data.passiveRefs
+                     document.getElementById("total-ref-count").innerHTML = data.totalRefs
+                     document.getElementById("ref-commision").innerHTML = data.refEarnings + " MNGF"
+
+                  })
+         document.getElementById("qrcode-ref").innerHTML = "";
+         document.getElementById("ref-link").innerHTML = userData._id;
+
+         var qrcode = new QRCode(document.getElementById("qrcode-ref"), {
+            text: userData._id,
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+         });
+      }
+
+   </script>
+   <!-- Get coin price -->
+   <script>
+       fetch(`http://localhost:4000/coin/getPrice`)
+                     .then(datatwo => {
+                        return datatwo.json();
+                     })
+                     .then(data => {
+                        console.log("data three: ",data)
+                        document.getElementById("coin-price-lb").innerHTML = (data[0].coinPrice) + " $"
+                     })
+   </script>
+
+   <script>
+
+
+      let userData = JSON.parse(localStorage.getItem("myUser"));
+
+      if (userData) {
+               fetch("http://localhost:4000/auth/signInWithId", {
+                  method: "POST",
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ userId: userData._id })
+               }).then(response => response.json())
+                  .then(data => {
+                     userData = data;
+                     localStorage.setItem("myUser", JSON.stringify(data));
+                     //Set Balances
+                     if (data.length == 0) {
+                        //   window.location.href="investment-plan.html"
+                        return;
+                     }
+                     fetch("http://localhost:4000/deposit/calculateEarnings", {
+                  method: "POST",
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ userId: userData._id })
+               }).then(response => response.json())
+                  .then(earningData => {
+                     console.log(earningData.totalEarning)
+                     document.getElementById("current-profit").innerHTML = earningData.totalEarning + " MNGF" 
+                     document.getElementById("current-profit-percent").innerHTML = "%" + earningData.totalPercent
+                     document.getElementById("active-deposit-amount").innerHTML = earningData.totalDeposit + " MNGF" 
+                     document.getElementById("total-receive").innerHTML = earningData.totalReceive + " MNGF" 
+
+                     
+                     
+                  });
+                     
+                  });
+            }
+            else {
+               window.location.href = "sign-in.html"
+            }
+
+
+      let checkLoadMoreBtn = true
+      let loadMoreBtn = document
+         .querySelector("#loadmore-active-investment")
+
+      loadMoreBtn.addEventListener("click", () => {
+         if (checkLoadMoreBtn) {
+            document.querySelector(".progress-loadmore").classList.add("active");
+            checkLoadMoreBtn = false
+         }
+         else {
+            document.querySelector(".progress-loadmore").classList.remove("active");
+            checkLoadMoreBtn = true
+
+         }
+      });
+
+
+      //Loadmore active investment
+
+      var selectedGlobalCoin;
+      var finalWithdrawalAmount;
+      var source = document.getElementById("coin-amount");
+
+      function coinAmountChange() {
+         console.log("HELLO");
+         var val = document.getElementById("coin-amount").value;
+         var fee;
+         switch (selectedGlobalCoin) {
+            case "BTC":
+               fee = 0.0002;
+               break;
+            case "MNGF":
+               fee = 1;
+               break;
+            case "USDT":
+               fee = 1;
+               break;
+            case "ETH":
+               fee = 0.0025;
+               break;
+            case "LTC":
+               fee = 0.002;
+               break;
+         }
+         if (val - fee <= 0) {
+            document.getElementById("coin-receive").value =
+               0 + " " + selectedGlobalCoin;
+            finalWithdrawalAmount = 0;
+
+         } else {
+            document.getElementById("coin-receive").value =
+               (val - fee).toFixed(5) + " " + selectedGlobalCoin;
+            finalWithdrawalAmount = (val - fee).toFixed(5);
+         }
+      }
+      source.addEventListener("input", coinAmountChange);
+
+      function formWithdrawalHistoryTable() {
+         fetch("http://localhost:4000/withdrawal/getAll", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userId: userData._id }),
+         }).then(response => response.json()).then(data => {
+            // Parse given JSON
+            console.log("withdrawal data: ",data)
+            for (let i = 0; i < data.length; i++) {
+               delete data[i]["userId"];
+               delete data[i]["methodCurrency"];
+               delete data[i]["__v"];
+            }
+            var html = '<table class="table table-striped">';
+            html += "<tr>";
+            var flag = 0;
+            $.each(data[0], function (index, value) {
+               console.log(index);
+               switch (index) {
+                  case "_id":
+                     index = "İşlem ID";
+                     break;
+                  case "wallet":
+                     index = "Cüzdan";
+                     break;
+                  case "status":
+                     index = "Durum";
+                     break;
+                  case "amount":
+                     index = "Miktar";
+                     break;
+                  case "requestedAt":
+                     index = "İşlem Tarihi";
+                     break;
+                  case "selectedCoin":
+                     index = "Coin";
+                     break;
+               }
+
+               html += "<th>" + index + "</th>";
+            });
+            html += "</tr>";
+            $.each(data, function (index, value) {
+               html += '<tr style="font-size:15px">';
+               $.each(value, function (index2, value2) {
+                  if (value2 == "new") value2 = "Onay Sürecinde";
+                  if (value2 == "denied") value2 = "Reddedildi";
+                  if (value2 == "done") value2 = "Onaylandı";
+
+                  html += "<td>" + value2 + "</td>";
+               });
+               html += "<tr>";
+            });
+            html += "</table>";
+            document.getElementById("withdraw-history-table").innerHTML = html;
+         });
+      }
+      function Logout() {
+    window.localStorage.removeItem("myUser");
+    window.location.href = "sign-in.html";
+  }
+
+      function sendWithdrawalRequest() {
+         if (document.getElementById("coin-amount").value) var coinBalance;
+         switch (selectedGlobalCoin) {
+            case "BTC":
+               coinBalance = userData.balances.BTC;
+               break;
+               case "MNGF":
+               coinBalance = userData.balances.MNGF;
+               break;
+            case "USDT":
+               coinBalance = userData.balances.USDT;
+               break;
+            case "ETH":
+               coinBalance = userData.balances.ETH;
+               break;
+            case "LTC":
+               coinBalance = userData.balances.LTC;
+               break;
+         }
+         if (coinBalance < finalWithdrawalAmount) {
+            Swal.fire({
+               icon: "error",
+               title: "Hata...",
+               text: "Çekmek istediğiniz miktar mevcut bakiyenizden büyük olamaz.",
+            });
+            return;
+         }
+         if (document.getElementById("coin-amount").value == "") {
+            Swal.fire({
+               icon: "error",
+               title: "Hata...",
+               text: "Lütfen çekmek istediğiniz miktarı giriniz.",
+            });
+            return;
+         }
+         if (document.getElementById("coin-receive").value == ("0 " + selectedGlobalCoin)) {
+            Swal.fire({
+               icon: "error",
+               title: "Hata...",
+               text: "Çekmek istediğiniz miktar sıfırdan büyük olmalıdır!",
+            });
+            return;
+         }
+         if (document.getElementById("receive-wallet").value == "") {
+            Swal.fire({
+               icon: "error",
+               title: "Hata...",
+               text: "Cüzdan adresi boş bırakılamaz.",
+            });
+            return;
+         } else {
+            let data = {
+               userId: userData._id,
+               selectedCoin: selectedGlobalCoin,
+               amount: finalWithdrawalAmount,
+               wallet: document.getElementById("receive-wallet").value,
+            };
+
+            fetch("http://localhost:4000/withdrawal/create", {
+               method: "POST",
+               headers: { "Content-Type": "application/json" },
+               body: JSON.stringify(data),
+            }).then((res) => {
+               console.log("Request complete! response:", res);
+               Swal.fire({
+                  icon: "success",
+                  title: "Çekim talebiniz gönderilmiştir.",
+                  text: "Onay sürecinden sonra miktar hesabınıza yatırılacaktır.",
+               });
+               $("#withdrawModal").modal("hide");
+            });
+         }
+      } //Send withdrawal request
+      function maxCoinValue() {
+         switch (selectedGlobalCoin) {
+            case "BTC":
+               document.getElementById("coin-amount").value = userData.balances.BTC.toFixed(2);
+               break;
+               case "MNGF":
+               document.getElementById("coin-amount").value = userData.balances.MNGF.toFixed(2);
+               break;
+            case "USDT":
+               document.getElementById("coin-amount").value = userData.balances.USDT.toFixed(2);
+               break;
+            case "ETH":
+               document.getElementById("coin-amount").value = userData.balances.ETH.toFixed(2);
+               break;
+            case "LTC":
+               document.getElementById("coin-amount").value = userData.balances.LTC.toFixed(2)  ;
+               break;
+         }
+      } //Max coin value
+      function withdrawSelectedCoin(coin) {
+         document.getElementById("coin-receive").value = "";
+         document.getElementById("coin-amount").value = "";
+         selectedGlobalCoin = coin;
+         switch (coin) {
+            case "BTC":
+               document.getElementById("wtlabel1").innerHTML = " <i class='fa fa-exclamation-triangle'></i> Bitcoin cüzdan adresi BTC ağından olmadılır.BTC ağından değilse ödeme yapılmaz."
+               document.getElementById("coin-balance").value =
+                  userData.balances.BTC.toFixed(2) + " BTC";
+               document.getElementById("coin-fee").value = "0.0002 BTC";
+               break;
+               case "MNGF":
+               document.getElementById("wtlabel1").innerHTML = " <i class='fa fa-exclamation-triangle'></i> MNGF bakiyenizi sadece USDT olarak çekebilirsiniz. Cüzdan adresi USDT ağından olmadılır.USDT ağından değilse ödeme yapılmaz."
+               document.getElementById("coin-balance").value =
+                  userData.balances.MNGF.toFixed(2) + " MNGF";
+               document.getElementById("coin-fee").value = "1 MNGF";
+               break;
+            
+            case "USDT":
+            document.getElementById("wtlabel1").innerHTML = " <i class='fa fa-exclamation-triangle'></i> Tether(USDT) cüzdan adresi USDT ağından olmadılır.USDT ağından değilse ödeme yapılmaz."
+               document.getElementById("coin-balance").value =
+                  userData.balances.USDT.toFixed(2) + " USDT";
+               document.getElementById("coin-fee").value = "1 USDT";
+               break;
+            case "ETH":
+            document.getElementById("wtlabel1").innerHTML = " <i class='fa fa-exclamation-triangle'></i> Ethereum cüzdan adresi ETH ağından olmadılır.ETH ağından değilse ödeme yapılmaz."
+               document.getElementById("coin-balance").value =
+                  userData.balances.ETH.toFixed(2) + " ETH";
+               document.getElementById("coin-fee").value = "0.0025 ETH";
+               break;
+            case "LTC":
+            document.getElementById("wtlabel1").innerHTML = " <i class='fa fa-exclamation-triangle'></i> Litecoin cüzdan adresi LTC ağından olmadılır.LTC ağından değilse ödeme yapılmaz."
+               document.getElementById("coin-balance").value =
+                  userData.balances.LTC.toFixed(2) + " LTC";
+               document.getElementById("coin-fee").value = "0.002 LTC";
+               break;
+         }
+      } //Withdraw selected coin
+      function selectedCoin(coin) {
+         switch (coin) {
+            case "BTC":
+               document.getElementById("wallet-adr").innerHTML =
+                  userData.depositAddresses.BTC;
+               document.getElementById("adr-label").innerHTML =
+                  "Yatıracağınız Bitcoin Adresi";
+               document.getElementById("min-label").innerHTML =
+                  "Bitcoin ile en az 100$ değerinde yatırım yapabilirsiniz.";
+               document.getElementById("network-label").innerHTML =
+                  "Yukarıdaki Bitcoin Adresine yalnızca Bitcoin ağından yapılan transferleri kabul ediyoruz. BEP2, ERC-20 gibi diğer ağlardan gönderilen transferler hesabınıza yansıtılmayacaktır.";
+               document.getElementById("inv-info").innerHTML =
+                  "BTC olarak istediğiniz tutarı yukarıda gösterilen adrese gönderin. 3 onay geldikten sonra Bitcoin hesabınıza eklenecektir.";
+
+               generateQR(userData.depositAddresses.BTC);
+
+               break;            
+            case "USDT":
+               document.getElementById("wallet-adr").innerHTML =
+                  userData.depositAddresses.USDT;
+               document.getElementById("adr-label").innerHTML =
+                  "Yatıracağınız Tether Adresi";
+               document.getElementById("min-label").innerHTML =
+                  " Tether ile en az 10$ değerinde yatırım yapabilirsiniz.";
+               document.getElementById("network-label").innerHTML =
+                  " Yukarıdaki Tether Adresine yalnızca TRC-20 ağından yapılan transferleri kabul ediyoruz. BEP2, ERC-20 gibi diğer ağlardan gönderilen transferler hesabınıza yansıtılmayacaktır.";
+               document.getElementById("inv-info").innerHTML =
+                  "USDT olarak istediğiniz tutarı yukarıda gösterilen adrese gönderin. 3 onay geldikten sonra Tether hesabınıza eklenecektir.";
+
+               generateQR(userData.depositAddresses.USDT);
+
+               break;
+            case "ETH":
+               document.getElementById("wallet-adr").innerHTML =
+                  userData.depositAddresses.ETH;
+               document.getElementById("adr-label").innerHTML =
+                  "Yatıracağınız Ethereum Adresi";
+               document.getElementById("min-label").innerHTML =
+                  " Ethereum ile en az 50$ değerinde yatırım yapabilirsiniz.";
+               document.getElementById("network-label").innerHTML =
+                  " Yukarıdaki Ethereum Adresine yalnızca ERC-20 ağından yapılan transferleri kabul ediyoruz. BEP2, ERC-20 gibi diğer ağlardan gönderilen transferler hesabınıza yansıtılmayacaktır.";
+               document.getElementById("inv-info").innerHTML =
+                  "ETH olarak istediğiniz tutarı yukarıda gösterilen adrese gönderin. 3 onay geldikten sonra Ethereum hesabınıza eklenecektir.";
+
+               generateQR(userData.depositAddresses.ETH);
+
+               break;
+            case "LTC":
+               document.getElementById("wallet-adr").innerHTML =
+                  userData.depositAddresses.LTC;
+               document.getElementById("adr-label").innerHTML =
+                  "Yatıracağınız Litecoin Adresi";
+               document.getElementById("min-label").innerHTML =
+                  " Litecoin ile en az 10$ değerinde yatırım yapabilirsiniz.";
+               document.getElementById("network-label").innerHTML =
+                  " Yukarıdaki Ethereum Adresine yalnızca Litecoin ağından yapılan transferleri kabul ediyoruz. BEP2, ERC-20 gibi diğer ağlardan gönderilen transferler hesabınıza yansıtılmayacaktır.";
+               document.getElementById("inv-info").innerHTML =
+                  "LTC olarak istediğiniz tutarı yukarıda gösterilen adrese gönderin. 3 onay geldikten sonra Litecoin hesabınıza eklenecektir.";
+               generateQR(userData.depositAddresses.LTC);
+
+               break;
+            default:
+         }
+      } // Selected coin
+
+      selectedCoin("BTC");
+   </script>
+
+
+</body>
+
+
+</html>

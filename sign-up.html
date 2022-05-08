@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Hyipland - HYIP Investment HTML Template</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/odometer.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="./assets/css/owl.min.css">
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="./assets/css/flaticon.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!--============= Sign In Section Starts Here =============-->
+    <div class="account-section bg_img" data-background="./assets/images/account-bg.jpg">
+        <div class="container">
+            <div class="account-title text-center">
+                <a href="index.html" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span
+                            class="d-none d-sm-inline-block">To Hyipland</span></span></a>
+                <a href="#0" class="logo">
+                    <img src="./assets/images/logo/footer-logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="account-wrapper">
+
+                <div class="account-body">
+                    <form class="account-form">
+                        <div class="form-group">
+                            <label for="mail">Mail Adresiniz</label>
+                            <input error-msg="E-posta Alanı Boş Bırakılamaz." name="mail" type="email" required
+                                placeholder="Mail adresinizi giriniz" id="mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Şifreniz</label>
+                            <input error-msg="Şifre Alanı Boş Bırakılamaz." minlength="8" name="password"
+                                type="password" required placeholder="Şifrenizi giriniz(minimum 8 karakter)"
+                                id="password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="firstName">Adınız</label>
+                            <input error-msg="Ad Alanı Boş Bırakılamaz." name="firstName" type="text" required
+                                placeholder="Adınızı giriniz" id="first-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="secondName">Soyadınız</label>
+                            <input error-msg="Soyad Alanı Boş Bırakılamaz." name="secondName" type="text" required
+                                placeholder="Soyadınızı giriniz" id="last-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Telefon numaranız</label>
+                            <div style="display: flex;">
+                                <select not-required name="countryPhoneCode" style="width: fit-content;height: auto;"
+                                    id="area-code">
+                                    <option value="+90">+90</option>
+                                </select>
+                                <div style="width: 5px;height: auto;"></div>
+                                <input error-msg="Telefon Alanı Boş Bırakılamaz." name="phoneNumber" style="left: 5px;"
+                                    required type="number" placeholder="Telefon numaranızı giriniz" id="phone-number">
+                            </div>
+                            <div class="form-group"><br>
+                                <div class="form-group">
+                                    <label for="ref">Referans Kodu(Opsiyonel)</label>
+                                    <input not-required name="ref" type="text" placeholder="Referans kodunuzu giriniz"
+                                        id="ref">
+                                </div>
+
+                                <label for="country">Ülkeniz</label>
+                                <select not-required error-msg="Ülke Alanı Boş Bırakılamaz." name="country"
+                                    id="country">
+                                    <option selected value="Türkiye">Türkiye</option>
+                                    <option value="ABD Virgin Adaları">ABD Virgin Adaları</option>
+                                    <option value="Almanya">Almanya</option>
+                                    <option value="Amerika Birleşik Devletleri">Amerika Birleşik Devletleri</option>
+                                    <option value="Andorra">Andorra</option>
+                                    <option value="Antigua ve Barbuda">Antigua ve Barbuda</option>
+                                    <option value="Arjantin">Arjantin</option>
+                                    <option value="Arnavutluk">Arnavutluk</option>
+                                    <option value="Aruba">Aruba</option>
+                                    <option value="Avustralya">Avustralya</option>
+                                    <option value="Avusturya">Avusturya</option>
+                                    <option value="Azerbaycan">Azerbaycan</option>
+                                    <option value="Bahama">Bahama</option>
+                                    <option value="Bahamas">Bahamas</option>
+                                    <option value="Bahreyn">Bahreyn</option>
+                                    <option value="Bangladeş">Bangladeş</option>
+                                    <option value="Barbados">Barbados</option>
+                                    <option value="Belçika">Belçika</option>
+                                    <option value="Belize">Belize</option>
+                                    <option value="Benin">Benin</option>
+                                    <option value="Beyaz Rusya">Beyaz Rusya</option>
+                                    <option value="Birleşik Arap Emirlikleri">Birleşik Arap Emirlikleri</option>
+                                    <option value="Bolivya">Bolivya</option>
+                                    <option value="Bosna Hersek">Bosna Hersek</option>
+                                    <option value="Brezilya">Brezilya</option>
+                                    <option value="Brunei">Brunei</option>
+                                    <option value="Bulgaristan">Bulgaristan</option>
+                                    <option value="Burma">Burma</option>
+                                    <option value="Cebelitarık">Cebelitarık</option>
+                                    <option value="Çek Cumhuriyeti">Çek Cumhuriyeti</option>
+                                    <option value="Çin">Çin</option>
+                                    <option value="Danimarka">Danimarka</option>
+                                    <option value="Dominik Cumhuriyeti">Dominik Cumhuriyeti</option>
+                                    <option value="Ekvator">Ekvator</option>
+                                    <option value="El Salvador">El Salvador</option>
+                                    <option value="Endonezya">Endonezya</option>
+                                    <option value="Eritre">Eritre</option>
+                                    <option value="Ermenistan">Ermenistan</option>
+                                    <option value="Estonya">Estonya</option>
+                                    <option value="Fas">Fas</option>
+                                    <option value="Fiji">Fiji</option>
+                                    <option value="Filipinler">Filipinler</option>
+                                    <option value="Finlandiya">Finlandiya</option>
+                                    <option value="Fransa">Fransa</option>
+                                    <option value="Fransız Polinezyası">Fransız Polinezyası</option>
+                                    <option value="Grenada">Grenada</option>
+                                    <option value="Guadalup">Guadalup</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Guatemala">Guatemala</option>
+                                    <option value="Güney Afrika">Güney Afrika</option>
+                                    <option value="Gürcistan">Gürcistan</option>
+                                    <option value="Hırvatistan">Hırvatistan</option>
+                                    <option value="Hindistan">Hindistan</option>
+                                    <option value="Hollanda">Hollanda</option>
+                                    <option value="Hollanda Antilleri">Hollanda Antilleri</option>
+                                    <option value="Honduras">Honduras</option>
+                                    <option value="Hong Kong">Hong Kong</option>
+                                    <option value="İngiliz Virginia Adaları">İngiliz Virginia Adaları</option>
+                                    <option value="İngiltere">İngiltere</option>
+                                    <option value="İrlanda">İrlanda</option>
+                                    <option value="İspanya">İspanya</option>
+                                    <option value="İsrail">İsrail</option>
+                                    <option value="İsveç">İsveç</option>
+                                    <option value="İsviçre">İsviçre</option>
+                                    <option value="İtalya">İtalya</option>
+                                    <option value="İzlanda">İzlanda</option>
+                                    <option value="Jamaika">Jamaika</option>
+                                    <option value="Japonya">Japonya</option>
+                                    <option value="Kamboçya">Kamboçya</option>
+                                    <option value="Kanada">Kanada</option>
+                                    <option value="Katar">Katar</option>
+                                    <option value="Kayman Adaları">Kayman Adaları</option>
+                                    <option value="Kıbrıs">Kıbrıs</option>
+                                    <option value="Kolombiya">Kolombiya</option>
+                                    <option value="Kore">Kore</option>
+                                    <option value="Kosta Rika">Kosta Rika</option>
+                                    <option value="Kuveyt">Kuveyt</option>
+                                    <option value="Küba">Küba</option>
+                                    <option value="Letonya">Letonya</option>
+                                    <option value="Liechtenstein">Liechtenstein</option>
+                                    <option value="Litvanya">Litvanya</option>
+                                    <option value="Lübnan">Lübnan</option>
+                                    <option value="Lüksemburg">Lüksemburg</option>
+                                    <option value="Macaristan">Macaristan</option>
+                                    <option value="Makedonya">Makedonya</option>
+                                    <option value="Maldivler">Maldivler</option>
+                                    <option value="Malezya">Malezya</option>
+                                    <option value="Malta">Malta</option>
+                                    <option value="Mauritius">Mauritius</option>
+                                    <option value="Meksika">Meksika</option>
+                                    <option value="Mısır">Mısır</option>
+                                    <option value="Moldova">Moldova</option>
+                                    <option value="Monako">Monako</option>
+                                    <option value="Mozambik">Mozambik</option>
+                                    <option value="Nikaragua">Nikaragua</option>
+                                    <option value="Norveç">Norveç</option>
+                                    <option value="Özbekistan">Özbekistan</option>
+                                    <option value="Panama">Panama</option>
+                                    <option value="Paraguay">Paraguay</option>
+                                    <option value="Peru">Peru</option>
+                                    <option value="Polonya">Polonya</option>
+                                    <option value="Portekiz">Portekiz</option>
+                                    <option value="Porto Riko">Porto Riko</option>
+                                    <option value="Romanya">Romanya</option>
+                                    <option value="Rusya">Rusya</option>
+                                    <option value="Saint Kitts ve Nevis">Saint Kitts ve Nevis</option>
+                                    <option value="Saint Lucia">Saint Lucia</option>
+                                    <option value="San Marino">San Marino</option>
+                                    <option value="Senegal">Senegal</option>
+                                    <option value="Seyşel">Seyşel</option>
+                                    <option value="Singapur">Singapur</option>
+                                    <option value="Slovakya">Slovakya</option>
+                                    <option value="Slovenya">Slovenya</option>
+                                    <option value="Sri Lanka">Sri Lanka</option>
+                                    <option value="Suriye">Suriye</option>
+                                    <option value="Suudi Arabistan">Suudi Arabistan</option>
+                                    <option value="Şili">Şili</option>
+                                    <option value="Tayland">Tayland</option>
+                                    <option value="Tayvan">Tayvan</option>
+                                    <option value="Tunus">Tunus</option>
+                                    <option value="Turks ve Caicos Adaları">Turks ve Caicos Adaları</option>
+                                    <option value="Ukrayna">Ukrayna</option>
+                                    <option value="Umman">Umman</option>
+                                    <option value="Uruguay">Uruguay</option>
+                                    <option value="Ürdün">Ürdün</option>
+                                    <option value="Vanuatu">Vanuatu</option>
+                                    <option value="Venezuela">Venezuela</option>
+                                    <option value="Vietnam">Vietnam</option>
+                                    <option value="Yeni Zelanda">Yeni Zelanda</option>
+                                    <option value="Yunanistan">Yunanistan</option>
+                                </select>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="button" id="btn-sign-up" onclick="checkClicked()">Kayıt Ol</button>
+                                <span class="d-block mt-15">Zaten üye misiniz? <a href="sign-in.html">Giriş yap</a></span>
+                            </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sponsor-slider-wrapper cl-white text-center mt-40">
+                <h5 class="slider-heading mb-3">Used by over 1,000,000 people worldwide</h5>
+                <div class="sponsor-slider-4 owl-theme owl-carousel">
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor1.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor2.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor3.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor4.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor5.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor6.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor7.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor1.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor2.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor3.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor4.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor5.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor6.png" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="./assets/images/sponsor/sponsor7.png" alt="sponsor">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--============= Sign In Section Ends Here =============-->
+
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/modernizr-3.6.0.min.js"></script>
+    <script src="./assets/js/lib/plugins.js"></script>
+    <script src="./assets/js/lib/bootstrap.min.js"></script>
+    <script src="./assets/js/lib/magnific-popup.min.js"></script>
+    <script src="./assets/js/lib/jquery-ui.min.js"></script>
+    <script src="./assets/js/lib/wow.min.js"></script>
+    <script src="./assets/js/lib/odometer.min.js"></script>
+    <script src="./assets/js/lib/viewport.jquery.js"></script>
+    <script src="./assets/js/lib/nice-select.js"></script>
+    <script src="./assets/js/lib/owl.min.js"></script>
+    <script src="./assets/js/lib/paroller.js"></script>
+    <script src="./assets/js/lib/lib_main.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./assets/js/auth/sign.js"></script>
+
+    <script>
+    
+    </script>
+
+
+
+</body>
+
+</html>
