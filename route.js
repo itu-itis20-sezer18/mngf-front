@@ -29,6 +29,10 @@ server.listen(port, () => console.log(`running @${port}`));
 
       var path = url.parse(request.url).pathname;
       console.log("path: ",path);
+      if(path.split("?")[0] == "invest"){
+        renderHTML('signed-up-invest.html?'+path.split("?")[1], response);
+        return;
+      }
       switch (path) {
           case '/':
               renderHTML('index.html', response);
@@ -51,9 +55,6 @@ server.listen(port, () => console.log(`running @${port}`));
           case '/plan':
               renderHTML('signed-up-plan.html', response);
               break;
-              case '/invest':
-                renderHTML('signed-up-invest.html', response);
-                break;
           default:
             renderHTML('index.html', response);
       }
