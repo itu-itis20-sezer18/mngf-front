@@ -28,6 +28,7 @@ server.listen(port, () => console.log(`running @${port}`));
     }
 
       var path = url.parse(request.url).pathname;
+      console.log("path: ",path);
       switch (path) {
           case '/':
               renderHTML('index.html', response);
