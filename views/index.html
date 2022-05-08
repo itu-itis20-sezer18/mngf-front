@@ -1582,7 +1582,7 @@
                         document.getElementById("usd-corresponding").value = dollarPrice + " $"
                         console.log(dollarPrice)
                         finalAmount = (dollarPrice * multiplier).toFixed(2)
-                        fetch(`http://api.miningfy.net/coin/getPrice`)
+                        fetch(`https://api.miningfy.net/coin/getPrice`)
                      .then(datatwo => {
                         return datatwo.json();
                      })
@@ -1600,7 +1600,7 @@
                else {
                   document.getElementById("usd-corresponding").value = document.getElementById("coin-amount").value + " $"
                   var dollarPrice = document.getElementById("coin-amount").value
-                  fetch(`http://api.miningfy.net/coin/getPrice`)
+                  fetch(`https://api.miningfy.net/coin/getPrice`)
                      .then(datatwo => {
                         return datatwo.json();
                      })
