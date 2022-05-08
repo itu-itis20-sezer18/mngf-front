@@ -2,7 +2,7 @@ class Withdrawal {
   constructor() {}
 
   async getByUserId(userid) {
-    let response = await fetch("http://localhost:4000/withdrawal/getAll", {
+    let response = await fetch("http://api.miningfy.net/withdrawal/getAll", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId: userid._id }),
@@ -12,7 +12,7 @@ class Withdrawal {
     return data;
   }
   async create(dataJson) {
-    await fetch("http://localhost:4000/withdrawal/create", {
+    await fetch("http://api.miningfy.net/withdrawal/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dataJson),

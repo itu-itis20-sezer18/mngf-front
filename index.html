@@ -62,10 +62,10 @@
                             <ul class="cart-area ">
 
                                 <li>
-                                    <a href="sign-in.html">Sign In</a>
+                                    <a href="sign-in">Sign In</a>
                                 </li>
                                 <li>
-                                    <a href="sign-up.html">Sign Up</a>
+                                    <a href="sign-up">Sign Up</a>
                                 </li>
                             </ul>
 
@@ -77,28 +77,28 @@
                 <div class="container">
                     <div class="header-area">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="">
                                 <img src="./assets/images/logo/logo.png" alt="logo">
                             </a>
                         </div>
                         <ul class="menu">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="">Home</a>
                             </li>       
                             <li>
-                                <a href="about.html">About</a>
+                                <a href="about">About</a>
                             </li>
                             <li>
-                                <a href="signed-up-plan.html">Plan</a>
+                                <a href="plan">Plan</a>
                             </li>
                             <li>
-                                <a href="faq.html">Faqs</a>
+                                <a href="faq">Faqs</a>
                             </li>
                             <li>
-                                <a href="contact.html">Contact</a>
+                                <a href="contact">Contact</a>
                             </li>
                             <li class="pr-0">
-                                <a href="contact.html" class="custom-button">Join Us</a>
+                                <a href="sign-up" class="custom-button">Join Us</a>
                             </li>
                         </ul>
                         <div class="header-bar d-lg-none">
@@ -122,11 +122,11 @@
                             class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
                             <ul class="menu" style="margin-right: 20px;">
                                 <li>
-                                    <a href="dashboard.html"
+                                    <a href="dashboard"
                                         style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Yatırımlarım</a>
                                 </li>
                                 <li>
-                                    <a href="signed-up-plan.html"
+                                    <a href="plan"
                                         style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Plan
                                         Seçim</a>
                                 </li>
@@ -156,10 +156,10 @@
                                         <div class="author-body">
                                             <ul>
                                                 <li>
-                                                    <a href="/profile.html"><i class="far fa-user"></i>Profile</a>
+                                                    <a href="/profile"><i class="far fa-user"></i>Profile</a>
                                                 </li>
-                                                <li><a href="dashboard.html">Yatırımlarım</a></li>
-                                                <li><a href="signed-up-plan.html">Plan Seçim</a></li>
+                                                <li><a href="dashboard">Yatırımlarım</a></li>
+                                                <li><a href="plan">Plan Seçim</a></li>
                                                 <li>
                                                     <a href="" id="btn-logout"><i class="fas fa-sign-out-alt"></i>Log
                                                         Out</a>
@@ -237,7 +237,7 @@
                                 A Profitable platform for high-margin investment
                             </p>
                             <div class="button-group">
-                                <a href="sign-up.html" class="custom-button">Get Started Now!</a>
+                                <a href="sign-up" class="custom-button">Get Started Now!</a>
                                 <a href="https://www.youtube.com/watch?v=GT6-H4BRyqQ" class="popup video-button"><i
                                         class="flaticon-play"></i></a>
                             </div>
@@ -586,7 +586,7 @@
                                         <p> Vade Süresi: 30 Gün</p>
                                         <p> Minimum Yatırım: 200$-500$</p>
                                     </div>
-                                    <a class="btn-fast-start" href="signed-up-invest.html?plan=30days" style="">Hemen
+                                    <a class="btn-fast-start" href="invest?plan=30days" style="">Hemen
                                         Başlayın <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -613,7 +613,7 @@
                                         <p> Vade Süresi: 60 Gün</p>
                                         <p> Minimum Yatırım: 500$-2000$</p>
                                     </div>
-                                    <a class="btn-fast-start bg-5432f6" href="signed-up-invest.html?plan=60days">Hemen
+                                    <a class="btn-fast-start bg-5432f6" href="invest?plan=60days">Hemen
                                         Başlayın <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -638,7 +638,7 @@
                                         <p>Vade Süresi: 90 Gün</p>
                                         <p>Minimum Yatırım: +2000$</p>
                                     </div>
-                                    <a class="btn-fast-start bg-fe4c1c" href="signed-up-invest.html?plan=60days">Hemen
+                                    <a class="btn-fast-start bg-fe4c1c" href="invest?plan=60days">Hemen
                                         Başlayın <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -1434,7 +1434,7 @@
             <div class="container">
                 <div class="footer-top">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="">
                             <img src="./assets/images/logo/footer-logo.png" alt="logo">
                         </a>
                     </div>
@@ -1512,7 +1512,7 @@
     <script>
          var myUser = JSON.parse(localStorage.getItem("myUser"));
          if (myUser) {
-               fetch("http://localhost:4000/auth/signInWithId", {
+               fetch("http://api.miningfy.net/auth/signInWithId", {
                   method: "POST",
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ userId: myUser._id })
@@ -1523,10 +1523,10 @@
                      localStorage.setItem("myUser", JSON.stringify(data));
                      //Set Balances
                      if (data.length == 0) {
-                        window.location.href = "sign-in.html"
+                        window.location.href = "sign-in"
                         return;
                      }
-                     window.location.href = "dashboard.html"
+                     window.location.href = "dashboard"
 
                   });
             }
@@ -1538,7 +1538,7 @@
         source.addEventListener('input', coinAmountChange);
         document.querySelector('#select-plan').addEventListener('change', planChange);
         function goToInvest(){
-            window.location.href = "signed-up-plan.html"
+            window.location.href = "plan"
         }
         function selectedCoin(coin){
             selectedGlobalCoin = coin;
@@ -1582,7 +1582,7 @@
                         document.getElementById("usd-corresponding").value = dollarPrice + " $"
                         console.log(dollarPrice)
                         finalAmount = (dollarPrice * multiplier).toFixed(2)
-                        fetch(`http://localhost:4000/coin/getPrice`)
+                        fetch(`http://api.miningfy.net/coin/getPrice`)
                      .then(datatwo => {
                         return datatwo.json();
                      })
@@ -1600,7 +1600,7 @@
                else {
                   document.getElementById("usd-corresponding").value = document.getElementById("coin-amount").value + " $"
                   var dollarPrice = document.getElementById("coin-amount").value
-                  fetch(`http://localhost:4000/coin/getPrice`)
+                  fetch(`http://api.miningfy.net/coin/getPrice`)
                      .then(datatwo => {
                         return datatwo.json();
                      })

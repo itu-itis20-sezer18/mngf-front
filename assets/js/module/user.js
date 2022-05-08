@@ -15,7 +15,7 @@ class User {
     return userCookie ? userCookie : false;
   }
   async getUserById(userid) {
-    let response = await fetch("http://localhost:4000/auth/signInWithId", {
+    let response = await fetch("http://api.miningfy.net/auth/signInWithId", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId: userid }),
