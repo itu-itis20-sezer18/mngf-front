@@ -49,6 +49,21 @@ app.get('/invest', function (req, res)
 {
     res.render('signed-up-invest.html');
 });
+
+app.get('/reset', function (req, res)
+{
+    res.render('reset-pwd.html');
+});
+
+app.get('/forgot-password', function (req, res)
+{
+    res.render('forgot-pwd.html');
+});
+
+app.get('/about', function (req, res)
+{
+    res.render('about.html');
+});
 //   app.use('/',function handleRequest(request, response) {
 //     function gup( name, url ) {
 //         if (!url) url = location.href;

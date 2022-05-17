@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 
 
+
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
 
@@ -49,25 +50,19 @@
             </div>
             <div class="account-wrapper">
                 <div class="account-body">
-                    <h4 class="title mb-20">Welcome To Hyipland</h4>
+                    <h4 class="title mb-20">Şifre Yenileme</h4>
                     <form id="signIn" class="account-form">
                         <div class="form-group">
-                            <label for="sign-up">Your Email </label>
-                            <input error-msg="E-Mail boş bırakılamaz." required type="email"
-                                placeholder="Enter Your Email " id="sign-up" name="mail">
-                        </div>
-                        <div class="form-group">
-                            <label for="pass">Password</label>
-                            <input error-msg="Şifre boş bırakılamaz." required minlength="8" type="password"
-                                placeholder="Enter Your Password" id="pass" name="password">
-                            <span class="sign-in-recovery ">Şifrenizi mi unuttunuz? <a href="/forgot-password">Şifre yenileyin</a></span>
+                            <label for="sign-up">Yeni şifreniz</label>
+                            <input error-msg="E-Mail boş bırakılamaz." required type="password"
+                                placeholder="Yeni şifrenizi giriniz " id="pw-1" > <br>
+                                <input error-msg="E-Mail boş bırakılamaz." required type="password"
+                                placeholder="Yeni şifrenizi tekrar giriniz " id="pw-2"  style="margin-top: 3px">
                         </div>
                         <div class="form-group text-center">
-                            <button type="button" class="mt-2 mb-2" id="btn-sign-in">Sign In</button>
+                            <button type="button" class="mt-2 mb-2" id="btn-sign-in" onclick="sendNewPassword()">Şifreyi Onayla</button>
                         </div>
-                        <div class="container d-flex justify-content-center">
-                            <span class="sign-in-recovery ">Üye değil misiniz? <a href="sign-up">Üye ol</a></span>
-                        </div>
+                       
                     </form>
                 </div>
 
@@ -89,9 +84,73 @@
     <script src="./assets/js/lib/paroller.js"></script>
     <script src="./assets/js/lib/lib_main.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="module" src="/assets/js/auth/sign.js"></script>
+
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const code = urlParams.get('code')
+      fetch("http://api.miningfy.net/pwRecovery/getCode", {
+                  method: "POST",
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ code: code})
+               }).then(response => response.json())
+                  .then(data => {
+                    if(data.msg == "successfull"){
+                    
+                    }
+                    else{
+                        Swal.fire({
+                    icon: "error",
+                    title: "Hata",
+                    text: "Hata! Lütfen tekrar deneyiniz.",
+      });                    
+      window.location.href = "/sign-in";
+                    }         
+                  })
+        
+    </script>
+    
+    <script>
+        function sendNewPassword(){
+            const pwd1 = document.getElementById("pw-1").value;
+            const pwd2 = document.getElementById("pw-2").value;
+            console.log(pwd1,pwd2)
+            if(pwd1 != pwd2){
+                Swal.fire({
+                    icon: "error",
+                    title: "Hata",
+                    text: "Şifreler eşleşmiyor!",
+      }); 
+      return;    
+    }
+    document.getElementById("btn-sign-in").style.display = "none"
+    fetch("http://api.miningfy.net/pwRecovery/savePwd", {
+                  method: "POST",
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ code: code,newPassword: pwd1})
+               }).then(response => response.json())
+                  .then(data => {
+                    if(data.msg == "successfull"){
+                        Swal.fire({
+                    icon: "success",
+                    title: "Başarılı",
+                    text: "Şifreniz başarıyla değiştirilmiştir.",
+      });   
+                        window.location.href = "/sign-in";
+                    }
+                    else{
+                        Swal.fire({
+                    icon: "error",
+                    title: "Hata",
+                    text: "Hata! Lütfen tekrar deneyiniz.",
+      });                    
+      window.location.href = "/sign-in";
+                    }         
+                  })
 
 
+        }
+    </script>
 
 </body>
 

@@ -527,15 +527,8 @@
                   </div>
                </div>
                <div class="dashboard-hero-content text-white">
-                  <h3 class="title">Dashboard</h3>
-                  <ul class="breadcrumb">
-                     <li>
-                        <a href="">Home</a>
-                     </li>
-                     <li>
-                        Dashboard
-                     </li>
-                  </ul>
+                  <h3 class="title">Yatırım Paneli
+                  </h3>
                </div>
             </div>
             <div class="container-fluid">
@@ -544,7 +537,7 @@
                      <div class="dashboard-item">
                         <div class="dashboard-inner">
                            <div class="cont">
-                              <span class="title">Balance</span>
+                              <span class="title">Bakiye</span>
                               <h5 class="amount" id="mngfb">0 MNGF</h5>
                            </div>
                            <div class="thumb">
@@ -557,7 +550,7 @@
                      <div class="dashboard-item">
                         <div class="dashboard-inner">
                            <div class="cont">
-                              <span class="title">Balance</span>
+                              <span class="title">Bakiye</span>
                               <h5 class="amount" id="btcb">0 BTC</h5>
                            </div>
                            <div class="thumb">
@@ -583,7 +576,7 @@
                      <div class="dashboard-item">
                         <div class="dashboard-inner">
                            <div class="cont">
-                              <span class="title">Balance</span>
+                              <span class="title">Bakiye</span>
                               <h5 class="amount" id="ethb">0 ETH</h5>
                            </div>
                            <div class="thumb">
@@ -596,7 +589,7 @@
                      <div class="dashboard-item">
                         <div class="dashboard-inner">
                            <div class="cont">
-                              <span class="title">Balance</span>
+                              <span class="title">Bakiye</span>
                               <h5 class="amount" id="ltcb">0 LTC</h5>
                            </div>
                            <div class="thumb">
@@ -873,8 +866,10 @@
                   body: JSON.stringify({ userId: userData._id })
                }).then(response => response.json())
                   .then(earningData => {
-                     console.log(earningData.totalEarning)
                      document.getElementById("current-profit").innerHTML = earningData.totalEarning + " MNGF" 
+                     if(earningData.totalPercent == "NaN"){
+                        earningData.totalPercent = 0
+                     }
                      document.getElementById("current-profit-percent").innerHTML = "%" + earningData.totalPercent
                      document.getElementById("active-deposit-amount").innerHTML = earningData.totalDeposit + " MNGF" 
                      document.getElementById("total-receive").innerHTML = earningData.totalReceive + " MNGF" 
