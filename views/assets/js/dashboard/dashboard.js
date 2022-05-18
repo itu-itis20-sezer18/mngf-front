@@ -57,6 +57,9 @@ deposit.getByUserId(userData._id).then((data) => {
     } else if (index == 1){
       otherEl += `  
       <div class="col-12">
+      <div style="width: 100%;display: flex;justify-content: end;"><div>
+      <i class="fa fa-ellipsis-h" id="det-btn-${index}" onclick="openInvestmentDetail(this)" data-toggle="modal" data-target="#investmentDetailModal" aria-hidden="true" style="color: white;cursor: pointer;"></i>
+   </div></div>
       <div class="progress-loadmore__item">
          <div class="progress-loadmore-info d-flex">
             <div class="term-sum">
@@ -79,6 +82,9 @@ deposit.getByUserId(userData._id).then((data) => {
     else{
       otherEl += `  
       <div class="col-12" style='margin-top:15%'>
+      <div style="width: 100%;display: flex;justify-content: end;"><div>
+      <i class="fa fa-ellipsis-h" id="det-btn-${index}" onclick="openInvestmentDetail(this)" data-toggle="modal" data-target="#investmentDetailModal" aria-hidden="true" style="color: white;cursor: pointer;"></i>
+   </div></div>
       <div class="progress-loadmore__item">
          <div class="progress-loadmore-info d-flex">
             <div class="term-sum">

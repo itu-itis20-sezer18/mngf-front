@@ -22,6 +22,32 @@
 </head>
 
 <body>
+    <!-- referance -->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="referenceModal" aria-hidden="true" 
+    id="investmentDetailModal">
+       <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Yatırım Detayı</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: min-content;">
+                   <span aria-hidden="true">&times;</span>
+                </button>
+             </div>
+             <div class="modal-body">
+               <div class="container">
+
+               </div>
+             </div>
+             <div class="modal-footer">
+             </div>
+          </div>
+       </div>
+    </div>
+
+
+
+
+
    <!-- referance -->
    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="referenceModal" aria-hidden="true" 
    id="refModal">
@@ -632,6 +658,9 @@
                         </div>
                         <div class="d-flex flex-wrap" style="margin-top: 4%;">
                            <div id="first-invest" class="container">
+                              <div style="width: 100%;display: flex;justify-content: end;"><div>
+                                 <i class="fa fa-ellipsis-h" id="det-btn-0" onclick="openInvestmentDetail(this)" data-toggle="modal" data-target="#investmentDetailModal" aria-hidden="true" style="color: white;cursor: pointer;"></i>
+                              </div></div>
                               <div style="width: 100%;display: flex;justify-content: space-between;">
                                  <div>
                                     <label for="" style="color: white;font-size: 22px;" id="amount-deposit">Vade tutarı <br>
@@ -1200,6 +1229,12 @@
       } // Selected coin
 
       selectedCoin("BTC");
+   </script>
+
+   <script>
+      function openInvestmentDetail(item){
+         console.log($(item).attr("id"));
+      }
    </script>
 
 

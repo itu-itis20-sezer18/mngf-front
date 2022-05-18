@@ -400,6 +400,10 @@
                                     <h2 class="title cl-theme-1" id="daily-profit"></h2>
                                  </div>
                                  <div class="item">
+                                    <span class="cate">Vade teklifimiz</span>
+                                    <h2 class="title cl-theme-1" id="vade"></h2>
+                                 </div>
+                                 <div class="item">
                                     <span class="cate">Toplam Kazanç</span>
                                     <h2 class="title cl-theme" id="total-profit"></h2>
                                  </div>
@@ -743,6 +747,7 @@
                            amount: investment,
                            methodCurrency: "USD",
                            plan: document.getElementById("select-plan").value,
+                           interestRate: multiplier,
                            amountInMngf: document.getElementById("mngf-coin-corresponding").value.split(" ")[0],
                            amountWillBeRecieved: document.getElementById("mngf-coin-corresponding").value.split(" ")[0] * (1+multiplier)
                         }
@@ -865,7 +870,54 @@
                      })
                      .then(datathree => {
                         console.log("MNGF: ", datathree)
-                        mngfAmount = dollarPrice/(datathree[0].coinPrice)
+                        mngfAmount = dollarPrice/(datathree[0].coinPrice);
+                        var plan = document.getElementById("select-plan").value;
+                        switch (plan) {
+                  case '30-days':
+                     document.getElementById('select-plan').value = "30-days"
+                     if(dollarPrice < 1000){
+                        multiplier = 0.05;
+                     }
+                     else if (dollarPrice >= 1000 && dollarPrice <5000){
+                        multiplier = 0.06;
+                     }
+                     else if (dollarPrice >= 5000){
+                        multiplier = 0.07;
+                     }
+                     document.getElementById("vade").innerHTML = "%" + (multiplier * 100).toFixed(0);
+                     days = 30
+                     break
+                  case '60-days':
+                     document.getElementById('select-plan').value = "60-days"
+                     if(dollarPrice < 2000){
+                        multiplier = 0.11;
+                     }
+                     else if (dollarPrice >= 2000 && dollarPrice <10000){
+                        multiplier = 0.13;
+                     }
+                     else if (dollarPrice >= 10000){
+                        multiplier = 0.15;
+                     }
+                    
+                     document.getElementById("vade").innerHTML = "%" + (multiplier * 100).toFixed(0);                     days = 60
+                     days = 60
+                     break
+                  case '90-days':
+                     document.getElementById('select-plan').value = "90-days"
+                     if(dollarPrice < 5000){
+                        multiplier = 0.18;
+                     }
+                     else if (dollarPrice >= 5000 && dollarPrice <20000){
+                        multiplier = 0.20;
+                     }
+                     else if (dollarPrice >= 20000){
+                        multiplier = 0.23;
+                     }
+                    
+                     document.getElementById("vade").innerHTML = "%" + (multiplier * 100).toFixed(0);                     days = 60
+                     days = 90;
+                     break
+               }
                         document.getElementById("mngf-coin-corresponding").value = mngfAmount.toFixed(2) + " MNGF"
                         document.getElementById("daily-profit").innerHTML = ((mngfAmount*multiplier) / days).toFixed(2) + " MNGF"
                         document.getElementById("total-profit").innerHTML = ((mngfAmount*multiplier)).toFixed(2) + " MNGF"
@@ -883,7 +935,54 @@
                      })
                      .then(datathree => {
                         console.log("MNGF: ", datathree)
-                        mngfAmount = dollarPrice/(datathree[0].coinPrice)
+                        mngfAmount = dollarPrice/(datathree[0].coinPrice);
+                        var plan = document.getElementById("select-plan").value;
+                        switch (plan) {
+                  case '30-days':
+                     document.getElementById('select-plan').value = "30-days"
+                     if(dollarPrice < 1000){
+                        multiplier = 0.05;
+                     }
+                     else if (dollarPrice >= 1000 && dollarPrice <5000){
+                        multiplier = 0.06;
+                     }
+                     else if (dollarPrice >= 5000){
+                        multiplier = 0.07;
+                     }
+                     document.getElementById("vade").innerHTML = "%" + (multiplier * 100).toFixed(0);
+                     days = 30
+                     break
+                  case '60-days':
+                     document.getElementById('select-plan').value = "60-days"
+                     if(dollarPrice < 2000){
+                        multiplier = 0.11;
+                     }
+                     else if (dollarPrice >= 2000 && dollarPrice <10000){
+                        multiplier = 0.13;
+                     }
+                     else if (dollarPrice >= 10000){
+                        multiplier = 0.15;
+                     }
+                    
+                     document.getElementById("vade").innerHTML = "%" + (multiplier * 100).toFixed(0);                     days = 60
+                     days = 60
+                     break
+                  case '90-days':
+                     document.getElementById('select-plan').value = "90-days"
+                     if(dollarPrice < 5000){
+                        multiplier = 0.18;
+                     }
+                     else if (dollarPrice >= 5000 && dollarPrice <20000){
+                        multiplier = 0.20;
+                     }
+                     else if (dollarPrice >= 20000){
+                        multiplier = 0.23;
+                     }
+                    
+                     document.getElementById("vade").innerHTML = "%" + (multiplier * 100).toFixed(0);                     days = 60
+                     days = 90;
+                     break
+               }
                         document.getElementById("mngf-coin-corresponding").value = mngfAmount.toFixed(2) + " MNGF"
                         document.getElementById("daily-profit").innerHTML = ((mngfAmount*multiplier) / days).toFixed(2) + " MNGF"
                         document.getElementById("total-profit").innerHTML = ((mngfAmount*multiplier)).toFixed(2) + " MNGF"
