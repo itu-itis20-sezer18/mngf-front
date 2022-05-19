@@ -64,6 +64,10 @@ app.get('/about', function (req, res)
 {
     res.render('about.html');
 });
+app.get('/faq', function (req, res)
+{
+    res.render('faq.html');
+});
 //   app.use('/',function handleRequest(request, response) {
 //     function gup( name, url ) {
 //         if (!url) url = location.href;
