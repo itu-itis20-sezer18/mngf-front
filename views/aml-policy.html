@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
+    <title>Miningfy</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/odometer.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="./assets/css/owl.min.css">
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="./assets/css/flaticon.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main--body section-bg">
+        <!--========== Preloader ==========-->
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+        <div class="overlay"></div>
+        <!--========== Preloader ==========-->
+
+
+     <!--=======Header-Section Starts Here=======-->
+     <header class="header-section">
+        <div class="header-top no-user" id="no-user-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6">
+
+                    </div>
+                    <div class="col-6">
+                        <ul class="cart-area ">
+
+                            <li>
+                                <a href="sign-in">Giriş Yap</a>
+                            </li>
+                            <li>
+                                <a href="sign-up">Kayıt Ol</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom" id="no-user-header-bottom">
+            <div class="container">
+                <div class="header-area">
+                    <div class="logo">
+                        <a href="https://miningfy.net">
+                            <img src="./assets/images/logo/mngflogo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="menu">
+                        <li>
+                            <a href="https://miningfy.net/faq.html">Sıkça Sorulan Sorular</a>
+                        </li>
+                        <li>
+                            <a href="https://miningfy.net/privacy.html">Gizlilik Sözleşmesi</a>
+                        </li>
+                        <li>
+                            <a href="https://miningfy.net/data-centers.html">Veri Merkezlerimiz</a>
+                        </li>
+                        <li>
+                            <a href="https://miningfy.net/aml-policy.html">Kara Para Aklamayı Önleme Politikası</a>
+                        </li>
+                        
+
+                       <!-- <li class="pr-0">
+                            <a href="sign-up" class="custom-button">BİZE KATIL!</a>
+                        </li> -->
+                    </ul>
+                    <div class="header-bar d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-top user">
+            <div class="container">
+                <div class="mobile-header d-flex justify-content-between d-lg-none align-items-center">
+                    <div class="author">
+                        <img src="./assets/images/dashboard/author.png" alt="dashboard">
+                    </div>
+                </div>
+                <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-end align-items-center">
+
+                    <div
+                        class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
+                        <ul class="menu" style="margin-right: 20px;">
+                            <li>
+                                <a href="dashboard"
+                                    style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Yatırımlarım</a>
+                            </li>
+                            <li>
+                                <a href="plan"
+                                    style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Plan
+                                    Seçim</a>
+                            </li>
+                        </ul>
+                        <ul class="dashboard-right-menus">
+                            <li>
+                                <a href="#0" class="author">
+                                    <div class="thumb">
+                                        <img src="./assets/images/dashboard/author.png" alt="dashboard">
+                                        <span class="checked">
+                                            <i class="flaticon-checked"></i>
+                                        </span>
+                                    </div>
+                                    <div class="content">
+                                        <h6 id="main-user-name" class="title">John Doe</h6>
+                                        <!-- <span class="country">Indonesia</span> -->
+                                    </div>
+                                </a>
+                                <div class="notification-area">
+                                    <div class="author-header">
+                                        <div class="thumb">
+                                            <img src="./assets/images/dashboard/author.png" alt="dashboard">
+                                        </div>
+                                        <h6 id="nav-user-name" class="title">John Doe</h6>
+                                        <a id="nav-email" href="#mailto:johndoe@gmail.com">Johndoe@gmail.com</a>
+                                    </div>
+                                    <div class="author-body">
+                                        <ul>
+                                            <li>
+                                                <a href="/profile"><i class="far fa-user"></i>Profile</a>
+                                            </li>
+                                            <li><a href="dashboard">Yatırımlarım</a></li>
+                                            <li><a href="plan">Plan Seçim</a></li>
+                                            <li>
+                                                <a href="" id="btn-logout"><i class="fas fa-sign-out-alt"></i>Log
+                                                    Out</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--=======Header-Section Ends Here=======-->
+
+
+        <!--=======Banner-Section Starts Here=======-->
+   <br/><br/><br/>
+        <!--=======Banner-Section Ends Here=======-->
+
+
+
+
+        <!--=======Mission-Section Starts Here=======-->
+        <section class="mission-section padding-top padding-bottom">
+            <div class="mission-shape">
+                <img src="./assets/images/mission/mission-shape.png" alt="about">
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-10">
+                        <div class="section-header">
+                            <span class="cate"></span>
+                            <h2 class="title">
+                                KARA PARA AKLAMAYI ÖNLEME POLITIKASI <br/>(ANTI-MONEY LAUNDERING POLICY)
+                            </h2>
+                            <p class="mw-100">
+                                Miningfy, terörün finansmanı da dahil olmak üzere her türlü yasa dışı ve suç faaliyetinden kaçınmayı taahhüt etmiştir. Bu kapsamda Kara Para Aklamayı Önleme (AML) Politikası ve Müşterini Tanı (KYC) Politikası'nı hayata geçirdik.
+<br/>
+<br/>
+Miningfy, tüm müşterilerin standart Özen (CDD) prosedürleri nedeniyle Müşteriler içinde doğrulanmasını gerektirir. Her türlü kara para aklamayla mücadele etmek için tüm yasalara ve uluslararası standartlara şiddetle uyarız.
+<br/>
+<br/>
+Partnerlerimizin, ürünlerimizi ve hizmetlerimizi kullanırken terörizmin ve suçların finansmanını yasallaştırmaya yönelik herhangi bir çabayı önlemek için Kara Para Aklamayı Önleme Politikası'nı nasıl uyguladığı aşağıda açıklanmıştır.
+<br/>
+<br/>
+- Tüm kullanıcıları tanımlamamız gerekiyor ve onların kimlik verilerini topluyoruz.<br/>
+- İlgili yasa ve yönetmelikler kapsamındaki tüm raporları ve kayıtları gözden geçirmek ve sunmak için tüm iç politikaları oluşturur ve düzenli olarak güncelleriz.<br/>
+- Ürünlerimizi ve hizmetlerimizi kullanırken tüm işlemleri izler ve normal faaliyetlerden sapmaları araştırırız.<br/>
+- Şirketimiz tüm risk değerlendirmelerini takip eder ve ilgili tüm mekanizmaları günceller. Ayrıca tüm yasa ve yönetmelik bilgilerini kolluk kuvvetlerine sağlarız.<br/>
+<br/>
+Buna göre, Miningfy, gerektiğinde müşterilerden herhangi bir ek bilgi ve belge talep etme hakkımızı kullanmak da dahil olmak üzere tüm para işlemlerini sürekli olarak izler. Ayrıca, kullanıcının terör finansmanı ve suç dahil her türlü yasa dışı faaliyette bulunduğundan şüphelenirsek, müşterinin hesabını askıya alabilir veya feshedebiliriz. Kara para aklamayı önlemek için kullandığımız herhangi bir yöntemi, kendi takdirimize bağlı olarak herhangi bir zamanda değiştirebileceğimizi unutmayın.<br/>
+<br/>
+<br/>
+AML Politikamızı yürütmek için kullandığımız düzenleyici/yasal düzenlemeler ve standartlar aşağıda verilmiştir.<br/>
+<br/>
+- Avrupa Parlamentosu ve Konseyi'nin 30 Mayıs 2018 tarihli (AB) 2018/843 sayılı Direktifi ve (AB) 2015/849'u değiştiren Direktif.<br/>
+- Suç Yasası 2002 Gelirleri.<br/>
+- Kara Para Aklama, Terörün Finansmanı ve Para Transferi (Ödeyene İlişkin Bilgiler) Yönetmeliği 2017.<br/>
+- Terörizm Yasası 2000 ve 2001.<br/>
+- JMLSG - Ortak Kara Para Aklama Yönlendirme Grubu (finansal sektör üyelerinin Kara Para Aklamayı Önleme (AML) açısından yükümlülüklerine uymalarına yardımcı olacak uluslararası kılavuz).<br/>
+- HM Hazine Yaptırım Bildirimleri.<br/>
+- 2008'den itibaren Terörle Mücadele Yasası.<br/>
+<br/>
+Miningfy, kara para aklamayı, terörizmi finanse etmeyi, insan ve uyuşturucu kaçakçılığını ve diğer her türlü suç ve terör eylemini güçlü bir şekilde önlemek için en son teknolojileri ve gelişmiş yöntemleri kullanır.<br/>
+<br/>
+<br/>
+Ayrıca yüksek yasal, ahlaki ve etik standartları taahhüt ederiz. https://miningfy.net/ sitesinin tüm müşterileri ve bağlı kuruluşları, yasa dışı veya yasa dışı faaliyetlere karşı en üst düzeyde korumaya sahiptir.<br/>
+<br/>
+Bir kişinin herhangi bir yasa dışı faaliyetle (doğrudan veya dolaylı olarak) bağlantılı olduğundan veya kara para aklama veya dolandırıcılık eylemleriyle ilgili olduğundan şüphelenirsek, Miningfy tüm kara para aklama veya yasa dışı faaliyetleri önlemek için araştırma yapma hakkını saklı tutar. Bazı durumlarda, kanıtları toplamak üzere ilgili makamlara teslim etmek üzere herhangi bir bireyle ilgili kendi araştırmamızı yapmak üzere üçüncü taraf kişi ve kuruluşları görevlendirme hakkımızı saklı tutuyoruz. Yukarıdakilere uygun olarak, Miningfy, tamamen meşru muamele görüp görmediklerini belirlemek için tüm müşterilerin işlemlerini sürekli olarak izleyecektir. Şirketimiz, terör ve suç faaliyetlerinden elde edilen gelirlerin yasallaştırılmasını önlemek için risk değerlendirmesi uygulamak için uluslararası standartları ve gereklilikleri kullanır. Ayrıca, bu Kara Paranın Aklanmasının Önlenmesi Politikasında belirtilen amaç için risk değerlendirmesi uygulamasını da uyguluyoruz. Miningfy, soruşturma prosedürünü yapmak ve tamamlamak için koşullar netleşene kadar herhangi bir müşterinin hesabını (tüm fonları dahil) bloke etme ve kapatma hakkını saklı tutar.
+<br/>
+<br/>
+Dolandırıcılıkla Mücadele Politikamız, Miningfy'ın KULLANIM VE HİZMET ŞARTLARININ hayati bir parçasıdır. Temel amacı, https://miningfy.net/ web sitesindeki herhangi bir dolandırıcılık girişimini ve yasa dışı faaliyetleri önlemektir.<br/>
+<br/>
+<br/>
+Dolandırıcılıkla Mücadele Görevlisi<br/>
+<br/>
+Dolandırıcılıkla Mücadele Görevlisi, her türlü yasa dışı faaliyeti tespit eden, araştıran ve önlemek için savunan kişidir. Bu kişi ayrıca, iddia edilen şüphelinin durumuyla ilgili her türlü bilgiyi toplar ve saklar (Miningfy'ın kullanıcıları ve para işlemleri hakkındaki verileri içerir).<br/>
+<br/>
+<br/>
+Dolandırıcılıkla Mücadele Görevlisi, herhangi bir bulguyu, soruşturma için gerekli olması halinde, üçüncü taraf kişi ve kuruluşlar da dahil olmak üzere ilgili makamlara bildirme hakkına sahiptir. KULLANIM ŞARTLARI ve GİZLİLİK POLİTİKAMIZ nedeniyle, kayıtlı herhangi bir müşteri, Dolandırıcılıkla Mücadele Görevlisi ile mümkün olduğunca verimli bir şekilde işbirliği yapmalıdır. Kullanıcı, görevlinin talep ettiği tüm ilgili bilgi ve belgeleri sağlamalıdır. Not Dolandırıcılıkla Mücadele Görevlileri, herhangi bir gizli bilgiyi yalnızca bu bilgileri almaya yetkili üçüncü taraflara (şirketler veya bireyler) ifşa edebilir.
+
+
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=======Mission-Section Ends Here=======-->
+
+
+        <!--=======Investor-Section Starts Here=======-->
+
+        <!--=======Investor-Section Ends Here=======-->
+
+   <!-- ==========Footer-Section Starts Here========== -->
+   <footer class="footer-section">
+    <div class="newslater-section padding-bottom">
+        <div class="container">
+            <div class="newslater-area">
+                <div class="newslater-content padding-bottom padding-top">
+                    <span class="cate"></span>
+                    <h3 class="title">Miningfy'a Abone Ol</h3>
+                    <form class="newslater-form">
+                        <input type="text" placeholder="Mail Adresi" required>
+                        <button type="submit">Abone Ol</button>
+                    </form>
+                </div>
+                <div class="newslater-thumb">
+                    <img src="./assets/images/footer/footer.png" alt="footer">
+                    <div class="coin-1">
+                        <img src="./assets/images/footer/Coin_01.png" alt="footer">
+                    </div>
+                    <div class="coin-2">
+                        <img src="./assets/images/footer/Coin_02.png" alt="footer">
+                    </div>
+                    <div class="coin-3">
+                        <img src="./assets/images/footer/Coin_03.png" alt="footer">
+                    </div>
+                    <div class="coin-4">
+                        <img src="./assets/images/footer/Coin_04.png" alt="footer">
+                    </div>
+                    <div class="coin-5">
+                        <img src="./assets/images/footer/Coin_05.png" alt="footer">
+                    </div>
+                    <div class="coin-6">
+                        <img src="./assets/images/footer/Coin_06.png" alt="footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-top">
+            <div class="logo">
+                <a href="">
+                    <img src="./assets/images/logo/mngflogo.png" alt="logo">
+                </a>
+            </div>
+            <ul class="links">
+                <li>
+                    <a href="https://miningfy.net/faq.html">Sıkça Sorulan Sorular</a>
+                </li>
+                <li>
+                    <a href="https://miningfy.net/privacy.html">Gizlilik Sözleşmesi</a>
+                </li>
+                <li>
+                    <a href="https://miningfy.net/data-centers.html">Veri Merkezlerimiz</a>
+                </li>
+                <li>
+                    <a href="https://miningfy.net/aml-policy.html">Kara Para Aklamayı Önleme Politikası</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-area">
+                <div class="left">
+                    <p>&copy; 2022 <a href="https://miningfy.net">Miningfy</a> | Tüm hakları saklıdır</p>
+                </div>
+                <!--
+                    
+                    <ul class="social-icons">
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0" class="active">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ==========Footer-Section Ends Here========== -->
+
+
+    </div>
+
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/modernizr-3.6.0.min.js"></script>
+    <script src="./assets/js/lib/plugins.js"></script>
+    <script src="./assets/js/lib/bootstrap.min.js"></script>
+    <script src="./assets/js/lib/magnific-popup.min.js"></script>
+    <script src="./assets/js/lib/jquery-ui.min.js"></script>
+    <script src="./assets/js/lib/wow.min.js"></script>
+    <script src="./assets/js/lib/odometer.min.js"></script>
+    <script src="./assets/js/lib/viewport.jquery.js"></script>
+    <script src="./assets/js/lib/nice-select.js"></script>
+    <script src="./assets/js/lib/owl.min.js"></script>
+    <script src="./assets/js/lib/paroller.js"></script>
+    <script src="./assets/js/lib/lib_main.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

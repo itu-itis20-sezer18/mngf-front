@@ -50,166 +50,138 @@
         <!--========== Preloader ==========-->
 
 
-        <!--=======Header-Section Starts Here=======-->
-        <header class="header-section">
-            <div class="header-top">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-6">
+     <!--=======Header-Section Starts Here=======-->
+     <header class="header-section">
+        <div class="header-top no-user" id="no-user-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6">
 
-                        </div>
-                        <div class="col-6">
-                            <ul class="cart-area">
-
-                                <li>
-                                    <a href="sign-in.html">Giriş Yap</a>
-                                </li>
-                                <li>
-                                    <a href="sign-up.html">Kayıt Ol</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="header-bottom">
-                <div class="container">
-                    <div class="header-area">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="./assets/images/logo/mngflogo.png" alt="logo">
-                            </a>
-                        </div>
-                        <ul class="menu">
+                    <div class="col-6">
+                        <ul class="cart-area ">
+
                             <li>
-                                <a href="index.html">Anasayfa</a>
+                                <a href="sign-in">Giriş Yap</a>
                             </li>
                             <li>
-                                <a href="investment-plan.html">Planlar</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">SSS</a>
-                            </li>
-                            <li class="pr-0">
-                                <a href="contact.html" class="custom-button">Bize Katıl!</a>
+                                <a href="sign-up">Kayıt Ol</a>
                             </li>
                         </ul>
-                        <div class="header-bar d-lg-none">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+
                     </div>
                 </div>
             </div>
-        </header>
-        <!--=======Header-Section Ends Here=======-->
+        </div>
+        <div class="header-bottom" id="no-user-header-bottom">
+            <div class="container">
+                <div class="header-area">
+                    <div class="logo">
+                        <a href="https://miningfy.net">
+                            <img src="./assets/images/logo/mngflogo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="menu">
+                        <li>
+                            <a href="https://miningfy.net/faq.html">Sıkça Sorulan Sorular</a>
+                        </li>
+                        <li>
+                            <a href="https://miningfy.net/privacy.html">Gizlilik Sözleşmesi</a>
+                        </li>
+                        <li>
+                            <a href="https://miningfy.net/data-centers.html">Veri Merkezlerimiz</a>
+                        </li>
+                        <li>
+                            <a href="https://miningfy.net/aml-policy.html">Kara Para Aklamayı Önleme Politikası</a>
+                        </li>
+                        
+
+                       <!-- <li class="pr-0">
+                            <a href="sign-up" class="custom-button">BİZE KATIL!</a>
+                        </li> -->
+                    </ul>
+                    <div class="header-bar d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-top user">
+            <div class="container">
+                <div class="mobile-header d-flex justify-content-between d-lg-none align-items-center">
+                    <div class="author">
+                        <img src="./assets/images/dashboard/author.png" alt="dashboard">
+                    </div>
+                </div>
+                <div class="mobile-header-content d-lg-flex flex-wrap justify-content-lg-end align-items-center">
+
+                    <div
+                        class="dashboard-header-right d-flex flex-wrap justify-content-center justify-content-sm-between justify-content-lg-end align-items-center">
+                        <ul class="menu" style="margin-right: 20px;">
+                            <li>
+                                <a href="dashboard"
+                                    style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Yatırımlarım</a>
+                            </li>
+                            <li>
+                                <a href="plan"
+                                    style="background-color: white;color: #33406a;border-radius: 20px;padding-left:15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">Plan
+                                    Seçim</a>
+                            </li>
+                        </ul>
+                        <ul class="dashboard-right-menus">
+                            <li>
+                                <a href="#0" class="author">
+                                    <div class="thumb">
+                                        <img src="./assets/images/dashboard/author.png" alt="dashboard">
+                                        <span class="checked">
+                                            <i class="flaticon-checked"></i>
+                                        </span>
+                                    </div>
+                                    <div class="content">
+                                        <h6 id="main-user-name" class="title">John Doe</h6>
+                                        <!-- <span class="country">Indonesia</span> -->
+                                    </div>
+                                </a>
+                                <div class="notification-area">
+                                    <div class="author-header">
+                                        <div class="thumb">
+                                            <img src="./assets/images/dashboard/author.png" alt="dashboard">
+                                        </div>
+                                        <h6 id="nav-user-name" class="title">John Doe</h6>
+                                        <a id="nav-email" href="#mailto:johndoe@gmail.com">Johndoe@gmail.com</a>
+                                    </div>
+                                    <div class="author-body">
+                                        <ul>
+                                            <li>
+                                                <a href="/profile"><i class="far fa-user"></i>Profile</a>
+                                            </li>
+                                            <li><a href="dashboard">Yatırımlarım</a></li>
+                                            <li><a href="plan">Plan Seçim</a></li>
+                                            <li>
+                                                <a href="" id="btn-logout"><i class="fas fa-sign-out-alt"></i>Log
+                                                    Out</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--=======Header-Section Ends Here=======-->
 
 
         <!--=======Banner-Section Starts Here=======-->
-        <section class="hero-section bg_img" data-background="./assets/images/about/hero-bg.png">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="title">Hakkımızda</h1>
-                    <ul class="breadcrumb">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            About Us
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+   <br/><br/><br/>
         <!--=======Banner-Section Ends Here=======-->
 
 
-        <!--=======About-Section Starts Here=======-->
-        <section class="about-section padding-top padding-bottom section-bg">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 d-none d-lg-block rtl">
-                        <img src="./assets/images/about/about.png" alt="about">
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="section-header left-style">
-                            <span class="cate">WELCOME TO HYIPLAND</span>
-                            <h2 class="title">about hyipland</h2>
-                            <p>
-                                HYIPLAND is an investment company, whose team is working on making money from the
-                                volatility of cryptocurrencies and offer great returns to our clients.
-                            </p>
-                        </div>
-                        <div class="about--content">
-                            <div class="about-item">
-                                <div class="about-thumb">
-                                    <img src="./assets/images/about/about01.png" alt="about">
-                                </div>
-                                <div class="about-content">
-                                    <h5 class="title">Secure & Reliable</h5>
-                                    <p>
-                                        Secure assets fund for users
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="about-item">
-                                <div class="about-thumb">
-                                    <img src="./assets/images/about/about02.png" alt="about">
-                                </div>
-                                <div class="about-content">
-                                    <h5 class="title">Fast Withdrawals</h5>
-                                    <p>
-                                        Quick money withdrawals for users
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="about-item">
-                                <div class="about-thumb">
-                                    <img src="./assets/images/about/about03.png" alt="about">
-                                </div>
-                                <div class="about-content">
-                                    <h5 class="title">Guaranteed</h5>
-                                    <p>
-                                        Your return on investment is guaranteed
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--=======About-Section Ends Here=======-->
-
-
-        <!--=======CEO-Section Starts Here=======-->
-        <section class="ceo-section padding-bottom padding-top bg_img"
-            data-background="./assets/images/about/ceo-bg.jpg">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-7 col-xl-6">
-                        <div class="ceo-content">
-                            <h3 class="title">Our goal is to be at the heart of the financial services industry</h3>
-                            <div class="author">
-                                <h6 class="subtitle"><a href="#0">Adam Phelps</a></h6>
-                                <span class="info">CEO of hyipland</span>
-                                <div class="sign">
-                                    <img src="./assets/images/about/sign-ceo.png" alt="about">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xl-3">
-                        <div class="ceo-thumb">
-                            <img src="./assets/images/about/certificate-ceo.png" alt="about">
-                        </div>
-                        <a href="#0" class="custom-button">Open Certificate</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--=======CEO-Section Ends Here=======-->
 
 
         <!--=======Mission-Section Starts Here=======-->
@@ -221,73 +193,44 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-10">
                         <div class="section-header">
-                            <span class="cate">Our Mission to help our user</span>
+                            <span class="cate"></span>
                             <h2 class="title">
-                                To maximize Money
+                                Gizlilik Sözleşmesi
                             </h2>
                             <p class="mw-100">
-                                We are worldwide investment company who are committed to the principle of revenue
-                                maximization and reduction of the financial risks at investing.
+                                Gizlilik ve Kayıt Sözleşmesi
+Hizmetimizin kullanıcılarının ve Site ziyaretçilerimizin (”siz”) gizliliğine saygı gösteriyoruz ve çevrimiçi gizliliğinizi korumaya önem veriyoruz. Bu Gizlilik Politikasında, Miningfy Ltd. ve bağlı şirketlerinin (”Miningfy L.T.D”, ”biz”) Kişisel Bilgilerinizin toplanması, saklanması ve işlenmesiyle ilgili prosedürler özetlenmektedir. Gizlilik Politikamızı ara sıra güncelleriz. Yeni Gizlilik Politikasını bu sayfada yayınlayarak size bu değişiklikleri bildiririz. Değişiklik olup olmadığını öğrenmek için, bu Gizlilik Politikasını ara sıra incelemenizi tavsiye ederiz. Bu Gizlilik Politikasındaki değişiklikler, bu sayfada yayınlandığında yürürlüğe girer.
+<br/><br/>
+1. Bilgi Toplama
+Kişisel bilgilerinizi, sunucu hizmetlerini sağladığımız blockchain ve madencilik hizmetlerini (”Hizmet”) sağlayıp sürdürmek ve Sitedeki kişisel deneyiminizi artırmak için kullanıyoruz. ”Kişisel Bilgiler”, belirli veya belirlenebilir bir kişiyle ilgili her türlü bilgi anlamına gelir. Hizmet için hesap oluştururken, bize verdiğiniz bilgileri kullanıyoruz. Aynı zamanda, bilgileri toplamak ve saklamak için çerezler, piksel etiketleri; tarayıcı web depolama veya uygulama veri önbellekleri, veritabanları ve sunucu kayıtları gibi yerel depolama da dâhil olmak üzere çeşitli teknolojiler kullanıyoruz. Hizmeti kullanmakla veya Site koşullarımızı kabul etmekle, bilgilerin bu politikaya uygun olarak toplanmasını ve kullanılmasını kabul etmiş sayılırsınız. Bu Gizlilik politikasında aksi belirtilmediği sürece, kullanılan terimler :lik1 adresinden ulaşabileceğiniz hüküm ve koşullarımızla aynı anlamda olacaktır.
+<br/><br/>1.1. Hesap Oluşturma Bilgileri
+Hizmet için kaydolduğunuzda veya Sitede bir hesap oluşturduğunuzda, adınız, e-posta adresiniz gibi Kişisel bilgilerinizi veya fatura bilgilerinizi, kredi kartı bilgilerinizi, cüzdan adresinizi, IP adresinizi veya Miningfy L.T.D’in bu bilgilerle makul şekilde ilişkilendirebileceği Miningfy L.T.D Hesabınızla ve size sağlanan Hizmetle ilişkilendirdiğimiz bilgiler gibi diğer bilgileri toplar ve kullanırız. Ayrıca Hizmete kayıt olurken özgün bir kullanıcı adı ve parola seçmeniz de istenecek ve bu bilgiler sadece kullanıcı hesabınıza erişmenizi sağlamak için kullanılacaktır. Kayıt olurken, Ayarlar sayfasından Google Doğrulamayı etkinleştirerek hesabınızın güvenliğini sağlama seçeneği sunulacaktır. Hesap veya parola kurtarma için, Ayarlar sayfasından kurtarma e-postası girebilirsiniz. Bir işletme adına kendi müşterileriniz için hesap açıyorsanız, bu kişilerle ilgili bilgiler verdiğinizde kendilerinden Kişisel Bilgilerini bize vermeleri konusunda izin almış olduğunuzu ve kendilerine bu Gizlilik Politikasını anlattığınızı ve kabul ettiklerini onaylamış olursunuz.
+<br/><br/>1.2. Oturum Bilgileri
+Miningfy L.T.D, Sitemizi her ziyaret ettiğinizde ve oturum açtığınızda tarayıcınızın gönderdiği bilgileri toplar (”Oturum Verileri”). Bu Oturum Verileri, bilgisayarınızın İnternet Protokol (”IP”) adresi, tarayıcı türü, tarayıcı sürümü, Hizmetimizin ziyaret ettiğiniz sayfaları, ziyaretinizin tarih ve saati, bu sayfalarda geçirdiğiniz süre ve diğer istatistikleri içerebilir. Ayrıca, Hizmetimizin işlevselliğini artırmak için bu gibi verileri toplayan, izleyen ve analiz eden Google Analytics gibi üçüncü şahıs hizmetlerini de kullanabiliriz. Bu üçüncü şahıs hizmet sağlayıcıların bu bilgilerin nasıl kullanılacağına dair kendi gizlilik ilkeleri bulunur. Bu üçüncü şahıs hizmet sağlayıcılar, sadece namımıza gerçekleştirdikleri görevleri gerçekleştirmek için gereken Kişisel Verilerinize kısıtlı olarak erişebilir ve sözleşmeye bağlı olarak bunları korumakla ve sadece açıklanma amaçlarına uygun olarak korumakla yükümlüdürler.
+<br/><br/>2. Hizmet Sağlayıcılar
+Hizmetimizi uygulamaları, Hizmetimizi bizim adımıza sağlamaları, Hizmetle alakalı işlemleri gerçekleştirmeleri veya Hizmetin nasıl kullanıldığını analiz etmeleri için üçüncü şahıs şirketlerden destek alabiliriz. Bu üçüncü şahıslar, sadece bizim adımıza bu görevleri gerçekleştirmek için Kişisel Bilgilerinize ulaşabilir ve bunları farklı hiçbir amaçla açıklamamak veya kullanmamakla yükümlüdür.
+<br/><br/>3. Yasalarla Uyumluluk
+Yasaların zorunlu tutması hâlinde veya mahkeme celbi doğrultusunda ya da yasalarla ve yürütme makamlarının makul istekleriyle uyumluluğu sürdürmek adına gerekli olduğunu düşündüğümüzde veya Avrupa Birliği Genel Veri Koruma Kanunu uyarınca Hizmetimizin güvenliğini veya güvenilirliğini korumak için gerekli olduğunda, Kişisel Bilgilerinizi açıklayacağız. Sitemizi ziyaret eden veya Hizmeti kullanan Avrupa Birliği, Avrupa Ekonomik Bölgesi ve İsviçre mukimleri, ilgili yasalar kapsamında şu haklara sahiptir: Bilgiye erişme hakkı, bilgi silme hakkı, bilgi değiştirme hakkı, veri konusuna erişme hakkı (Madde 15 GDPR), silme hakkı (Madde 17 GDPR), düzeltme hakkı (Madde 16 GDPR), işlenmesini kısıtlama hakkı (Madde 18 GDPR), bilgi taşınabilirliği hakkı (Madde 20 GDPR), yetkili makamlara şikayet hakkı (Madde 77 GDPR), iznini geri çekme hakkı (Madde 7 (3) GDPR) ve belirli veri işleme süreçlerine itiraz etme hakkı (Madde 21 GDPR). Bu kullanıcılar, Kişisel Bilgilerine erişim hakkına sahiptir ve diledikleri zaman bülten aboneliğimizden çıkabilirler.
+<br/><br/>4. Bilgi Güvenliği
+Miningfy L.T.D, makul tasarımlı ve sektörde kabul edilmiş uygun bilgi toplama, saklama ve işleme uygulamaları ve güvenlik önlemlerini benimsemiş ve Kişisel Bilgilerinize, kullanıcı adınıza, parolanıza, işlem bilgilerinize ve kullanıcı hesabınızda saklanan bilgilere yetkisiz erişim, değiştirme, açıklama veya yok etmeye karşı fiziksel önlemleri hayata geçirmiştir. Çalışanlarımız, kullanıcıların adlarına ve e-posta adreslerine sadece bilmeleri gerektiğinde erişir. Kişisel Bilgilerin güvenliği bizim için önemlidir, ancak kullanıcılarımıza hiçbir İnternet üzerinden aktarım yöntemi veya elektronik depolama yönteminin %100 güvenli olmadığını da hatırlatırız. Kişisel Bilgilerinizi korumak için etkin önlemler alıp araçlar kullansak da, bu bilgilerin %100 güvende olduğunu ve korunacağını garanti edemeyiz.
+<br/><br/>5. Uluslararası Veri Aktarımı
+Kişisel Bilgileriniz de dâhil olmak üzere tüm bilgileriniz, kendi devletinizin, eyaletinizin, ülkenizin veya diğer yargı alanınızın dışında bulunan ve bilgi koruma yasalarının kendi yargı alanınızdan farklı olduğu yerlerdeki sistemlere gönderilip buralarda saklanabilir. Bu Gizlilik Politikamızı kabul edip bu bilgileri vermekle, bu transferleri de kabul etmiş sayılırsınız. Nerede işlendiğinden veya saklandığından bağımsız olarak, topladığımız bilgilerin güvenliğini ve gizliliğini bu Gizlilik Politikasına uygun olarak sağlayacağız.
+<br/><br/>6. Diğer Sitelere Bağlantılar
+Hizmetimiz, kendi işletmediğimiz farklı sitelere bağlantılar da içerebilir. Bir üçüncü şahıs bağlantısını tıklarsanız, ilgili üçüncü şahsın sitesine yönlendirilirsiniz. Ziyaret ettiğiniz her sitenin kendi Gizlilik Politikasını incelemenizi şiddetle tavsiye ederiz. Miningfy L.T.D olarak herhangi bir üçüncü şahıs sitesi veya hizmeti üzerinde denetimimiz olmadığı gibi, içeriğinden, gizlilik politikasından veya uygulamalarından da sorumlu değiliz.
+<br/><br/>7. Çocukların Gizliliği
+Site, on sekiz (18) yaşından küçüklere yönelik değildir. Genel olarak ve bazı istisnalarla, Genel Veri Koruma Kanunu da dâhil olmak üzere gizlilik yasaları uyarınca çoğu zaman on altı (16) yaşın altındaki kişilerin (”Çocuklar”) Kişisel Bilgilerinin toplanması ebeveynlerinin onayına tabidir. Ayrıca, Avrupa Birliği üye ülkesi daha düşük bir yaş sınırı (13 yaş altında olmamak kaydıyla) belirlemediği sürece, Genel Veri Koruma Kanunu ebeveynlerin onayını zorunlu tutmaktadır. Eğer bir ebeveyn veya vasiyseniz ve Çocuklarınızın bize Kişisel Bilgi verdiğini düşünüyorsanız, lütfen bizimle iletişime geçin. 16 yaşından küçük bir Çocuğun bize bilgi verdiğini fark edersek, bu bilgiyi derhâl sunucularımızdan sileriz.
+<br/><br/>8. Kişisel Bilgilerinizde Değişiklik
+Kişisel Bilgilerinizi bu Gizlilik Politikası beyanında belirtilmeyen bir amaçla kullanmaya karar vermemiz hâlinde, Kişisel Bilgilerinizin bu farklı kullanımlarını kabul etmeme seçeneğini de size sunacağız. Zaman zaman size yeni hizmetler, özellikler ve yaklaşan etkinlikler hakkında e-postalar (”Bültenler”) gönderebiliriz. Gönderdiğimiz her e-postada bulunan ’abonelikten çık’ özelliğini kullanarak bültenlerin ve Miningfy L.T.D’ten ikincil mesajların gelmesini engelleyebilirsiniz. Ancak, Hizmet kullanıcıları gerekli e-postaları ve Hizmetle ilgili mesajları almaya devam edecektir.
+<br/><br/>9. Bilgilerim silinecek mi?
+Kişisel bilgilerinizi, bu Gizlilik Politikasında belirtilen amaçlar doğrultusunda ve sözleşmeye dayalı ve yasal yükümlülüklerimizi yerine getirmemiz için gerekli olduğu sürece saklayacağız. Kişisel bilgilerinizi aynı zamanda farklı amaçlarla ve yasal taleplere karşı savunma da dâhil olmak üzere belirli amaçlar için yasaların izin verdiği sürece de saklayabiliriz.
+<br/><br/>10. Bülten
+Kullanıcılar, Site üzerinden Bültene abone olarak Hizmet ve yeni hizmet teklifleri hakkında bilgi alabilirler. Bültenimizi alabilmeleri için Kullanıcıların geçerli bir e-posta adresi vermeleri gerekir ve ardından Bülten alıcısı olarak e-posta adresini doğrulamasını ve kullanımını onaylamasını sağlayan bir e-posta alacaklardır. Yetkisiz bir üçüncü şahsın e-postasıyla Bülten aboneliklerinin tespit edilebilmesi için, her Bülten aboneliğinin IP adresi ile tarih ve saati saklanır. Yasal davaların açılması, yürütülmesi veya savunması için yasal zorunluluğumuz olmadığı sürece farklı bir bilgi toplamayacak ve bu bilgileri üçüncü şahıslara aktarmayacağız. Bülten aboneliğinizi dilediğiniz zaman iptal edebilirsiniz. Her Bültenin içinde ve E-posta adresinize gönderdiğimiz abonelik onayında gerekli bilgileri bulabilirsiniz.
+
+
+
+
+
                             </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-5 rtl">
-                        <div class="mission--thumb">
-                            <img class="wow slideInLeft" src="./assets/images/mission/mission.png" alt="about">
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="mission-wrapper owl-theme owl-carousel">
-                            <div class="mission-item">
-                                <div class="mission-thumb">
-                                    <img src="./assets/images/mission/1.png" alt="mission">
-                                </div>
-                                <div class="mission-content">
-                                    <h5 class="title">Low invest</h5>
-                                    <p>
-                                        Praesent sagittis nibh vehicula diam tesque
-                                    </p>
-                                    <a href="#0">Learn More <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                            <div class="mission-item">
-                                <div class="mission-thumb">
-                                    <img src="./assets/images/mission/2.png" alt="mission">
-                                </div>
-                                <div class="mission-content">
-                                    <h5 class="title">One tap invest</h5>
-                                    <p>
-                                        Praesent sagittis nibh vehicula diam tesque
-                                    </p>
-                                    <a href="#0">Learn More <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                            <div class="mission-item">
-                                <div class="mission-thumb">
-                                    <img src="./assets/images/mission/3.png" alt="mission">
-                                </div>
-                                <div class="mission-content">
-                                    <h5 class="title">Max. returns</h5>
-                                    <p>
-                                        Praesent sagittis nibh vehicula diam tesque
-                                    </p>
-                                    <a href="#0">Learn More <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
-                            <div class="mission-item">
-                                <div class="mission-thumb">
-                                    <img src="./assets/images/mission/4.png" alt="mission">
-                                </div>
-                                <div class="mission-content">
-                                    <h5 class="title">Transparency</h5>
-                                    <p>
-                                        Praesent sagittis nibh vehicula diam tesque
-                                    </p>
-                                    <a href="#0">Learn More <i class="flaticon-right-arrow"></i></a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -300,241 +243,101 @@
 
         <!--=======Investor-Section Ends Here=======-->
 
-
-        <!--=======Check-Section Starts Here=======-->
-        <section class="call-section call-overlay bg_img" data-background="./assets/images/call/call-bg.jpg">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-7 col-xl-6">
-                        <div class="call-item text-center text-sm-left">
-                            <div class="call-icon">
-                                <img src="./assets/images/call/icon01.png" alt="call">
-                            </div>
-                            <div class="call-content">
-                                <h5 class="title">Ready To Start Your Earnings Through Crypto Currency</h5>
-                            </div>
-                        </div>
+   <!-- ==========Footer-Section Starts Here========== -->
+   <footer class="footer-section">
+    <div class="newslater-section padding-bottom">
+        <div class="container">
+            <div class="newslater-area">
+                <div class="newslater-content padding-bottom padding-top">
+                    <span class="cate"></span>
+                    <h3 class="title">Miningfy'a Abone Ol</h3>
+                    <form class="newslater-form">
+                        <input type="text" placeholder="Mail Adresi" required>
+                        <button type="submit">Abone Ol</button>
+                    </form>
+                </div>
+                <div class="newslater-thumb">
+                    <img src="./assets/images/footer/footer.png" alt="footer">
+                    <div class="coin-1">
+                        <img src="./assets/images/footer/Coin_01.png" alt="footer">
                     </div>
-                    <div class="col-md-5 col-xl-6 text-center text-sm-left text-md-right">
-                        <a href="#0" class="custom-button">learn more <i class="flaticon-right"></i></a>
+                    <div class="coin-2">
+                        <img src="./assets/images/footer/Coin_02.png" alt="footer">
+                    </div>
+                    <div class="coin-3">
+                        <img src="./assets/images/footer/Coin_03.png" alt="footer">
+                    </div>
+                    <div class="coin-4">
+                        <img src="./assets/images/footer/Coin_04.png" alt="footer">
+                    </div>
+                    <div class="coin-5">
+                        <img src="./assets/images/footer/Coin_05.png" alt="footer">
+                    </div>
+                    <div class="coin-6">
+                        <img src="./assets/images/footer/Coin_06.png" alt="footer">
                     </div>
                 </div>
             </div>
-        </section>
-        <!--=======Check-Section Ends Here=======-->
-
-
-        <!--=======Check-Section Starts Here=======-->
-        <section class="client-section padding-bottom padding-top">
-            <div class="background-map">
-                <img src="./assets/images/client/client-bg.png" alt="client">
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-top">
+            <div class="logo">
+                <a href="">
+                    <img src="./assets/images/logo/mngflogo.png" alt="logo">
+                </a>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10">
-                        <div class="section-header left-style">
-                            <span class="cate">TESTIMONIALS</span>
-                            <h2 class="title"><span>40,000</span> HAPPY CLIENTS AROUND THE WORLD</h2>
-                            <p class="mw-500">
-                                We have many happy investors invest with us .Some impresions from our Customers!
-                            </p>
-                        </div>
-                    </div>
+            <ul class="links">
+                <li>
+                    <a href="https://miningfy.net/faq.html">Sıkça Sorulan Sorular</a>
+                </li>
+                <li>
+                    <a href="https://miningfy.net/privacy.html">Gizlilik Sözleşmesi</a>
+                </li>
+                <li>
+                    <a href="https://miningfy.net/data-centers.html">Veri Merkezlerimiz</a>
+                </li>
+                <li>
+                    <a href="https://miningfy.net/aml-policy.html">Kara Para Aklamayı Önleme Politikası</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-area">
+                <div class="left">
+                    <p>&copy; 2022 <a href="https://miningfy.net">Miningfy</a> | Tüm hakları saklıdır</p>
                 </div>
-                <div class="row">
-                    <div class="col-xl-9">
-                        <div class="m--30">
-                            <div class="client-slider owl-carousel owl-theme">
-                                <div class="client-item">
-                                    <div class="client-content">
-                                        <p>
-                                            Perfect work to start on, support is awesome
-                                        </p>
-                                        <div class="rating">
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="client-thumb">
-                                        <a href="#0">
-                                            <img src="./assets/images/client/client01.png" alt="client">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="client-item">
-                                    <div class="client-content">
-                                        <p>
-                                            Very easy to use, perfect for invest
-                                        </p>
-                                        <div class="rating">
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="client-thumb">
-                                        <a href="#0">
-                                            <img src="./assets/images/client/client02.png" alt="client">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="client-item">
-                                    <div class="client-content">
-                                        <p>
-                                            Awesome hyipland most profitable site!
-                                        </p>
-                                        <div class="rating">
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="client-thumb">
-                                        <a href="#0">
-                                            <img src="./assets/images/client/client03.png" alt="client">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--=======Check-Section Ends Here=======-->
-
-
-        <!-- ==========Footer-Section Starts Here========== -->
-        <footer class="footer-section">
-            <div class="newslater-section padding-bottom">
-                <div class="container">
-                    <div class="newslater-area">
-                        <div class="newslater-content padding-bottom padding-top">
-                            <span class="cate">SUBSCRIBE TO hyipland</span>
-                            <h3 class="title">To Get Exclusive Benefits</h3>
-                            <form class="newslater-form">
-                                <input type="text" placeholder="Enter Your Email Here" required>
-                                <button type="submit">subscribe</button>
-                            </form>
-                        </div>
-                        <div class="newslater-thumb">
-                            <img src="./assets/images/footer/footer.png" alt="footer">
-                            <div class="coin-1">
-                                <img src="./assets/images/footer/Coin_01.png" alt="footer">
-                            </div>
-                            <div class="coin-2">
-                                <img src="./assets/images/footer/Coin_02.png" alt="footer">
-                            </div>
-                            <div class="coin-3">
-                                <img src="./assets/images/footer/Coin_03.png" alt="footer">
-                            </div>
-                            <div class="coin-4">
-                                <img src="./assets/images/footer/Coin_04.png" alt="footer">
-                            </div>
-                            <div class="coin-5">
-                                <img src="./assets/images/footer/Coin_05.png" alt="footer">
-                            </div>
-                            <div class="coin-6">
-                                <img src="./assets/images/footer/Coin_06.png" alt="footer">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="footer-top">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="./assets/images/logo/footer-logo.png" alt="logo">
+                <!--
+                    
+                    <ul class="social-icons">
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
-                    </div>
-                    <ul class="links">
-                        <li>
-                            <a href="#0">About</a>
-                        </li>
-                        <li>
-                            <a href="#0">Affiliates</a>
-                        </li>
-                        <li>
-                            <a href="#0">Plans</a>
-                        </li>
-                        <li>
-                            <a href="#0">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="#0">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-bottom">
-                    <div class="footer-bottom-area">
-                        <div class="left">
-                            <p>&copy; 2021 <a href="#0">Hyipland</a> | All right reserved</p>
-                        </div>
-                        <ul class="social-icons">
-                            <li>
-                                <a href="#0">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0" class="active">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <i class="fab fa-pinterest-p"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <a href="#0" class="active">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            -->
             </div>
-        </footer>
-        <!-- ==========Footer-Section Ends Here========== -->
+        </div>
+    </div>
+</footer>
+<!-- ==========Footer-Section Ends Here========== -->
 
 
     </div>

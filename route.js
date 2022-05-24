@@ -68,6 +68,18 @@ app.get('/faq', function (req, res)
 {
     res.render('faq.html');
 });
+app.get('/privacy', function (req, res)
+{
+    res.render('privacy.html');
+});
+app.get('/aml-policy', function (req, res)
+{
+    res.render('aml-policy.html');
+});
+app.get('/data-centers', function (req, res)
+{
+    res.render('data-centers.html');
+});
 //   app.use('/',function handleRequest(request, response) {
 //     function gup( name, url ) {
 //         if (!url) url = location.href;

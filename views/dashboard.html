@@ -35,10 +35,19 @@
              </div>
              <div class="modal-body">
                <div class="container">
+                  <div><h6 >Yatırım Planı:</h6><label id="selected-plan"></label></div><br>
+                  <div><h6 >Vade Oranı:</h6><label id="interest-rate"></label></div><br>
+                  <div><h6 >Yatırım Miktarı:</h6>                     <label id="invested-amount-org">
+                  </div><br>
+                  <div><h6 >Yatırım Sonu Getiri:</h6><label id="invested-return"></label></div><br>
+                  <div><h6 >Yatırım Bitiş Tarihi:</h6><label id="end-day"></label>
+                  </div>
+                  
 
                </div>
              </div>
              <div class="modal-footer">
+               <button type="button" class="btn btn-info" style="width: fit-content;" id="confirmClickActionElementId">Yatırımı İptal Et</button>
              </div>
           </div>
        </div>
@@ -1231,9 +1240,88 @@
    </script>
 
    <script>
+      var selectedInvestmentId;
       function openInvestmentDetail(item){
-         console.log($(item).attr("id"));
+         fetch("http://api.miningfy.net/deposit/getAll", {
+                  method: "POST",
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ userId: userData._id })
+               }).then(response => response.json())
+                  .then(data => {
+                     console.log(parseInt($(item).attr("id").split("-")[2]));
+                     const chosenIndex = parseInt($(item).attr("id").split("-")[2]);
+                     const chosenData = data[chosenIndex].data;
+                     selectedInvestmentId = chosenData._id;
+                     var planString;
+                     switch(chosenData.plan){
+                        case "30-days":
+                           planString = "30 Gün - Standart Plan"
+                           break;
+                           case "60-days":
+                           planString = "60 Gün - Avantajlı Plan"
+                           break;
+                           case "90-days":
+                           planString = "90 Gün - Altın Plan"
+                           break;
+                     }
+                     document.getElementById("selected-plan").innerHTML = planString
+                     document.getElementById("interest-rate").innerHTML = "%" + (chosenData.interestRate*100).toFixed(0)
+                     document.getElementById("invested-amount-org").innerHTML = chosenData.amount + " " + chosenData.selectedCoin + " - " + chosenData.amountInMngf + " " + "MNGF"
+                     document.getElementById("invested-return").innerHTML = (chosenData.amountWillBeRecieved - chosenData.amountInMngf).toFixed(2) + " MNGF"
+                     document.getElementById("end-day").innerHTML = chosenData.endDate.split(" ")[0] + " " +  chosenData.endDate.split(" ")[1] + " " + chosenData.endDate.split(" ")[2] + " "+chosenData.endDate.split(" ")[3]
+
+                  })
+
       }
+
+                  // function cancelInvestment(){
+                     document
+    .getElementById("confirmClickActionElementId")
+    .addEventListener("click", function( e ){ //e => event
+        if( ! confirm("Yatırımınızı iptal ederseniz vade getirisinden yararlanamazsınız ve yatırdığınız tutar cüzdanınıza aktarılır. İptal etmek istediğinize emin misiniz?") ){
+            e.preventDefault(); // ! => don't want to do this
+        } else {
+         fetch("http://localhost:4000/deposit/cancelDeposit", {
+                  method: "POST",
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ depositId: selectedInvestmentId })
+               }).then(response => response.json())
+                  .then(data => {
+                     if(data.msg == "success"){
+                        Swal.fire({
+               icon: "success",
+               title: "Başarılı",
+               text: "Yatırımınız iptal edilmiştir!",
+            });
+            window.location.reload();
+            return;
+                     }
+                     else{
+                        Swal.fire({
+               icon: "error",
+               title: "Hata...",
+               text: "Hata oluştu! Lütfen tekrar deneyiniz.",
+            });
+                     }
+                  })           
+        }
+    });
+            //          fetch("http://api.miningfy.net/deposit/cancelDeposit", {
+            //       method: "POST",
+            //       headers: { 'Content-Type': 'application/json' },
+            //       body: JSON.stringify({ depositId: selectedInvestmentId })
+            //    }).then(response => response.json())
+            //       .then(data => {
+            //          if(data.msg == "success"){
+            //             Swal.fire({
+            //    icon: "success",
+            //    title: "Başarılı",
+            //    text: "Yatırımınız iptal edilmiştir!",
+            // });
+            // return;
+            //          }
+            //       })
+               // }
    </script>
 
 

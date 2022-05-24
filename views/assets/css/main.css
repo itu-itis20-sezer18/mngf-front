@@ -4982,7 +4982,7 @@ body *::-webkit-scrollbar-track {
 }
 
 .faq-item .faq-content {
-  max-width: 780px;
+  /* max-width: 780px; */
   display: none;
   padding: 10px 0 20px;
   padding-left: 60px;

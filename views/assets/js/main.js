@@ -13,9 +13,19 @@ if (user.isLogin(false)) {
   let navUserName = document.querySelector("#nav-user-name");
   let navEmail = document.querySelector("#nav-email");
 
+
   userName.innerHTML = `${userData.firstName}`;
   navUserName.innerHTML = `${userData.firstName}`;
   navEmail.innerHTML = userData.email;
+
+  let userNameM = document.querySelector("#main-user-name-m");
+  let navUserNameM = document.querySelector("#nav-user-name-m");
+  let navEmailM = document.querySelector("#nav-email-m");
+  
+
+  userNameM.innerHTML = `${userData.firstName}`;
+  navUserNameM.innerHTML = `${userData.firstName}`;
+  navEmailM.innerHTML = userData.email;
   try {
     // document.querySelector(".btn-join-us").style.display = "none";
     document.getElementById("no-user-header").style.display = "none";
