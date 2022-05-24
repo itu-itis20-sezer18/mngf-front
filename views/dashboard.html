@@ -530,7 +530,6 @@
                                        </span>
                                     </div>
                                     <div class="content">
-                                       <h6 id="main-user-name" class="title">John Doe</h6>
                                        <!-- <span class="country">Indonesia</span> -->
                                     </div>
                                  </a>
@@ -540,8 +539,6 @@
                                           <i class="fa fa-user" aria-hidden="true" style="color: #e73351;font-size: 60px;"></i>
                                           <!-- <img src="./assets/images/dashboard/author.png" alt="dashboard"> -->
                                        </div>
-                                       <h6 id="nav-user-name" class="title">John Doe</h6>
-                                       <a id="nav-email" href="#mailto:johndoe@gmail.com">Johndoe@gmail.com</a>
                                     </div>
                                     <div class="author-body">
                                        <ul>
@@ -1281,7 +1278,8 @@
         if( ! confirm("Yatırımınızı iptal ederseniz vade getirisinden yararlanamazsınız ve yatırdığınız tutar cüzdanınıza aktarılır. İptal etmek istediğinize emin misiniz?") ){
             e.preventDefault(); // ! => don't want to do this
         } else {
-         fetch("http://localhost:4000/deposit/cancelDeposit", {
+           console.log(selectedInvestmentId);
+         fetch("https://api.miningfy.net/deposit/cancelDeposit", {
                   method: "POST",
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ depositId: selectedInvestmentId })
