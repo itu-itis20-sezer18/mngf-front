@@ -460,6 +460,7 @@
 
          <script>
             var myUser = JSON.parse(localStorage.getItem("myUser"));
+            let token = localStorage.getItem("token")
             var multiplier;
             var days;
             var finalAmount;
@@ -575,16 +576,26 @@
                         }
                         fetch("http://api.miningfy.net/deposit/create", {
                            method: "POST",
-                           headers: { 'Content-Type': 'application/json' },
+                           headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                            body: JSON.stringify(dataaa)
                         }).then(response => response.json()).then(dataa => {
+                           if(dataa.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
 
                            fetch("http://api.miningfy.net/auth/signInWithId", {
                               method: "POST",   
-                              headers: { 'Content-Type': 'application/json' },
+                              headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                               body: JSON.stringify({ userId: myUser._id })
                            }).then(response => response.json())
                               .then(data => {
+                                 if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                                  localStorage.setItem("myUser", JSON.stringify(data));
                               });
 
@@ -622,15 +633,25 @@
                      }
                      fetch("http://api.miningfy.net/deposit/create", {
                         method: "POST",
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                         body: JSON.stringify(dataaa)
                      }).then(response => response.json()).then(dataa => {
+                        if(dataa.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                         fetch("http://api.miningfy.net/auth/signInWithId", {
                            method: "POST",
-                           headers: { 'Content-Type': 'application/json' },
+                           headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                            body: JSON.stringify({ userId: myUser._id })
                         }).then(response => response.json())
                            .then(data => {
+                              if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                               localStorage.setItem("myUser", JSON.stringify(data));
                            });
                         Swal.fire({
@@ -821,11 +842,15 @@
             if (myUser) {
                fetch("http://api.miningfy.net/auth/signInWithId", {
                   method: "POST",
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                   body: JSON.stringify({ userId: myUser._id })
                }).then(response => response.json())
                   .then(data => {
-                     console.log(data);
+                     if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                      myUser = data;
                      selectedCoin('BTC');
                      localStorage.setItem("myUser", JSON.stringify(data));

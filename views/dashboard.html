@@ -842,10 +842,15 @@
       function generateQRforRef() {
          fetch("http://api.miningfy.net/ref/getRefs", {
                   method: "POST",
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                   body: JSON.stringify({ userId: userData._id })
                }).then(response => response.json())
                   .then(data => {
+                     if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                      document.getElementById("invested-label").innerHTML = data.activeRefs
                      document.getElementById("not-invested-label").innerHTML = data.passiveRefs
                      document.getElementById("total-ref-count").innerHTML = data.totalRefs
@@ -882,14 +887,20 @@
 
 
       let userData = JSON.parse(localStorage.getItem("myUser"));
-
+      let token = localStorage.getItem("token")
+      console.log("token: ",token)
       if (userData) {
                fetch("http://api.miningfy.net/auth/signInWithId", {
                   method: "POST",
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                   body: JSON.stringify({ userId: userData._id })
                }).then(response => response.json())
                   .then(data => {
+                     if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                      userData = data;
                      localStorage.setItem("myUser", JSON.stringify(data));
                      //Set Balances
@@ -899,10 +910,16 @@
                      }
                      fetch("http://api.miningfy.net/deposit/calculateEarnings", {
                   method: "POST",
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                   body: JSON.stringify({ userId: userData._id })
                }).then(response => response.json())
                   .then(earningData => {
+                     if(earningData.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
+                     console.log("DATA: ",earningData)
                      document.getElementById("current-profit").innerHTML = earningData.totalEarning + " MNGF" 
                      if(earningData.totalPercent == "NaN"){
                         earningData.totalPercent = 0
@@ -982,10 +999,15 @@
       function formWithdrawalHistoryTable() {
          fetch("http://api.miningfy.net/withdrawal/getAll", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
             body: JSON.stringify({ userId: userData._id }),
          }).then(response => response.json()).then(data => {
             // Parse given JSON
+            if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
             console.log("withdrawal data: ",data)
             for (let i = 0; i < data.length; i++) {
                delete data[i]["userId"];
@@ -1101,10 +1123,14 @@
 
             fetch("http://api.miningfy.net/withdrawal/create", {
                method: "POST",
-               headers: { "Content-Type": "application/json" },
+               headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                body: JSON.stringify(data),
-            }).then((res) => {
-               console.log("Request complete! response:", res);
+            }).then((res) => res.json()).then(data =>{
+               if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                Swal.fire({
                   icon: "success",
                   title: "Çekim talebiniz gönderilmiştir.",
@@ -1244,10 +1270,15 @@
       function openInvestmentDetail(item){
          fetch("http://api.miningfy.net/deposit/getAll", {
                   method: "POST",
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                   body: JSON.stringify({ userId: userData._id })
                }).then(response => response.json())
                   .then(data => {
+                     if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                      console.log(parseInt($(item).attr("id").split("-")[2]));
                      const chosenIndex = parseInt($(item).attr("id").split("-")[2]);
                      const chosenData = data[chosenIndex].data;
@@ -1281,19 +1312,26 @@
         if( ! confirm("Yatırımınızı iptal ederseniz vade getirisinden yararlanamazsınız ve yatırdığınız tutar cüzdanınıza aktarılır. İptal etmek istediğinize emin misiniz?") ){
             e.preventDefault(); // ! => don't want to do this
         } else {
-         fetch("http://localhost:4000/deposit/cancelDeposit", {
+         fetch("https://api.miningfy.net/deposit/cancelDeposit", {
                   method: "POST",
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                   body: JSON.stringify({ depositId: selectedInvestmentId })
                }).then(response => response.json())
                   .then(data => {
+                     if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                      if(data.msg == "success"){
                         Swal.fire({
                icon: "success",
                title: "Başarılı",
                text: "Yatırımınız iptal edilmiştir!",
             });
-            window.location.reload();
+            setTimeout(function () {
+               window.location.reload();
+    }, 2000);
             return;
                      }
                      else{

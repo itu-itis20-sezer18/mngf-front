@@ -893,13 +893,20 @@
 
     <script>
          var myUser = JSON.parse(localStorage.getItem("myUser"));
+         const token = localStorage.getItem("token");
+
          if (myUser) {
                fetch("http://api.miningfy.net/auth/signInWithId", {
                   method: "POST",
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: { "Content-Type": "application/json",
+      "Authorization": "Bearer " + token },
                   body: JSON.stringify({ userId: myUser._id })
                }).then(response => response.json())
                   .then(data => {
+                    if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
                      console.log(data);
                      myUser = data;
                      localStorage.setItem("myUser", JSON.stringify(data));

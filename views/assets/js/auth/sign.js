@@ -41,6 +41,12 @@ btnSignUp?.addEventListener("click", () => {
     formData = form.form2Obj(formData);
     console.log(formData);
     auth.signUp(formData).then((data) => {
+      if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
+      localStorage.setItem("token",data.token)
+      data = data.data
       let msg =
         data.msg == "taken-email" ? "e-Mail Adresi" : "Telefon Numarası";
       if (
@@ -86,7 +92,12 @@ btnSignIn?.addEventListener("click", () => {
     console.log(formData);
 
     auth.signIn(formData).then((data) => {
-      console.log(data);
+      if(data.msg == "unauthorized"){
+        localStorage.removeItem("myUser");
+        window.location.href = "/sign-in"
+      }
+      localStorage.setItem("token",data.token)
+      data = data.data
       if (data.msg && data.msg == "no-user") {
         Swal.fire({
           icon: "error",
