@@ -45,22 +45,23 @@ btnSignUp?.addEventListener("click", () => {
         localStorage.removeItem("myUser");
         window.location.href = "/sign-in"
       }
+      let msg =
+      data.msg == "taken-email" ? "e-Mail Adresi" : "Telefon Numarası";
+    if (
+      data.msg &&
+      (data.msg == "taken-email" || data.msg == "taken-number")
+    ) {
+      Swal.fire({
+        icon: "error",
+        title: "Hata...",
+        text: `Bu ${msg} zaten kullanıyor.`,
+      });
+      document.getElementById("btn-sign-up").style.visibility = "visible"
+      return;
+    }
       localStorage.setItem("token",data.token)
       data = data.data
-      let msg =
-        data.msg == "taken-email" ? "e-Mail Adresi" : "Telefon Numarası";
-      if (
-        data.msg &&
-        (data.msg == "taken-email" || data.msg == "taken-number")
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Hata...",
-          text: `Bu ${msg} zaten kullanıyor.`,
-        });
-        document.getElementById("btn-sign-up").style.visibility = "visible"
-        return;
-      }
+
       localStorage.setItem("myUser", JSON.stringify(data));
       window.location.href = "dashboard.html";
     });
@@ -96,8 +97,6 @@ btnSignIn?.addEventListener("click", () => {
         localStorage.removeItem("myUser");
         window.location.href = "/sign-in"
       }
-      localStorage.setItem("token",data.token)
-      data = data.data
       if (data.msg && data.msg == "no-user") {
         Swal.fire({
           icon: "error",
@@ -107,6 +106,8 @@ btnSignIn?.addEventListener("click", () => {
         document.getElementById("btn-sign-up").style.visibility = "visible"
         return;
       }
+      localStorage.setItem("token",data.token)
+      data = data.data
 
       localStorage.setItem("myUser", JSON.stringify(data));
       window.location.href = "dashboard.html";
