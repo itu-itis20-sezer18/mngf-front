@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 
-    <title>Kayıt Ol-Miningfy</title>
+    <title>Kayıt Ol - Miningfy</title>
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/all.min.css">
@@ -302,7 +302,9 @@
     <script type="module" src="./assets/js/auth/sign.js"></script>
 
     <script>
-    
+    const urlParams = new URLSearchParams(window.location.search);
+    const ref = urlParams.get('ref');
+    document.getElementById("ref").value = ref;
     </script>
 
 

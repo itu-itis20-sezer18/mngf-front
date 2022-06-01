@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Yatırım Paneli-Miningfy</title>
+   <title>Yatırım Paneli - Miningfy</title>
    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 
    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
@@ -140,7 +140,7 @@
                                  border: 1px solid #cdd9f6;display: flex;flex-direction: column;justify-content: center;">
                               <label id="ref-link" style="margin: 10px"></label>
                            </div>
-                           <span class="copy-btn input-group-text border-start-0 bg-white">
+                           <span class="copy-btn input-group-text border-start-0 bg-white" onclick="copyToClipboard()" style="cursor: pointer;  ">
                               <i class="fa fa-clone fs-4"></i>
                            </span>
                         </div>
@@ -858,10 +858,11 @@
 
                   })
          document.getElementById("qrcode-ref").innerHTML = "";
-         document.getElementById("ref-link").innerHTML = userData._id;
+         const link =  "https://miningfy.net/sign-up?ref=" + userData._id;
+         document.getElementById("ref-link").innerHTML = link;
 
          var qrcode = new QRCode(document.getElementById("qrcode-ref"), {
-            text: userData._id,
+            text: link,
             width: 128,
             height: 128,
             colorDark: "#000000",
@@ -870,6 +871,19 @@
          });
       }
 
+   </script>
+   <script>
+      function copyToClipboard() {
+  /* Get the text field */
+  var copyText =  document.getElementById("ref-link").innerHTML;
+
+
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText);
+
+  /* Alert the copied text */
+}
    </script>
    <!-- Get coin price -->
    <script>
