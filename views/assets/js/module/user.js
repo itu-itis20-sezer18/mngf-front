@@ -9,7 +9,7 @@ class User {
       if (!url.includes("sign-up")) {
         return userCookie
           ? userCookie
-          : (window.location.href = "sign-in.html");
+          : (window.location.href = "sign-in");
       }
     }
     return userCookie ? userCookie : false;
@@ -32,14 +32,14 @@ class User {
 
   Logout() {
     window.localStorage.removeItem("myUser");
-    window.location.href = "sign-in.html";
+    window.location.href = "sign-in";
   }
   async btnLogout() {
     let btnLogout = await document.querySelector("#btn-logout");
     btnLogout?.addEventListener("click", (e) => {
       e.preventDefault();
       window.localStorage.removeItem("myUser");
-      window.location.href = "sign-in.html";
+      window.location.href = "sign-in";
     });
   }
 }

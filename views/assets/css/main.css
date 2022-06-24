@@ -69,6 +69,9 @@ html {
   line-height: 1.4;
 }
 
+.last-deposits {
+  display: none;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -7274,6 +7277,122 @@ body *::-webkit-scrollbar-track {
 }
 
 @media (min-width: 992px) {
+.last-deposits {
+  display: block;
+}
+.chat-btn {
+    position: fixed;
+    left: 14px;
+    z-index: 100;
+    bottom: 30px;
+    cursor: pointer;
+}
+
+.chat-btn .close {
+    display: none
+}
+
+.chat-btn i {
+    transition: all 0.9s ease
+}
+
+#check:checked~.chat-btn i {
+    display: block;
+    pointer-events: auto;
+    transform: rotate(180deg)
+}
+
+#check:checked~.chat-btn .comment {
+    display: none
+}
+
+.chat-btn i {
+    font-size: 22px;
+    color: #fff !important;
+    
+}
+
+.chat-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: blue;
+    color: #fff;
+    font-size: 22px;
+    border: none
+}
+
+.wrapper {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: fit-content;
+    background-color: #ffffff;
+    border-radius: 8px;
+    opacity: 1;
+    transition: all 0.4s;
+    z-index: 100;
+    height: 60%;
+}
+.last-deposits-closed {
+  background: linear-gradient(-225deg, rgb(255, 195, 113) 20%, rgb(255, 95, 109) 100%);
+  color: white;
+  position: fixed;
+  left: 2%;
+  bottom: 4%;
+  z-index: 100;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px, rgb(0 0 0 / 20%) 0px 2px;
+  cursor: pointer;
+}
+
+#check:checked~.wrapper {
+    opacity: 1
+}
+
+.header {
+    padding: 15px;
+    background: linear-gradient(-225deg, rgb(255, 195, 113) 20%, rgb(255, 95, 109) 100%);
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 10px;
+    color: #fff
+}
+
+.chat-form {
+    padding: 15px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.chat-form input,
+textarea,
+button {
+    margin-bottom: 10px
+}
+
+.chat-form textarea {
+    resize: none
+}
+
+.form-control:focus,
+.btn:focus {
+    box-shadow: none
+}
+
+.btn,
+.btn:focus,
+.btn:hover {
+    background-color: blue;
+    border: blue
+}
+
+#check {
+    display: none !important
+}
   .make-deposit .form-group {
     max-width: 300px;
   }

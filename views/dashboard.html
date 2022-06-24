@@ -22,6 +22,24 @@
 </head>
 
 <body>
+   <div class="last-deposits">       <div class="last-deposits-closed" onclick="openForm();"><i class="fa fa-user-circle"></i> Son Yatırımlar</div>
+   <div class="wrapper shadow" id="last-deposits-part"> <div class="header d-flex padding-top 5px;" style="justify-content: space-between;"> 
+     <i class="fa fa-window-minimize" style="visibility: hidden"></i>
+     <h6 style="color: #ffffff;margin: unset;">Son Yatırımlar</h6> 
+     <i class="fa fa-window-minimize" onclick="closeForm();" style="color: #ffffff;cursor: pointer;" aria-hidden="true"></i>
+ 
+ </div> 
+          <div class="chat-form" style="display: flex;flex-direction: column;">
+             <div class="row" style="margin-bottom: 5px;">
+                 <div class="col" style="color:#33406a;font-weight: bold;">İsim</div>
+                 <div class="col" style="white-space: nowrap;color:#33406a;font-weight: bold;">Miktar</div>
+                 <div class="col"  style="color:#33406a;font-weight: bold;">Süre</div>
+             </div> 
+             <div id="deposits-container" style="display: flex;flex-direction: column;">
+         </div>
+         </div> </div>
+     </div>
+
     <!-- referance -->
     <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="referenceModal" aria-hidden="true" 
     id="investmentDetailModal">
@@ -468,6 +486,7 @@
                <div class="header-top">
                   <div class="container d-flex coin-price-div">
                      <div class="d-flex">
+                        <img class="shadow-sm" src="./assets/images/favicon.png" style="margin-left:2px;margin-right:3px;height: 25px;width: 25px;border-radius: 50%;padding: 2px 2px 2px 2px;border:1px solid #301c1c5d;" alt="logo">
                         <div class="coin-label">MNGF COIN</div>
                         <div class="coin-label-two">MNGF</div>
                         <div class="coin-price-label" id="coin-price-lb">$1</div>
@@ -1060,9 +1079,9 @@
             $.each(data, function (index, value) {
                html += '<tr style="font-size:15px">';
                $.each(value, function (index2, value2) {
-                  if (value2 == "new") value2 = "Onay Sürecinde";
-                  if (value2 == "denied") value2 = "Reddedildi";
-                  if (value2 == "done") value2 = "Onaylandı";
+                  if (value2 == "New") value2 = "Onay Sürecinde";
+                  if (value2 == "Declined") value2 = "Reddedildi";
+                  if (value2 == "Approved") value2 = "Onaylandı";
 
                   html += "<td>" + value2 + "</td>";
                });
@@ -1376,6 +1395,54 @@
                // }
    </script>
 
+<script>
+   function openForm() {
+document.getElementById("last-deposits-part").style.display = "block";
+}
+
+function closeForm() {
+document.getElementById("last-deposits-part").style.display = "none";
+}
+
+function diff_minutes(dt2, dt1) 
+{
+
+var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+diff /= 60;
+return Math.abs(Math.round(diff));
+
+}
+fillDeposits();
+
+function fillDeposits(){
+   fetch(`http://api.miningfy.net/coin/getPrice`)
+                .then(datatwo => {
+                   return datatwo.json();
+                })
+                .then(datathree => {
+   //Get Last Deposits
+   fetch("http://localhost:4000/panel/getLastDeposits", {
+             method: "POST",
+             headers: { "Content-Type": "application/json"},
+          }).then(response => response.json())
+             .then(data => {
+               console.log(data);
+               //Calculate time difference
+               depositsHtml = "";
+               var dollarCrp;
+               for(var i = 0;i < data.length; i++){
+                   data[i].date = diff_minutes(new Date(),new Date(data[i].date));
+                   data[i].userName = data[i].userName.split(" ")[0] + " " +data[i].userName.split(" ")[1][0] + "." 
+                   dollarCrp = Number(data[i].amount) * datathree[0].coinPrice
+                   dollarCrp = dollarCrp.toFixed(0)
+                   
+                   depositsHtml += `<div class="row shadow-sm " style="margin:unset;padding: 5px;border: 1px solid orange;border-radius:5px;margin-bottom: 5px">                            <div class="col" style="white-space: nowrap">${data[i].userName}</div>                            <div class="col" style="white-space: nowrap;">${data[i].amount}<img class="shadow-sm" src="./assets/images/favicon.png" style="margin-left:2px;height: 25px;width: 25px;border-radius: 50%;padding: 2px 2px 2px 2px;border:1px solid #301c1c5d;position: relative;bottom: 2%" alt="logo"> = ${dollarCrp}<label style="color: #0cd60c">$</label>                            </div>                            <div class="col" style="white-space: nowrap">${data[i].date} dk.</div>                        </div> `
+               }
+               document.getElementById("deposits-container").innerHTML = depositsHtml
+             })
+           })
+}
+</script>
 
 </body>
 
