@@ -1421,7 +1421,7 @@ function fillDeposits(){
                 })
                 .then(datathree => {
    //Get Last Deposits
-   fetch("http://localhost:4000/panel/getLastDeposits", {
+   fetch("http://api.miningfy.net/panel/getLastDeposits", {
              method: "POST",
              headers: { "Content-Type": "application/json"},
           }).then(response => response.json())
